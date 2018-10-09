@@ -175,3 +175,27 @@ ul li { list-style: none; }
   font-family: EconSansReg;
   line-height: normal;
  }
+
+h1,h2,h3 { color: #39393a; }
+
+h2 {
+  font-size: 85px;
+  font-family: EconSansReg;
+  line-height: 88px;
+  text-transform: uppercase;
+}
+
+ h3 {
+   margin-bottom: 16px;
+   font-family: EconSansReg;
+   font-size: 60px;
+   line-height: 64px;
+   text-transform: uppercase; 
+ }
+
+.common-text-style {
+  color: #39393a;
+  font-family: EconSansReg;
+  font-size: 24px;
+  line-height: 30px;
+}
