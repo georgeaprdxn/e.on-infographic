@@ -320,6 +320,8 @@ h2 {
 
 .government { margin-top: 63px; }
 
+.government .wrapper { overflow: hidden; }
+
 .government-description { 
   width: calc(70% - 5px);
   display: inline-block;
@@ -341,7 +343,26 @@ h2 {
   z-index: 1;
   top: -8%;
   right: 17px;
+  -webkit-animation: hand-drop 2s infinite ease-in-out;
+  -moz-animation:    hand-drop 2s infinite ease-in-out;
+  -o-animation:      hand-drop 2s infinite ease-in-out;
+  animation:         hand-drop 2s infinite ease-in-out;
 }
+
+@keyframes hand-drop {
+  0% { 
+    right: -100px; 
+    transform:rotate(10deg);
+  }
+  80% {
+   transform:rotate(10deg); 
+  }
+  100% { 
+    right: 18px; 
+    transform:rotate(0);
+  }
+}
+
 
 .hand-image img { width: 100%; }
 
@@ -436,13 +457,13 @@ h4 {
 }
 
 .save-cost-car-image li {
-  width: 30%;
+  width: 22%;
   display: inline-block;
 }
 
 .save-cost-car-image li:not(:last-child) { margin-right: calc(4% - 5px); }
 
-.save-cost-car-image li img { width: 100% }
+.save-cost-car-image li figure img { width: 100% }
 
 /* on the road section starts here */
 
