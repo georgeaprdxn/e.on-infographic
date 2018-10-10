@@ -171,8 +171,6 @@ ul li { list-style: none; }
   margin: 0 auto;
 }
 
-html {  margin-top: 52px;}
-
  body {
   font-family: EconSansReg;
   line-height: normal;
@@ -196,6 +194,23 @@ h1,h2,h3 { color: #39393a; }
   line-height: 28px;
 }
 
+.infographic-content-section .wrapper {
+  padding-top: 34px;
+  position: relative;
+}
+
+.infographic-content-section .wrapper:after {
+  content: "";
+  padding: 4px 0;
+  width: 4.6%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #39393a;
+}
+
+
+/* Header section starts here */
 .page-header { margin-top: 80px; }
 
 .page-header h1 { 
@@ -213,6 +228,7 @@ h1,h2,h3 { color: #39393a; }
   margin-top: 20px;
 }
 
+/* Banner section starts here */
 .banner { 
   padding-top: 40px;
   margin-top: 40px; 
@@ -272,17 +288,85 @@ h2 {
   word-spacing: -3px;
 }
 
-.infographic-content-section .wrapper {
-  padding-top: 34px;
+/* Government section starts here */
+
+.government { margin-top: 63px; }
+
+.government-description { 
+  width: calc(70% - 5px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.government-description .common-text-style { width: 91%; }
+
+.hand-money-bank-image { 
+  width: calc(30% - 5px);
+  display: inline-block;
+  vertical-align: top;
   position: relative;
 }
 
-.infographic-content-section .wrapper:after {
-  content: "";
-  padding: 4px 0;
-  width: 4.6%;
+.hand-image { 
+  width: 60%;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #39393a;
+  z-index: 1;
+  top: -19px;
+  right: 17px;
 }
+
+.hand-image img { width: 100%; }
+
+.money-bank-image { 
+  width: 50%;
+  margin: 80px auto 0;
+}
+
+.money-bank-image img { width: 100% }
+
+.government ul { margin-top: 41px; }
+
+.government ul li { 
+  width: calc(25% - 5px);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center; 
+}
+
+h4 {
+  width: 86%;
+  margin: 0 auto 40px;
+  color: #1f5f76; 
+  font-family: EconSansReg;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.government ul li:first-child h4 { 
+  width: 57%; 
+  padding-bottom: 23px;
+  margin-bottom: 24px;
+}
+
+.government ul li:nth-child(2) h4 { 
+  width: 58%; 
+  padding-bottom: 27px;
+  margin-bottom: 28px;
+}
+
+.government ul li:nth-child(3) h4 { width: 35%; }
+
+.government ul li:last-child h4 { 
+  padding-bottom: 31px;
+  margin-bottom: 32px; 
+  
+}
+ 
+.offering-image { 
+  width: 51%; 
+  margin: 0 auto;
+}
+
+.offering-image img{ width: 100% }
