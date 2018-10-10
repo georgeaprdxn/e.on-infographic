@@ -311,7 +311,7 @@ h2 {
   width: 60%;
   position: absolute;
   z-index: 1;
-  top: -19px;
+  top: -8%;
   right: 17px;
 }
 
@@ -319,7 +319,7 @@ h2 {
 
 .money-bank-image { 
   width: 50%;
-  margin: 80px auto 0;
+  margin: 24.5% auto 0;
 }
 
 .money-bank-image img { width: 100% }
@@ -370,3 +370,96 @@ h4 {
 }
 
 .offering-image img{ width: 100% }
+
+/* Exhaust Emission section starts here */
+
+.exhaust-emission { margin-top: 65px; }
+
+.exhaust-emission h3 { width: 40%; }
+
+.ill-health {
+  width: 44%;
+  margin-right: calc(10% - 5px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.polution-stats {
+  width: 46%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Save cost section starts here */
+
+.save-costs { margin-top: 61px; }
+
+.save-costs h3 { width: 50% }
+
+.save-cost-description {
+  width: 57.5%;
+  margin-right: calc(12% - 5px);
+  display: inline-block;
+}
+
+.save-cost-car-image {
+  width: 30.5%; 
+  display: inline-block; 
+}
+
+.save-cost-car-image li {
+  width: 30%;
+  display: inline-block;
+}
+
+.save-cost-car-image li:not(:last-child) { margin-right: calc(4% - 5px); }
+
+.save-cost-car-image li img { width: 100% }
+
+/* on the road section starts here */
+
+.on-the-road { margin-top: 64px; }
+
+.on-the-road-info { width: 66%; }
+
+.on-the-road ul { width: 36%; }
+
+.on-the-road ul li { 
+  width: calc(75% - 5px);
+  display: inline-block; 
+}
+
+.line-indicator-vehicle { margin-top: 42px; }
+
+.line-indicator-vehicle li:first-child { 
+  width: 20%; 
+  margin-right: 5%;
+}
+
+.line-indicator-vehicle li:first-child figure { width: 100%; }
+
+.line-indicator-fuel { margin-top: 27px; }
+
+.line-indicator-fuel li { vertical-align: top; }
+
+.line-indicator-fuel li:first-child { width: 25%; }
+
+.line-indicator-fuel li:last-child { margin-top: 8%; }
+
+.line-indicator-fuel li:first-child figure { 
+  width: 60%; 
+  margin: 0 auto;
+}
+
+.on-the-road ul li figure img { width: 100%; }
+
+.on-the-road .charging-point-info { 
+  width: 24%; 
+  margin-top: 28px;
+}
+
+/* Consumer Desire section starts here */
+
+.consumer-desire { margin-top: 61px; }
+
+.consumer-info { width: 28%; }
