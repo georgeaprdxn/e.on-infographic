@@ -238,6 +238,7 @@ h1,h2,h3 { color: #39393a; }
   width: 43%; 
   float: right;
   position: relative;
+  overflow: hidden;
 }
 
 .banner-image img { width: 100% }
@@ -248,19 +249,46 @@ h1,h2,h3 { color: #39393a; }
   bottom: 0; 
 }
 
-.car-to-left { 
+.car-to-left {
   width: 15%;
-  left: 0; 
+  right: 85%;
+  -webkit-animation: car-left 2s infinite linear;
+  -moz-animation:    car-left 2s infinite linear;
+  -o-animation:      car-left 2s infinite linear;
+  animation:         car-left 2s infinite linear;
 }
 
-.car-to-right { 
+@keyframes car-left {
+  from { right: 0%; }
+  to { right: 100%; }
+}
+
+.car-to-right {
   width: 20%;
-  left: 26%; 
+  left: 20%;
+  -webkit-animation: car-right 2s infinite linear;
+  -moz-animation:    car-right 2s infinite linear;
+  -o-animation:      car-right 2s infinite linear;
+  animation:         car-right 2s infinite linear;
+}
+
+@keyframes car-right {
+  from { left: 0; }
+  to { left: 100%; }
 }
 
 .tempo-to-right {
   width: 22%;
-  right: 16%;
+  left: 65%;
+  -webkit-animation: tempo-right 2s infinite linear;
+  -moz-animation:    tempo-right 2s infinite linear;
+  -o-animation:      tempo-right 2s infinite linear;
+  animation:         tempo-right 2s infinite linear;
+}
+
+@keyframes tempo-right {
+  from { left: 30%; }
+  to { left: 130%; }
 }
 
 .electric-vehicle img { width: 100% }
