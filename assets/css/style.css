@@ -176,7 +176,7 @@ ul li { list-style: none; }
   line-height: normal;
  }
 
-h1,h2,h3 { color: #39393a; }
+h1,h2,h3,h5 { color: #39393a; }
 
 
  h3 {
@@ -235,13 +235,47 @@ h1,h2,h3 { color: #39393a; }
 }
 
 .banner-image { 
-  width: 43%; 
+  width: 43%;
+  padding-top: 19%; 
   float: right;
   position: relative;
   overflow: hidden;
 }
 
 .banner-image img { width: 100% }
+
+.lightning { 
+  display: inline-block; 
+  position: absolute;
+  -webkit-animation: lightning 2s infinite linear;
+  -moz-animation:    lightning 2s infinite linear;
+  -o-animation:      lightning 2s infinite linear;
+  animation:         lightning 2s infinite linear;
+}
+
+.lightning-left { 
+  width: 15%;
+  z-index: -1;
+  top: 47%;
+  left: 12%; 
+}
+
+.lightning-middle { 
+  width: 24%; 
+  top: 0;
+  left: 35%;
+}
+
+@keyframes lightning {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+.lightning-right { 
+  width: 17%;
+  top: 30%;
+  right: 2%;
+}
 
 .electric-vehicle { 
   display: inline-block;
@@ -351,7 +385,7 @@ h2 {
 
 @keyframes hand-drop {
   0% { 
-    right: -100px; 
+    right: -200px; 
     transform:rotate(10deg);
   }
   80% {
@@ -384,7 +418,7 @@ h2 {
 
 h4 {
   width: 86%;
-  margin: 0 auto 40px;
+  margin: 0 auto 15%;
   color: #1f5f76; 
   font-family: EconSansReg;
   font-size: 22px;
@@ -396,20 +430,20 @@ h4 {
 .government ul li:first-child h4 { 
   width: 57%; 
   padding-bottom: 23px;
-  margin-bottom: 24px;
+  margin-bottom: 10%;
 }
 
 .government ul li:nth-child(2) h4 { 
   width: 58%; 
   padding-bottom: 27px;
-  margin-bottom: 28px;
+  margin-bottom: 11%;
 }
 
 .government ul li:nth-child(3) h4 { width: 35%; }
 
 .government ul li:last-child h4 { 
   padding-bottom: 31px;
-  margin-bottom: 32px; 
+  margin-bottom: 11%; 
   
 }
  
@@ -417,6 +451,33 @@ h4 {
   width: 51%; 
   margin: 0 auto;
 }
+
+.government ul li figure { position: relative; }
+
+
+.wheel {
+  width: 96% !important;
+  margin-top: -13%;
+  margin-left: 2.3%;
+}
+
+.offering-van { margin-top: -15%; }
+
+.car {
+  position: relative;
+  z-index: -1;
+  -webkit-animation: car .8s infinite linear;
+  -moz-animation:    car .8s infinite linear;
+  -o-animation:      car .8s infinite linear;
+  animation:         car .8s infinite linear;
+}
+
+@keyframes car {
+  0 { transform: translateY(0); }
+  50% { transform: translateY(-10%);}
+  100% { transform: translateY(0); }
+}
+
 
 .offering-image img{ width: 100% }
 
@@ -512,3 +573,27 @@ h4 {
 .consumer-desire { margin-top: 61px; }
 
 .consumer-info { width: 28%; }
+
+/* sources section starts here */
+
+.sources {
+  padding: 50px 0;
+  margin-top: 50px; 
+  background-color: #f6f5f6;
+}
+
+.sources h5 {
+  margin-bottom: 6px;
+  font-size: 17px;
+  text-transform: uppercase; 
+}
+
+.sources ol { 
+  margin-left: 14px; 
+  word-break: break-all;
+}
+
+.sources ol li {
+  margin-bottom: 5px;
+  color: #39393a; 
+}
