@@ -429,13 +429,13 @@ h4 {
 
 .government ul li { margin-left: -5px; }
 
-.government ul li:first-child h4 { 
+.government ul li:first-child h4 {
   width: 57%; 
   padding-bottom: 23px;
   margin-bottom: 10%;
 }
 
-.government ul li:nth-child(2) h4 { 
+.government ul li:nth-child(2) h4 {
   width: 58%; 
   padding-bottom: 27px;
   margin-bottom: 11%;
@@ -448,24 +448,24 @@ h4 {
   margin-bottom: 11%;
 }
 
-.government ul li:nth-child(1) .offering-stats img {
-  width: 100%;
+.offering-stats img { margin: 0 auto; }
+
+.government ul li:nth-child(1) .offering-stats img,
+.government ul li:nth-child(1) .border-line { width: 50%; }
+
+.government ul li:nth-child(2) .offering-stats img,
+.government ul li:nth-child(2) .border-line { width: 70%; }
+
+.government ul li:nth-child(3) .offering-stats img,
+.government ul li:nth-child(3) .border-line { width: 85%; }
+
+.government ul li:nth-child(4) .offering-stats img,
+.government ul li:nth-child(4) .border-line { width: 100%; }
+
+.border-line {
+  border-bottom: 1px solid red;
 }
 
-.government ul li:nth-child(2) .offering-stats img {
-  width: 130%;
-  transform: translateX(-10%);
-}
-
-.government ul li:nth-child(3) .offering-stats img {
-  width: 150%;
-  transform: translateX(-16%);
-}
-
-.government ul li:nth-child(4) .offering-stats img {
-  width: 180%;
-  transform: translateX(-22%);
-}
  
 .offering-image,
 .offering-stats {
@@ -473,7 +473,14 @@ h4 {
   margin: 0 auto;
 }
 
-.offering-stats { position: relative; }
+.offering-stats {
+  text-align: center; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.offering-stats-wrapper { animation: triangle-emerge 2s; }
 
 .offering-stats .figure {
   position: absolute; 
@@ -490,8 +497,12 @@ h4 {
   font-size: 14px;
 }
 
-.government ul li figure { position: relative; }
+@keyframes triangle-emerge {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
 
+.government ul li figure { position: relative; }
 
 .wheel {
   width: 96% !important;
@@ -511,7 +522,7 @@ h4 {
 }
 
 @keyframes car {
-  0 { transform: translateY(0); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-10%);}
   100% { transform: translateY(0); }
 }
