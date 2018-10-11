@@ -502,7 +502,7 @@ h4 {
   transform: translate(-50%,30%);
   color: #fff;
 }
->>>>>>> 390348d11e57eb02aa589c37ec5043139cda4298
+
 .offering-image img{ width: 100% }
 
 /* Exhaust Emission section starts here */
@@ -549,6 +549,37 @@ h4 {
 .save-cost-car-image li:not(:last-child) { margin-right: calc(4% - 5px); }
 
 .save-cost-car-image li figure img { width: 100% }
+
+.save-cost-car { 
+  -webkit-animation: save-cost-car .8s infinite linear;
+  -moz-animation:    save-cost-car .8s infinite linear;
+  -o-animation:      save-cost-car .8s infinite linear;
+  animation:         save-cost-car .8s infinite linear;
+ }
+
+@keyframes save-cost-car {
+  0 { transform: translateY(0); }
+  50% { transform: translateY(-10%);}
+  100% { transform: translateY(0); }
+}
+
+
+.dark-blue-wheel {
+  width: 98% !important;
+  margin: 0 auto;
+}
+
+.red-wheel {
+  width: 94% !important;
+  margin: 0 auto;
+}
+
+.car-green-blue { margin-bottom: -13%; }
+
+.wheel-green-blue {
+  width: 95% !important;
+  margin: 0 auto;
+}
 
 /* on the road section starts here */
 
@@ -608,6 +639,7 @@ h4 {
 
 .sources h5 {
   margin-bottom: 6px;
+  font-family: EconSansReg;
   font-size: 17px;
   text-transform: uppercase; 
 }
@@ -621,3 +653,5 @@ h4 {
   margin-bottom: 5px;
   color: #39393a; 
 }
+
+.sources ol li p { font-family: EconSansReg; }
