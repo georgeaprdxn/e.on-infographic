@@ -427,6 +427,8 @@ h4 {
   text-transform: uppercase;
 }
 
+.government ul li { margin-left: -5px; }
+
 .government ul li:first-child h4 { 
   width: 57%; 
   padding-bottom: 23px;
@@ -443,12 +445,49 @@ h4 {
 
 .government ul li:last-child h4 {
   padding-bottom: 31px;
-  margin-bottom: 11%; 
+  margin-bottom: 11%;
+}
+
+.government ul li:nth-child(1) .offering-stats img {
+  width: 100%;
+}
+
+.government ul li:nth-child(2) .offering-stats img {
+  width: 130%;
+  transform: translateX(-10%);
+}
+
+.government ul li:nth-child(3) .offering-stats img {
+  width: 150%;
+  transform: translateX(-16%);
+}
+
+.government ul li:nth-child(4) .offering-stats img {
+  width: 180%;
+  transform: translateX(-22%);
 }
  
-.offering-image {
+.offering-image,
+.offering-stats {
   width: 51%; 
   margin: 0 auto;
+}
+
+.offering-stats { position: relative; }
+
+.offering-stats .figure {
+  position: absolute; 
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.figure sup {
+  margin-left: 3px;
+  font-size: 14px;
 }
 
 .government ul li figure { position: relative; }
@@ -477,7 +516,10 @@ h4 {
   100% { transform: translateY(0); }
 }
 
-.offering-image img { width: 100%; }
+.offering-image img,
+.offering-stats img {
+  width: 100%;
+}
 
 .progressbar { background-color: #fff!important; }
 
@@ -502,7 +544,7 @@ h4 {
   transform: translate(-50%,30%);
   color: #fff;
 }
->>>>>>> 390348d11e57eb02aa589c37ec5043139cda4298
+
 .offering-image img{ width: 100% }
 
 /* Exhaust Emission section starts here */
@@ -580,15 +622,15 @@ h4 {
 
 .line-indicator-fuel li:last-child { margin-top: 8%; }
 
-.line-indicator-fuel li:first-child figure { 
+.line-indicator-fuel li:first-child figure {
   width: 60%; 
   margin: 0 auto;
 }
 
 .on-the-road ul li figure img { width: 100%; }
 
-.on-the-road .charging-point-info { 
-  width: 24%; 
+.on-the-road .charging-point-info {
+  width: 24%;
   margin-top: 28px;
 }
 
