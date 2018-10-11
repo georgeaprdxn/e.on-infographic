@@ -697,3 +697,24 @@ h4 {
 }
 
 .sources ol li p { font-family: EconSansReg; }
+
+/* air-poultion-graph */
+
+#air-poultion-graph { overflow: unset; }
+#air-poultion-graph rect { fill: #135863cf; }
+
+#air-poultion-graph .value-text {
+  fill: #000; 
+  font: 24px sans-serif;
+  text-anchor: end;
+}
+
+.year-text {
+  fill: #989898;
+  font: 20px sans-serif;
+  text-anchor:start;
+}
+
+@media only screen and (max-width: 995px) {
+  .polution-stats { width: 100%; }
+}
