@@ -27,9 +27,7 @@
         $.options = options;
         return this.each(function (index, el) {
             // Markup
-            $(el).html('<div class="progressbar"><div class="proggress"></div><div class=progressName></div><div class="percentCount"></div></div>');
-
-
+            $(el).html('<div class="progressbar"><div class=progressName></div><div class="progressBlade"><div class="proggress"><div class="percentCount"></div></div></div></div>');
 
             var progressFill = $(el).find('.proggress');
             var progressBar = $(el).find('.progressbar');
@@ -49,12 +47,13 @@
             // Progressing
             progressFill.animate(
                 {
-                    width: options.percentage + "%"
+                    width: options.percentage/16000*100 + "%"
                 },
                 {
                     step: function (x) {
                         if (options.ShowProgressCount) {
-                            $(el).find(".percentCount").text(Math.round(x) + "%");
+                            $(el).find(".percentCount").text('£'+
+                                Math.round(options.percentage));
                         }
                     },
                     duration: options.duration
