@@ -386,15 +386,38 @@ h4 {
 
 .government ul li:nth-child(3) h4 { width: 35%; }
 
-.government ul li:last-child h4 { 
+.government ul li:last-child h4 {
   padding-bottom: 31px;
-  margin-bottom: 32px; 
-  
+  margin-bottom: 32px;
 }
  
-.offering-image { 
+.offering-image {
   width: 51%; 
   margin: 0 auto;
 }
 
-.offering-image img{ width: 100% }
+.offering-image img { width: 100%; }
+
+.progressbar { background-color: #fff!important; }
+
+.progressName,
+.progressBlade {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -5px;
+}
+
+.progressName {
+  width: 15%;
+  font-size: 16px;
+  color: #096275;
+}
+
+.progressBlade {
+  width: 85%;
+}
+
+.percentCount {
+  transform: translate(-50%,30%);
+  color: #fff;
+}
