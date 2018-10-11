@@ -463,7 +463,8 @@ h4 {
 .government ul li:nth-child(4) .border-line { width: 100%; }
 
 .border-line {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #A71E34;
+  margin: 0 auto;
 }
 
  
@@ -611,7 +612,7 @@ h4 {
  }
 
 @keyframes save-cost-car {
-  0 { transform: translateY(0); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-10%);}
   100% { transform: translateY(0); }
 }
