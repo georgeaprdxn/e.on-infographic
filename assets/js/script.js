@@ -14,7 +14,7 @@ $(document).ready(function () {
       'value': 15903,
     },
     {
-      'name': 'ELECTRIC VEHICLE (BATTERY LEASED) 7',
+      'name': 'ELECTRIC VEHICLE (BATTERY LEASED)',
       'value': 12066,
     }
   ];
@@ -27,13 +27,14 @@ $(document).ready(function () {
     $('#progressbar' + i).LineProgressbar({
       percentage: progressBarData[i].value,
       fillBackgroundColor: progressColors[i],
-      height: '50px'
+      height: '55px'
     });
     $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
   }
+  $('#progressbar3 .progressName').append('<sup>7</sup>');
 
+  
   // Air Poultion Bar graph
-
   var svgWidth = 100;
   var svgHeight = 250;
 
@@ -56,8 +57,7 @@ $(document).ready(function () {
       'name':'&pound;18.6bn',
       'value': 18600,
       'year':'2035'
-    }
-  ];
+    }];
 
   var barPadding = 10;
   var scaleFactor = 20;
