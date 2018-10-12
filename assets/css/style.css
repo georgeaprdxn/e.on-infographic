@@ -209,8 +209,10 @@ h1,h2,h3,h5 { color: #39393a; }
   background-color: #39393a;
 }
 
+/*==========================================================================
+  Header section starts here
+============================================================================*/
 
-/* Header section starts here */
 .page-header { margin-top: 80px; }
 
 .page-header h1 { 
@@ -228,13 +230,22 @@ h1,h2,h3,h5 { color: #39393a; }
   margin-top: 20px;
 }
 
-/* Banner section starts here */
-.banner { 
+/*==========================================================================
+  Header section ends here
+============================================================================*/
+
+
+
+/*==========================================================================
+  Banner section starts here
+============================================================================*/
+
+.banner {
   padding-top: 40px;
   margin-top: 40px; 
 }
 
-.banner-image { 
+.banner-image {
   width: 43%;
   padding-top: 19%; 
   float: right;
@@ -242,7 +253,7 @@ h1,h2,h3,h5 { color: #39393a; }
   overflow: hidden;
 }
 
-.banner-image img { width: 100% }
+.banner-image img { width: 100%; }
 
 .lightning { 
   display: inline-block; 
@@ -260,7 +271,7 @@ h1,h2,h3,h5 { color: #39393a; }
   left: 12%; 
 }
 
-.lightning-middle { 
+.lightning-middle {
   width: 24%; 
   top: 0;
   left: 35%;
@@ -271,16 +282,16 @@ h1,h2,h3,h5 { color: #39393a; }
   to { transform: scale(1); }
 }
 
-.lightning-right { 
+.lightning-right {
   width: 17%;
   top: 30%;
   right: 2%;
 }
 
-.electric-vehicle { 
+.electric-vehicle {
   display: inline-block;
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
 }
 
 .car-to-left {
@@ -325,7 +336,7 @@ h1,h2,h3,h5 { color: #39393a; }
   to { left: 130%; }
 }
 
-.electric-vehicle img { width: 100% }
+.electric-vehicle img { width: 100%; }
 
 .banner-content {
   width: 57%;
@@ -336,9 +347,9 @@ h1,h2,h3,h5 { color: #39393a; }
 
 h2 {
   margin-bottom: 17px;
+  line-height: 88px;
   font-size: 85px;
   font-family: EconSansReg;
-  line-height: 88px;
   text-transform: uppercase;
 }
 
@@ -350,13 +361,20 @@ h2 {
   word-spacing: -3px;
 }
 
-/* Government section starts here */
+/*==========================================================================
+  Banner section ends here
+============================================================================*/
+
+
+/*==========================================================================
+  Government section starts here
+============================================================================*/
 
 .government { margin-top: 63px; }
 
 .government .wrapper { overflow: hidden; }
 
-.government-description { 
+.government-description {
   width: calc(70% - 5px);
   display: inline-block;
   vertical-align: top;
@@ -364,14 +382,14 @@ h2 {
 
 .government-description .common-text-style { width: 91%; }
 
-.hand-money-bank-image { 
+.hand-money-bank-image {
   width: calc(30% - 5px);
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
 
-.hand-image { 
+.hand-image {
   width: 60%;
   position: absolute;
   z-index: 1;
@@ -388,15 +406,12 @@ h2 {
     right: -200px; 
     transform:rotate(10deg);
   }
-  80% {
-   transform:rotate(10deg); 
-  }
+  80% { transform:rotate(10deg); }
   100% { 
     right: 18px; 
     transform:rotate(0);
   }
 }
-
 
 .hand-image img { width: 100%; }
 
@@ -409,7 +424,7 @@ h2 {
 
 .government ul { margin-top: 41px; }
 
-.government ul li { 
+.government ul li {
   width: calc(25% - 5px);
   display: inline-block;
   vertical-align: top;
@@ -436,7 +451,7 @@ h4 {
 }
 
 .government ul li:nth-child(2) h4 {
-  width: 58%; 
+  width: 58%;
   padding-bottom: 27px;
   margin-bottom: 11%;
 }
@@ -467,7 +482,6 @@ h4 {
   margin: 0 auto;
 }
 
- 
 .offering-image,
 .offering-stats {
   width: 51%; 
@@ -476,12 +490,18 @@ h4 {
 
 .offering-stats {
   width: 100%;
-  text-align: center;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
-.offering-stats-wrapper { animation: triangle-emerge 2s; }
+.offering-stats-wrapper {
+  -webkit-animation: triangle-emerge 2s;
+     -moz-animation: triangle-emerge 2s;
+       -o-animation: triangle-emerge 2s;
+          animation: triangle-emerge 2s;
+}
+
 
 .offering-stats .figure {
   position: absolute; 
@@ -492,14 +512,16 @@ h4 {
   font-weight: 700;
   transform: translateX(-50%);
   opacity: 0;
-  animation: showfigure 2s forwards;
+  -webkit-animation: showfigure 2s forwards;
+     -moz-animation: showfigure 2s forwards;
+       -o-animation: showfigure 2s forwards;
+          animation: showfigure 2s forwards;
 }
 
 @keyframes showfigure {
   90% { opacity: 0; }
   100% { opacity: 1; }
 }
-
 
 .figure sup {
   margin-left: 3px;
@@ -541,42 +563,15 @@ h4 {
   width: 100%;
 }
 
-.progressbars { margin-top: 15px; }
+/*==========================================================================
+  Government section ends here
+============================================================================*/
 
-.progressbar { background-color: #fff!important; }
 
-.progressName,
-.progressBlade {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: -5px;
-}
 
-.progressBlade { width: 80%; }
-
-.progressName {
-  width: 20%;
-  color: #096275;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.progressName sup {
-  font-size: 12px;
-}
-
-.percentCount {
-  margin-top: 12px;
-  margin-right: 15px;
-  color: #fff;
-  font-family: EconSansReg !important;
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.offering-image img{ width: 100% }
-
-/* Exhaust Emission section starts here */
+/*==========================================================================
+  Exhaust Emission section starts here
+============================================================================*/
 
 .exhaust-emission { margin-top: 65px; }
 
@@ -595,7 +590,44 @@ h4 {
   vertical-align: top;
 }
 
-/* Save cost section starts here */
+/*==========================================================================
+  Exhaust Emission section ends here
+============================================================================*/
+
+/*==========================================================================
+  save-costs section starts here
+============================================================================*/
+
+.progressbars { margin-top: 15px; }
+
+.progressbar { background-color: #fff !important; }
+
+.progressName,
+.progressBlade {
+  margin-left: -5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.progressBlade { width: 80%; }
+
+.progressName {
+  width: 20%;
+  color: #096275;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.progressName sup { font-size: 12px; }
+
+.percentCount {
+  margin-top: 12px;
+  margin-right: 15px;
+  color: #fff;
+  font-family: EconSansReg !important;
+  font-size: 25px;
+  font-weight: 500;
+}
 
 .save-costs { margin-top: 61px; }
 
@@ -621,7 +653,7 @@ h4 {
 
 .save-cost-car-image li figure img { width: 100% }
 
-.save-cost-car { 
+.save-cost-car {
   -webkit-animation: save-cost-car .8s infinite linear;
   -moz-animation:    save-cost-car .8s infinite linear;
   -o-animation:      save-cost-car .8s infinite linear;
@@ -651,6 +683,10 @@ h4 {
   width: 95% !important;
   margin: 0 auto;
 }
+
+/*==========================================================================
+  save-costs section ends here
+============================================================================*/
 
 /* on the road section starts here */
 
