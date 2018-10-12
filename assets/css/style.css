@@ -245,9 +245,34 @@ h1,h2,h3,h5 { color: #39393a; }
   margin-top: 40px; 
 }
 
+
+.banner-content {
+  width: 57%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.banner-content .common-text-style { width: 80%; }
+
+h2 {
+  margin-bottom: 17px;
+  line-height: 88px;
+  font-size: 85px;
+  font-family: EconSansReg;
+  text-transform: uppercase;
+}
+
+.sub-text {
+  margin-bottom: 31px;
+  color: #1f5f76;
+  font-family: EconSansReg;
+  font-size: 40px;
+  word-spacing: -3px;
+}
+
 .banner-image {
   width: 43%;
-  padding-top: 19%; 
+  padding-top: 19%;
   float: right;
   position: relative;
   overflow: hidden;
@@ -337,29 +362,6 @@ h1,h2,h3,h5 { color: #39393a; }
 }
 
 .electric-vehicle img { width: 100%; }
-
-.banner-content {
-  width: 57%;
-  display: inline-block; 
-}
-
-.banner-content .common-text-style { width: 80%; }
-
-h2 {
-  margin-bottom: 17px;
-  line-height: 88px;
-  font-size: 85px;
-  font-family: EconSansReg;
-  text-transform: uppercase;
-}
-
-.sub-text {
-  margin-bottom: 31px;
-  color: #1f5f76;
-  font-family: EconSansReg;
-  font-size: 40px;
-  word-spacing: -3px;
-}
 
 /*==========================================================================
   Banner section ends here
@@ -760,7 +762,7 @@ h4 {
 .car-green-blue { margin-bottom: -13%; }
 
 .wheel-green-blue {
-  width: 95% !important;
+  width: 94% !important;
   margin: 0 auto;
 }
 
@@ -872,10 +874,15 @@ h4 {
   position: absolute;
   top: 85%;
   left: -25%;
-  -webkit-animation: sky .5s linear forwards;
-  -moz-animation:    sky .5s linear forwards;
-  -o-animation:      sky .5s linear forwards;
-  animation:         sky .5s linear forwards;
+  -webkit-animation: half-round .5s linear forwards;
+  -moz-animation:    half-round .5s linear forwards;
+  -o-animation:      half-round .5s linear forwards;
+  animation:         half-round .5s linear forwards;
+}
+
+@keyframes half-round {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
 }
 
 .round {
@@ -883,10 +890,17 @@ h4 {
   position: absolute;
   top: 75%;
   left: -13%;
-  -webkit-animation: sky 1s linear forwards;
-  -moz-animation:    sky 1s linear forwards;
-  -o-animation:      sky 1s linear forwards;
-  animation:         sky 1s linear forwards;
+  -webkit-animation: round 1s linear forwards;
+  -moz-animation:    round 1s linear forwards;
+  -o-animation:      round 1s linear forwards;
+  animation:         round 1s linear forwards;
+}
+
+@keyframes round {
+  0% { transform: scale(0); }
+  25% { transform: scale(0); }
+  50% { transform: scale(0); }
+  100% { transform: scale(1); }
 }
 
 .sky {
@@ -900,8 +914,11 @@ h4 {
 }
 
 @keyframes sky {
-  from { transform: scale(0);  }
-  to { transform: scale(1); }
+  0% { transform: scale(0); }
+  25% { transform: scale(0); }
+  50% { transform: scale(0); }
+  75% { transform: scale(0); }
+  100% { transform: scale(1); }
 }
 
 .sky-text {
@@ -918,5 +935,6 @@ h4 {
 @keyframes scale-in {
   0%{ transform: scale(0); }
   50% { transform: scale(0); }
+  75% { transform: scale(0); }
   100% { transform: scale(1); }
 }
