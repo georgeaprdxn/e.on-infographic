@@ -14,7 +14,7 @@ $(document).ready(function () {
       'value': 15903,
     },
     {
-      'name': 'ELECTRIC VEHICLE (BATTERY LEASED) 7',
+      'name': 'ELECTRIC VEHICLE (BATTERY LEASED)',
       'value': 12066,
     }
   ];
@@ -27,10 +27,10 @@ $(document).ready(function () {
     $('#progressbar' + i).LineProgressbar({
       percentage: progressBarData[i].value,
       fillBackgroundColor: progressColors[i],
-      height: '50px'
+      height: '55px'
     });
     $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
   }
-
+  $('#progressbar3 .progressName').append('<sup>7</sup>');
 });
 
