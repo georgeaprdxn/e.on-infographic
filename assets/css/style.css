@@ -481,7 +481,21 @@ h4 {
   overflow: hidden;
 }
 
-.offering-stats-wrapper { animation: triangle-emerge 2s; }
+.offering-stats-wrapper {
+  min-height: 100%;
+}
+
+.offering-stats-wrapper figure img { animation: triangle-emerge 4s; }
+
+@keyframes triangle-emerge {
+  0% {
+    max-height: 0;
+  }
+
+  100% {
+    max-height: 500px;
+  }
+}
 
 .offering-stats .figure {
   position: absolute; 
@@ -504,11 +518,6 @@ h4 {
 .figure sup {
   margin-left: 3px;
   font-size: 14px;
-}
-
-@keyframes triangle-emerge {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
 }
 
 .government ul li figure { position: relative; }
