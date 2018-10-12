@@ -621,3 +621,51 @@ h4 {
   margin-bottom: 5px;
   color: #39393a; 
 }
+
+/* Zero Exhaust Pipe Emissions */
+.early-deaths-per-year{ position: relative; }
+.cloud { display: inline-block; }
+
+.half-round {
+  width: 11%;
+  position: absolute;
+  top: 85%;
+  left: -25%;
+  animation-name: fade-in;
+  animation-duration: .2s;
+  animation-timing-function: ease-in;
+}
+
+.round {
+  width: 13%;
+  position: absolute;
+  top: 75%;
+  left: -13%;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.sky-text {
+  width: 72%;
+  position: absolute;
+  top: 45px;
+  left: 75px;
+  animation-name: fade-in;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
