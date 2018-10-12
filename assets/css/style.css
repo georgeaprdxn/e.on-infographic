@@ -546,15 +546,15 @@ h4 {
 .car {
   position: relative;
   z-index: -1;
-  -webkit-animation: car .8s infinite linear;
-  -moz-animation:    car .8s infinite linear;
-  -o-animation:      car .8s infinite linear;
-  animation:         car .8s infinite linear;
+  -webkit-animation: car .5s infinite linear;
+  -moz-animation:    car .5s infinite linear;
+  -o-animation:      car .5s infinite linear;
+  animation:         car .5s infinite linear;
 }
 
 @keyframes car {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-10%);}
+  50% { transform: translateY(-2.5%);}
   100% { transform: translateY(0); }
 }
 
@@ -653,16 +653,16 @@ h4 {
 
 .save-cost-car-image li figure img { width: 100% }
 
-.save-cost-car {
-  -webkit-animation: save-cost-car .8s infinite linear;
-  -moz-animation:    save-cost-car .8s infinite linear;
-  -o-animation:      save-cost-car .8s infinite linear;
-  animation:         save-cost-car .8s infinite linear;
+.save-cost-car { 
+  -webkit-animation: save-cost-car .5s infinite linear;
+  -moz-animation:    save-cost-car .5s infinite linear;
+  -o-animation:      save-cost-car .5s infinite linear;
+  animation:         save-cost-car .5s infinite linear;
  }
 
 @keyframes save-cost-car {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-10%);}
+  50% { transform: translateY(-5%);}
   100% { transform: translateY(0); }
 }
 
