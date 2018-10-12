@@ -726,3 +726,72 @@ h4 {
 }
 
 .sources ol li p { font-family: EconSansReg; }
+
+/* Zero Exhaust Pipe Emissions */
+.early-deaths-per-year{ position: relative;}
+.cloud { display: inline-block; }
+
+.half-round {
+  width: 11%;
+  position: absolute;
+  top: 85%;
+  left: -25%;
+  -webkit-animation: moving-half-round .5s linear forwards;
+  -moz-animation:    moving-half-round .5s linear forwards;
+  -o-animation:      moving-half-round .5s linear forwards;
+  animation:         moving-half-round .5s linear forwards;
+}
+
+@keyframes moving-half-round {
+  from { left: -35%; }
+  to { left: -25%; }
+}
+
+.round {
+  width: 13%;
+  position: absolute;
+  top: 75%;
+  left: -13%;
+  -webkit-animation: moving-round 1s linear forwards;
+  -moz-animation:    moving-round 1s linear forwards;
+  -o-animation:      moving-round 1s linear forwards;
+  animation:         moving-round 1s linear forwards;
+}
+
+@keyframes moving-round {
+  from { left: -50%; }
+  to { left: -13%; }
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  -webkit-animation: moving-sky 1.5s linear forwards;
+  -moz-animation:    moving-sky 1.5s linear forwards;
+  -o-animation:      moving-sky 1.5s linear forwards;
+  animation:         moving-sky 1.5s linear forwards;
+}
+
+@keyframes moving-sky {
+  from { left: -140%; }
+  to { left: 0; }
+}
+
+.sky-text {
+  width: 72%;
+  position: absolute;
+  top: 45px;
+  left: 75px;
+  -webkit-animation: scale-in 2s linear forwards;
+  -moz-animation:    scale-in 2s linear forwards;
+  -o-animation:      scale-in 2s linear forwards;
+  animation:         scale-in 2s linear forwards;
+}
+
+@keyframes scale-in {
+  0%{ transform: scale(0); }
+  50% { transform: scale(0); }
+  80% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
