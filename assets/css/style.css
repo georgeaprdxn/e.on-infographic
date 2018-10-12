@@ -280,6 +280,8 @@ h2 {
 
 .banner-image img { width: 100%; }
 
+.building { display: none; }
+
 .lightning { 
   display: inline-block; 
   position: absolute;
@@ -362,6 +364,70 @@ h2 {
 }
 
 .electric-vehicle img { width: 100%; }
+
+@media screen and (max-width: 995px) {
+  
+  .banner .wrapper { overflow-x: hidden; }
+
+  .banner-content { width: 100%; }
+
+  h2 { width: 76%; }
+
+  .sub-text { width: 65%; }
+
+  .banner-content .common-text-style { width: 43%; }
+
+  .banner-image { 
+    width: 100%; 
+    margin-top: -86%;
+    overflow: unset;
+  }
+  
+  .building-big { display: none; }
+
+  .building { 
+    width: 50% !important; 
+    display: block;
+    float: right;
+  }
+  
+  .lightning-left { 
+    width: 10%; 
+    top: 40.5%;
+    left: 61%;
+  }
+
+  .lightning-middle {
+    width: 15%; 
+    top: -9%;
+    right: 4%;
+    left: unset;
+  }
+
+  .lightning-right { display: none; }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .banner .wrapper { padding-top: 10px; }
+
+  h2 {
+    width: 221px; 
+    font-size: 40px;
+    line-height: 36px;
+  }
+
+  .sub-text { font-size: 26px; }
+
+  .banner-content .common-text-style { 
+    font-size: 18px; 
+    line-height: 24px;
+  }
+
+  .banner-image { margin-top: -60%; }
+}
+
 
 /*==========================================================================
   Banner section ends here
