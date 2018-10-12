@@ -446,7 +446,6 @@ h4 {
   text-transform: uppercase;
 }
 
-
 .government ul li:first-child h4 {
   width: 57%;
   padding-bottom: 23px;
@@ -462,12 +461,9 @@ h4 {
 .government ul li:nth-child(3) h4 {
   width: 35%;
   margin-bottom: 28px;
-
 }
 
-.government ul li:last-child h4 {
-  margin-bottom: 33px;
-}
+.government ul li:last-child h4 { margin-bottom: 33px; }
 
 .offering-stats img {
   margin: 0 auto;
@@ -493,9 +489,7 @@ h4 {
   width: 100%;
 }
 
-.hybrid-cars {
-  width: 23.33%;
-}
+.hybrid-cars { width: 23.33%; }
 
 .electric-vehicles {
   width: 23.33%;
@@ -554,14 +548,14 @@ h4 {
   top: 15px;
   left: 50%;
   color: #fff;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   transform: translateX(-50%);
   opacity: 0;
-  -webkit-animation: showfigure 2s forwards;
-     -moz-animation: showfigure 2s forwards;
-       -o-animation: showfigure 2s forwards;
-          animation: showfigure 2s forwards;
+  -webkit-animation: showfigure 1.5s forwards;
+     -moz-animation: showfigure 1.5s forwards;
+       -o-animation: showfigure 1.5s forwards;
+          animation: showfigure 1.5s forwards;
 }
 
 @keyframes showfigure {
