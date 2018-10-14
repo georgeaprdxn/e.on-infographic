@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendor/lineProgressbar/jquery.lineProgressbar.css">
+    <link rel="stylesheet" href="assets/vendor/simple-chart.css">
 
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css">
@@ -206,7 +207,10 @@
                 <p class="common-text-style">
                   Air pollution, much of it coming from petrol and diesel engines, is estimated to have <strong>cost the NHS and social care</strong> £157m in 2017. If action isn’t taken, these numbers will increase:
                 </p>
-                <svg id="air-poultion-graph"></svg>
+                <!-- <svg id="air-poultion-graph"></svg> -->
+                <section class="sc-section">
+                  <div class="column-chart"></div>
+                </section>
               </div>
             </div>
           </div>
@@ -336,7 +340,8 @@
     <!-- container class ends here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/vendor/lineProgressbar/jquery.lineProgressbar.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="assets/vendor/simple-chart.js"></script>
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
     <script src="assets/js/script.js"></script>
   </body>
 
