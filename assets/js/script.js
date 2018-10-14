@@ -35,13 +35,13 @@ $(document).ready(function () {
 
   
   // Air Poultion Bar graph
-  var svgWidth = 100;
-  var svgHeight = 250;
+  // var svgWidth = 100;
+  // var svgHeight = 250;
 
-  var svg = d3.select('#air-poultion-graph')
-      .attr("width", svgWidth+'%')
-      .attr("height", svgHeight)
-      .attr("class", "bar-chart");
+  // var svg = d3.select('#air-poultion-graph')
+  //     .attr("width", svgWidth+'%')
+  //     .attr("height", svgHeight)
+  //     .attr("class", "bar-chart");
 
   var polutionDataSet = [{
       'name':'&pound;157m',
@@ -59,48 +59,76 @@ $(document).ready(function () {
       'year':'2035'
     }];
 
-  var barPadding = 10;
-  var scaleFactor = 20;
-  var barWidth = (svgWidth / polutionDataSet.length);
+    var labels = ["Avatar", "Titanic", "Star Wars: The Force Awakens"];
+    var values = [157, 5500, 18600];
+        
 
-  var bar = svg.selectAll("g")
-                  .data(polutionDataSet)
-                  .enter()
-                  .append("g")
-                  .attr("width", barWidth - barPadding+'%')
-                  .attr('height',svgHeight-100)
-                  .attr("x",0 )
-                  .attr("transform", function (d, i) {
-                     var translate = [barWidth * i + 155*i];
-                     return "translate("+ translate +")";
-                  });
+        $('#air-poulltion-graph').simpleChart({
+            title: {
+                text: 'All Time Box Office - Top 10 Worldwide Grosses',
+                align: 'center'
+            },
+            type: 'column',
+            layout: {
+                width: '80%',
+                height: '250px'
+            },
+            item: {
+                label: labels,
+                value: values,
+                color: ['#00aeef'],
+                prefix: '$',
+                suffix: '',
+                outputValue: values,
+                render: {
+                    margin: '0 auto',
+                    size: 'relative'
+                }
+            }
+        });
 
-    bar.append("rect")
-      .attr("height", 0)
-      .attr("width", barWidth - barPadding+'%')
-      .attr("y", svgHeight)
-      .transition()
-      .attr("height", function(d) { return d.value/100; })
-      .attr("y", function(d) { return svgHeight - d.value/100; })
-      .duration(2000)
-      .ease();
+//   var barPadding = 10;
+//   var scaleFactor = 20;
+//   var barWidth = (svgWidth / polutionDataSet.length);
 
-      bar.append("text")
-         .attr('class', 'value-text')
-        .attr("y", function(d) { return svgHeight - d.value/100; })
-        .attr("dy", "-.75em")
-        .attr("dx", "3.8em")
-        .html(function(d) { return d.name; });
+//   var bar = svg.selectAll("g")
+//                   .data(polutionDataSet)
+//                   .enter()
+//                   .append("g")
+//                   .attr("width", barWidth - barPadding+'%')
+//                   .attr('height',svgHeight-100)
+//                   .attr("x",0 )
+//                   .attr("transform", function (d, i) {
+//                      var translate = [barWidth * i + 155*i];
+//                      return "translate("+ translate +")";
+//                   });
 
-      bar.append('text')
-         .attr('class', 'year-text') 
-        .attr('y', svgHeight-20)
-        .attr("dx", "2.0em")
-        .attr("dy", "2.0em")
-        .html(function(d) { return d.year; })
-        .append('tspan')
-          .text(function(d, i) { if(i == 2)return '3'; })
-          .style('font-size', '10px')
-          .attr('dx', '0em')
-          .attr('dy', '-.8em')
+//     bar.append("rect")
+//       .attr("height", 0)
+//       .attr("width", barWidth - barPadding+'%')
+//       .attr("y", svgHeight)
+//       .transition()
+//       .attr("height", function(d) { return d.value/100; })
+//       .attr("y", function(d) { return svgHeight - d.value/100; })
+//       .duration(2000)
+//       .ease();
+
+//       bar.append("text")
+//          .attr('class', 'value-text')
+//         .attr("y", function(d) { return svgHeight - d.value/100; })
+//         .attr("dy", "-.75em")
+//         .attr("dx", "3.8em")
+//         .html(function(d) { return d.name; });
+
+//       bar.append('text')
+//          .attr('class', 'year-text') 
+//         .attr('y', svgHeight-20)
+//         .attr("dx", "2.0em")
+//         .attr("dy", "2.0em")
+//         .html(function(d) { return d.year; })
+//         .append('tspan')
+//           .text(function(d, i) { if(i == 2)return '3'; })
+//           .style('font-size', '10px')
+//           .attr('dx', '0em')
+//           .attr('dy', '-.8em')
 });
