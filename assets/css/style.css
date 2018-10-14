@@ -946,8 +946,72 @@ h4 {
 
 /* air-poultion-graph */
 
-#air-poultion-graph { overflow: unset; }
+#air-poulltion-graph-container { overflow: unset; }
+
 #air-poultion-graph rect { fill: #135863cf; }
+
+.air-graph-wrapper {
+  width: 90%;
+  height: 230px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bar {
+  width: 28%;
+  margin-left: -5px;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-color: #1f5f76;
+  animation: graphAnimate 5s forwards;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.bar:first-child { margin-left: 0; }
+
+.bar-year {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  color: gray;
+  text-align: center;
+}
+
+.bar0 { height: 2px; }
+
+.bar1 {
+  height: 60px;
+  left: 37%;
+}
+
+.bar2 {
+  height: 200px;
+  left: 74%; 
+}
+
+.bar-label {
+  width: 100%;
+  position: absolute;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.bar0 .bar-label { top: -30px; }
+
+.bar1 .bar-label,
+.bar2 .bar-label {
+  color: #fff;
+  top: 10px;
+}
+
+@keyframes graphAnimate {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
 
 #air-poultion-graph .value-text {
   fill: #000; 
