@@ -32,7 +32,6 @@ $(document).ready(function () {
     $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
   }
   $('#progressbar3 .progressName').append('<sup>7</sup>');
-
   
   // Air Poultion Bar graph
   var svgWidth = 100;
