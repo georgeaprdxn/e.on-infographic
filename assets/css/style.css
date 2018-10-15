@@ -246,7 +246,10 @@ h1,h2,h3,h5 { color: #39393a; }
   Header section starts here
 ============================================================================*/
 
-.page-header { margin-top: 80px; }
+.page-header { 
+  margin-top: 80px; 
+  position: relative;
+}
 
 .page-header h1 { 
   font-size: 20px; 
@@ -745,7 +748,7 @@ h4 {
 
   .hand-image { 
     width: 80%;   
-    top: -14%;
+    top: -13%;
     right: -10%
   }
 
@@ -789,6 +792,9 @@ h4 {
 
   .government ul li:last-child h4 { width: 233px; }
 
+
+  .offering-stats .figure { font-size: 24px; }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -804,9 +810,9 @@ h4 {
     transform: translateX(-50%);
   }
 
-  .offering-image {
-    margin-top: 100px;
-  }
+  .offering-image { margin-top: 100px; }
+
+  .hybrid-cars .offering-image { margin-top: 95px; }
 
   .electric-vehicles { transform: translateX(-18%); }
   
@@ -816,10 +822,21 @@ h4 {
 
   .government ul li:last-child h4 { width: 80%; }
 
+  .offering-stats .figure { font-size: 16px; }
+
 }
 
 @media screen and (max-width: 540px) {
   .government ul li:first-child h4 { width: 90%; }
+
+  .hybrid-cars .offering-image { margin-top: 97px; }
+
+  .offering-stats .figure { 
+    top: 8px;
+    font-size: 10px; 
+  }
+
+  .figure sup { font-size: 10px; }
 }
 
 /*==========================================================================
