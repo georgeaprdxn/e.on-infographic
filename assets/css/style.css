@@ -955,20 +955,29 @@ h4 {
 
 /* on the road section starts here */
 
-.on-the-road { margin-top: 64px; }
+.on-the-road {
+  padding-bottom: 12%;
+  margin-top: 64px;
+  position: relative;
+}
+
+.on-the-road-content {
+  position: relative;
+  z-index: 1;
+}
 
 .on-the-road-info { width: 66%; }
 
 .on-the-road ul { width: 36%; }
 
-.on-the-road ul li { 
+.on-the-road ul li {
   width: calc(75% - 5px);
   display: inline-block; 
 }
 
 .line-indicator-vehicle { margin-top: 42px; }
 
-.line-indicator-vehicle li:first-child { 
+.line-indicator-vehicle li:first-child {
   width: 20%; 
   margin-right: 5%;
 }
@@ -994,6 +1003,33 @@ h4 {
   width: 24%;
   margin-top: 28px;
 }
+
+.on-the-road-graph {
+  position: absolute;
+  z-index: 0;
+  top: 34px;
+}
+
+.on-the-road-graph .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  animation: reveal 3s forwards;
+}
+
+@keyframes reveal {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.on-the-road-graph img { width: 100%; }
 
 /* Consumer Desire section starts here */
 
