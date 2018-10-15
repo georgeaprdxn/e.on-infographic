@@ -778,11 +778,48 @@ h4 {
     transform: unset;
   }
 
-  .government ul li:nth-child(3) h4 { margin-bottom: 11.5%; }
+  .government ul li:first-child h4 { width: 142px; }
+  
+  .government ul li:nth-child(2) h4 { width: 155px; }
+
+  .government ul li:nth-child(3) h4 { 
+    width: 99px;
+    margin-bottom: 11.5%; 
+  }
+
+  .government ul li:last-child h4 { width: 233px; }
+
 }
 
 @media screen and (max-width: 767px) {
   .government-description h3 { width: 260px; } 
+  
+  .government ul li { position: relative; }
+
+  .government ul li h4 { 
+    font-size: 16px; 
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offering-image {
+    margin-top: 100px;
+  }
+
+  .electric-vehicles { transform: translateX(-18%); }
+  
+  .government ul li:first-child h4 { width: 66%; }
+  
+  .government ul li:nth-child(2) h4 { width: 80%; }
+
+  .government ul li:last-child h4 { width: 80%; }
+
+}
+
+@media screen and (max-width: 540px) {
+  .government ul li:first-child h4 { width: 90%; }
 }
 
 /*==========================================================================
