@@ -103,4 +103,17 @@ $(document).ready(function () {
           .style('font-size', '10px')
           .attr('dx', '0em')
           .attr('dy', '-.8em')
+
+  // To set piggy bank on position
+  $(window).on('load resize',function(){
+    a=$('.government').offset();
+    b=$('.government ul').offset();
+    if(window.innerWidth <= 995){
+      c=b.top-a.top
+      $('.hand-money-bank-image').css('top',c+34);
+    }else {
+      $('.hand-money-bank-image').css('cssText','top','unset')
+    }
+  });
+
 });
