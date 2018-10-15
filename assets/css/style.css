@@ -946,8 +946,75 @@ h4 {
 
 /* air-poultion-graph */
 
-#air-poultion-graph { overflow: unset; }
+#air-poulltion-graph-container { 
+  height: 300px;
+  overflow: unset; 
+}
+
 #air-poultion-graph rect { fill: #135863cf; }
+
+.air-graph-wrapper {
+  width: 90%;
+  height: 192px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bar {
+  width: 28%;
+  margin-left: -5px;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-color: #1f5f76;
+  animation: graphAnimate 5s forwards;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.bar:first-child { margin-left: 0; }
+
+.bar-year {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  color: gray;
+  text-align: center;
+}
+
+.bar0 { height: 2px; }
+
+.bar1 {
+  height: 60px;
+  left: 37%;
+}
+
+.bar2 {
+  height: 200px;
+  left: 74%; 
+}
+
+.bar-label {
+  width: 100%;
+  position: absolute;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.bar0 .bar-label { top: -30px; }
+
+.bar1 .bar-label,
+.bar2 .bar-label {
+  color: #fff;
+  top: 10px;
+}
+
+@keyframes graphAnimate {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
 
 #air-poultion-graph .value-text {
   fill: #000; 
@@ -961,12 +1028,10 @@ h4 {
   text-anchor:start;
 }
 
-@media only screen and (max-width: 995px) {
-  .polution-stats { width: 100%; }
-}
 /* Zero Exhaust Pipe Emissions */
 .early-deaths-per-year{ position: relative;}
 .cloud { display: inline-block; }
+.mobile { display: none; }
 
 .half-round {
   width: 11%;
@@ -1020,20 +1085,113 @@ h4 {
   100% { transform: scale(1); }
 }
 
+
 .sky-text {
   width: 72%;
   position: absolute;
-  top: 45px;
-  left: 75px;
+  top: 38px;
+  left: 15%;
   -webkit-animation: scale-in 2s linear forwards;
   -moz-animation:    scale-in 2s linear forwards;
   -o-animation:      scale-in 2s linear forwards;
   animation:         scale-in 2s linear forwards;
 }
+/*
+.sky-text { 
+  width: 25%;
+  margin: 0 auto;
+  -webkit-animation: scale-in 2s linear forwards;
+  -moz-animation:    scale-in 2s linear forwards;
+  -o-animation:      scale-in 2s linear forwards;
+  animation:         scale-in 2s linear forwards;
+ }
+
+.sky-text-number {
+  width: 100%;
+  margin-top: 25px;
+  color: #A71E34;
+  font-size: 6em;
+  font-weight: 900;
+  text-align: center;
+  line-height: 80px;
+  -webkit-animation: scale-in 2s linear forwards;
+  -moz-animation:    scale-in 2s linear forwards;
+  -o-animation:      scale-in 2s linear forwards;
+  animation:         scale-in 2s linear forwards;
+
+}
+
+.sky-text {
+  width: 100%;
+  top: 145px;
+  color: #A71E34;
+  font-size: 1.5em;
+  text-align: center;
+  -webkit-animation: scale-in 2s linear forwards;
+  -moz-animation:    scale-in 2s linear forwards;
+  -o-animation:      scale-in 2s linear forwards;
+  animation:         scale-in 2s linear forwards;
+
+}*/
 
 @keyframes scale-in {
   0%{ transform: scale(0); }
   50% { transform: scale(0); }
   75% { transform: scale(0); }
   100% { transform: scale(1); }
+}
+
+@media only screen and (max-width: 995px) {
+ .ill-health,
+  .polution-stats { width: 100%; }
+
+  .early-deaths-per-year{
+    width: 90%;
+    margin: 0 0 50px 8%;
+  }
+
+  .air-graph-wrapper { height: 222px }
+  .exhaust-emission h3 { width: 100%; }
+  .desktop { display: none; }
+  .mobile { display: block; }
+  .round { 
+    width: 11%;
+    left: -1% 
+  }
+
+  .sky-text { 
+    width: 64%;
+    top: 14%;
+    left: 24%;
+  }
+
+  .small-round {  
+    width: 8%;
+    position: absolute;
+    top: 82%;
+    left: -10%;
+    -webkit-animation: half-round .5s linear forwards;
+    -moz-animation:    half-round .5s linear forwards;
+    -o-animation:      half-round .5s linear forwards;
+    animation:         half-round .5s linear forwards;
+   }
+
+  .sky {
+    width: 90%;
+    margin-top: 20px; 
+    margin-left: 11%;
+  }
+
+  /*.sky-text-number {
+    margin-top: 19px;
+    font-size: 7.5em;
+    line-height: 117px;
+  }
+
+  .sky-text {
+    width: 100%;
+    font-size: 2.1em;
+  }
+
+  .sky-text-img { width: 20%; }*/
 }
