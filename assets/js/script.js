@@ -46,4 +46,57 @@ $(document).ready(function () {
     }
   });
 
+  $(window).on('scroll',function () {
+    
+    // Lightning animation
+    var lightning_banner = $('.banner').offset().top;
+    var topOfWindow = $(window).scrollTop();
+
+    if (lightning_banner < (topOfWindow+200)) {
+        $('.lightning').addClass("anim-lightning");
+    }
+    
+    // Car animation
+    var tempo_right= $('.tempo-to-right').offset().top;
+    if (tempo_right < (topOfWindow+700)) {
+      $('.car-to-left').addClass("car-left");
+      $('.car-to-right').addClass("car-right");
+      $('.tempo-to-right').addClass("tempo-right");
+    }
+
+  // Hand animation
+   var hand_drop= $('.hand-image').offset().top   
+    if (hand_drop < (topOfWindow+600)) {
+      $('.hand-image').addClass("hand-drop");
+    }
+
+  // trainle animation
+    var offering_stats_wrapper= $('.offering-stats-wrapper').offset().top;
+    if (offering_stats_wrapper < (topOfWindow+700)) {
+      $('.offering-stats-wrapper').addClass("offering-stats-triangle");
+    }
+
+  // Death animation
+    var sky_top= $('.sky').offset().top;
+    if (sky_top < (topOfWindow+700)) {
+      $('.half-round').addClass("anime-half-round");
+      $('.round').addClass("anime-roud");
+      $('.sky').addClass("sky-anime");
+      $('.sky-text').addClass("anime-sky-text");
+    }
+
+  // Graph animation 
+    var bar_top= $('.bar').offset().top;
+    if (bar_top < (topOfWindow+800)) {
+      $('.bar').addClass("anime-bar");
+    }
+
+  // on the road graph animation
+    var on_road_top= $('.on-the-road-graph').offset().top;
+    if (on_road_top < (topOfWindow+800)) {
+      $('.on-the-road-graph').addClass("anime-on-the-road-graph");
+    }
+
+  });
+
 });

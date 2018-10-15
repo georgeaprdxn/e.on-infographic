@@ -321,6 +321,9 @@ h2 {
 .lightning { 
   display: inline-block; 
   position: absolute;
+}
+
+.anim-lightning {
   -webkit-animation: lightning 1s linear;
   -moz-animation:    lightning 1s linear;
   -o-animation:      lightning 1s linear;
@@ -360,10 +363,13 @@ h2 {
 .car-to-left {
   width: 15%;
   right: 85%;
-  -webkit-animation: car-left 2s infinite linear;
-  -moz-animation:    car-left 2s infinite linear;
-  -o-animation:      car-left 2s infinite linear;
-  animation:         car-left 2s infinite linear;
+}
+
+.car-left { 
+  -webkit-animation: car-left 2s linear;
+  -moz-animation:    car-left 2s linear;
+  -o-animation:      car-left 2s linear;
+  animation:         car-left 2s linear; 
 }
 
 @keyframes car-left {
@@ -374,10 +380,13 @@ h2 {
 .car-to-right {
   width: 20%;
   left: 20%;
-  -webkit-animation: car-right 2s infinite linear;
-  -moz-animation:    car-right 2s infinite linear;
-  -o-animation:      car-right 2s infinite linear;
-  animation:         car-right 2s infinite linear;
+}
+
+.car-right {
+  -webkit-animation: car-right 2s linear;
+  -moz-animation:    car-right 2s linear;
+  -o-animation:      car-right 2s linear;
+  animation:         car-right 2s linear;
 }
 
 @keyframes car-right {
@@ -388,10 +397,13 @@ h2 {
 .tempo-to-right {
   width: 22%;
   left: 65%;
-  -webkit-animation: tempo-right 2s infinite linear;
-  -moz-animation:    tempo-right 2s infinite linear;
-  -o-animation:      tempo-right 2s infinite linear;
-  animation:         tempo-right 2s infinite linear;
+}
+
+.tempo-right {
+  -webkit-animation: tempo-right 2s linear;
+  -moz-animation:    tempo-right 2s linear;
+  -o-animation:      tempo-right 2s linear;
+  animation:         tempo-right 2s linear;
 }
 
 @keyframes tempo-right {
@@ -499,10 +511,12 @@ h2 {
   z-index: 1;
   top: -6%;
   right: 5%;
-  -webkit-animation: hand-drop 1.2s infinite linear;
-  -moz-animation:    hand-drop 1.2s infinite linear;
-  -o-animation:      hand-drop 1.2s infinite linear;
-  animation:         hand-drop 1.2s infinite linear;
+}
+
+.hand-drop {
+  -webkit-animation: hand-drop 1.2s linear;
+  -moz-animation:    hand-drop 1.2s linear;
+  -o-animation:      hand-drop 1.2s linear;
 }
 
 @keyframes hand-drop {
@@ -626,14 +640,14 @@ h4 {
   text-align: center;
 }
 
-.offering-stats-wrapper {
+.offering-stats-triangle {
   -webkit-animation: triangle-emerge 2s;
      -moz-animation: triangle-emerge 2s;
        -o-animation: triangle-emerge 2s;
           animation: triangle-emerge 2s;
 }
 
-.offering-stats-wrapper figure img { animation: triangle-emerge 4s; }
+.offering-stats-triangle figure img { animation: triangle-emerge 4s; }
 
 @keyframes triangle-emerge {
   0% {
@@ -1071,8 +1085,9 @@ h4 {
   bottom: 0;
   left: 0;
   background-color: #fff;
-  animation: reveal 3s forwards;
 }
+
+.anime-on-the-road-graph .overlay { animation: reveal 3s forwards; }
 
 @keyframes reveal {
   from {
@@ -1150,7 +1165,7 @@ h4 {
 
 .air-graph-wrapper {
   width: 90%;
-  height: 192px;
+  height: 230px;
   margin: 0 auto;
   position: relative;
 }
@@ -1163,9 +1178,15 @@ h4 {
   bottom: 0;
   display: inline-block;
   background-color: #1f5f76;
-  animation: graphAnimate 5s forwards;
   text-align: center;
   vertical-align: bottom;
+}
+
+.anime-bar {
+  -webkit-animation: graphAnimate 5s forwards;
+  -moz-animation:    graphAnimate 5s forwards;
+  -o-animation:      graphAnimate 5s forwards;
+  animation:         graphAnimate 5s forwards; 
 }
 
 .bar:first-child { margin-left: 0; }
@@ -1233,6 +1254,9 @@ h4 {
   position: absolute;
   top: 85%;
   left: -25%;
+}
+
+.half-round-anime {
   -webkit-animation: half-round .5s linear forwards;
   -moz-animation:    half-round .5s linear forwards;
   -o-animation:      half-round .5s linear forwards;
@@ -1249,6 +1273,9 @@ h4 {
   position: absolute;
   top: 75%;
   left: -13%;
+}
+
+.anime-roud {
   -webkit-animation: round 1s linear forwards;
   -moz-animation:    round 1s linear forwards;
   -o-animation:      round 1s linear forwards;
@@ -1266,6 +1293,9 @@ h4 {
   position: relative;
   width: 100%;
   margin-top: 4.5%;
+}
+
+.sky-anime {
   -webkit-animation: sky 1.5s linear forwards;
   -moz-animation:    sky 1.5s linear forwards;
   -o-animation:      sky 1.5s linear forwards;
@@ -1286,12 +1316,14 @@ h4 {
   position: absolute;
   top: 15%;
   left: 15%;
+}
+
+.anime-sky-text {
   -webkit-animation: scale-in 2s linear forwards;
   -moz-animation:    scale-in 2s linear forwards;
   -o-animation:      scale-in 2s linear forwards;
   animation:         scale-in 2s linear forwards;
 }
-
 
 @keyframes scale-in {
   0%{ transform: scale(0); }
@@ -1310,7 +1342,7 @@ h4 {
   }
 
   .air-graph-wrapper { height: 222px }
-  .exhaust-emission h3 { width: 100%; }
+  .exhaust-emission h3 { width: 228px; }
   .desktop { display: none; }
   .mobile { display: block; }
   .round { 
