@@ -1094,3 +1094,47 @@ h4 {
   75% { transform: scale(0); }
   100% { transform: scale(1); }
 }
+
+.hide { display: none; }
+
+@media screen and (max-width: 868px) {
+  #progressbar-container {
+    height: 400px;
+    padding-top: 10%;
+    transform: rotate(-90deg);
+  }
+
+  .proggress,
+  .progressBlade .image {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .progressBlade { width: 70%; }
+
+  .percentCount {
+    margin-top: 33px;
+    transform: rotate(90deg);
+  }
+
+  .progressName { transform: rotate(90deg); }
+
+  .progressbar .image {
+    max-width: 120px;
+    max-height: 120px;
+    width: 10%;
+    display: inline-block;
+    transform: rotate(90deg) translateY(-10px);
+  }
+
+  .progressbar .image img {
+    max-width: 120px;
+    max-height: 120px;
+    width: 100px;
+  }
+
+  #progressbar0 .wheels {
+    margin: 0 auto;
+  }
+
+}

@@ -1,9 +1,25 @@
 $(document).ready(function () {
+
   //Progress Bar functionality
   var progressColors = ['#096275', '#a71e34', '#CED672', '#8fd0d8', '#86CED3'];
+  var progressImages = [{
+    'car': 'dark_blue_car.png',
+    'wheels': 'dark_blue_wheel.png'
+  }, {
+    'car': 'red_car.png',
+    'wheels': 'red_wheel.png'
+  }, {
+    'car': 'green_car.png',
+    'wheels': 'gree_blue_wheel.png'
+  }, {
+    'car': 'blue_car.png',
+    'wheels': 'gree_blue_wheel.png'
+  }];
+
   var progressBarData = [{
       'name': 'PETROL VEHICLE',
       'value': 15783,
+      'image': ''
     },
     {
       'name': 'DIESEL VEHICLE',
@@ -27,7 +43,8 @@ $(document).ready(function () {
     $('#progressbar' + i).LineProgressbar({
       percentage: progressBarData[i].value,
       fillBackgroundColor: progressColors[i],
-      height: '55px'
+      height: 55
+
     });
     $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
   }
@@ -102,4 +119,18 @@ $(document).ready(function () {
           .style('font-size', '10px')
           .attr('dx', '0em')
           .attr('dy', '-.8em')
+
+  if ($(window).width() < 868) {
+    $('.save-cost-car-image').addClass('hide');
+    var progressContainerWidth = $('#progressbar-container').width() + 120;
+    $('#progressbar-container').height(progressContainerWidth);
+    $('.proggress').height(120);
+    $('.progressbar .image').each(function(index,el) {
+      var image = new Image();
+      image.src = 'assets/images/'+progressImages[index].car;
+      el.innerHTML += '<img class="car" src=assets/images/' + progressImages[index].car + '>';
+      el.innerHTML += '<img class="wheels" src=assets/images/' + progressImages[index].wheels + '>';
+    });
+  }
+
 });
