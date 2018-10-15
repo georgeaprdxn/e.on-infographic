@@ -18,4 +18,32 @@ $(document).ready(function () {
       'value': 12066,
     }
   ];
+
+  for (var i = 0; i < progressBarData.length; i++) {
+    var progressbar = document.createElement('div');
+    $(progressbar).attr('id', 'progressbar' + i);
+    $(progressbar).attr('class', 'progressbars');
+    $('#progressbar-container').append(progressbar);
+    $('#progressbar' + i).LineProgressbar({
+      percentage: progressBarData[i].value,
+      fillBackgroundColor: progressColors[i],
+      height: '55px'
+    });
+    $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
+  }
+  $('#progressbar3 .progressName').append('<sup>7</sup>');
+  
+
+  // To set piggy bank on position
+  $(window).on('load resize',function(){
+    a=$('.government').offset();
+    b=$('.government ul').offset();
+    if(window.innerWidth <= 995){
+      c=b.top-a.top
+      $('.hand-money-bank-image').css('top',c+34);
+    }else {
+      $('.hand-money-bank-image').css('cssText','top','unset')
+    }
+  });
+
 });

@@ -209,11 +209,47 @@ h1,h2,h3,h5 { color: #39393a; }
   background-color: #39393a;
 }
 
+@media screen and (max-width: 995px) {
+  
+  .wrapper { width: 90%; }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  .common-text-style { 
+    font-size: 32px; 
+    line-height: 40px;
+  }
+
+  .infographic-content-section .wrapper:after { width: 10.6%; }
+}
+
+@media screen and (max-width: 767px) {
+
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .common-text-style { 
+    font-size: 18px; 
+    line-height: 24px;
+  }
+
+  .infographic-content-section .wrapper:after { width: 14.6%; }
+}
+
 /*==========================================================================
   Header section starts here
 ============================================================================*/
 
-.page-header { margin-top: 80px; }
+.page-header { 
+  margin-top: 80px; 
+  position: relative;
+}
 
 .page-header h1 { 
   font-size: 20px; 
@@ -461,22 +497,22 @@ h2 {
   width: 60%;
   position: absolute;
   z-index: 1;
-  top: -8%;
-  right: 17px;
-  -webkit-animation: hand-drop 2s infinite ease-in-out;
-  -moz-animation:    hand-drop 2s infinite ease-in-out;
-  -o-animation:      hand-drop 2s infinite ease-in-out;
-  animation:         hand-drop 2s infinite ease-in-out;
+  top: -6%;
+  right: 5%;
+  -webkit-animation: hand-drop 1.2s infinite linear;
+  -moz-animation:    hand-drop 1.2s infinite linear;
+  -o-animation:      hand-drop 1.2s infinite linear;
+  animation:         hand-drop 1.2s infinite linear;
 }
 
 @keyframes hand-drop {
   0% { 
-    right: -200px; 
+    right: -50%; 
     transform:rotate(10deg);
   }
   80% { transform:rotate(10deg); }
   100% { 
-    right: 18px; 
+    right: 5%; 
     transform:rotate(0);
   }
 }
@@ -485,7 +521,7 @@ h2 {
 
 .money-bank-image { 
   width: 50%;
-  margin: 24.5% auto 0;
+  margin: 26.5% auto 0;
 }
 
 .money-bank-image img { width: 100% }
@@ -503,7 +539,7 @@ h2 {
 
 h4 {
   width: 86%;
-  margin: 0 auto 15%;
+  margin: 0 auto;
   color: #1f5f76; 
   font-family: EconSansReg;
   font-size: 22px;
@@ -514,22 +550,22 @@ h4 {
 
 .government ul li:first-child h4 {
   width: 57%;
-  padding-bottom: 23px;
+  padding-bottom: 8.5%;
   margin-bottom: 10%;
 }
 
 .government ul li:nth-child(2) h4 {
   width: 60%;
-  padding-bottom: 27px;
+  padding-bottom: 10%;
   margin-bottom: 11%;
 }
 
 .government ul li:nth-child(3) h4 {
   width: 35%;
-  margin-bottom: 28px;
+  margin-bottom: 10%;
 }
 
-.government ul li:last-child h4 { margin-bottom: 33px; }
+.government ul li:last-child h4 { margin-bottom: 11%; }
 
 .offering-stats img {
   margin: 0 auto;
@@ -650,10 +686,6 @@ h4 {
 .car {
   position: relative;
   z-index: -1;
-/*  -webkit-animation: car .5s infinite linear;
-  -moz-animation:    car .5s infinite linear;
-  -o-animation:      car .5s infinite linear;
-  animation:         car .5s infinite linear;*/
 }
 
 .electric_car_chargable {
@@ -699,6 +731,112 @@ h4 {
 .offering-image img,
 .offering-stats img {
   width: 100%;
+}
+
+@media screen and (max-width: 995px) {
+  .government-description { 
+    width: 100%; 
+    display: block;
+  }
+
+  .government-description h3 { width: 70%; }
+
+  .hand-money-bank-image { 
+    position: absolute; 
+    right: 6%;
+  }
+
+  .hand-image { 
+    width: 80%;   
+    top: -13%;
+    right: -10%
+  }
+
+  @keyframes hand-drop {
+    0% { 
+      right: -50%; 
+      transform:rotate(10deg);
+    }
+    80% { transform:rotate(10deg); }
+    100% { 
+      right: -10%; 
+      transform:rotate(0);
+    }
+  }
+
+  .money-bank-image { width: 75%; }
+
+  .hybrid-cars { width: 33%; }
+
+  .electric-vehicles { width: 33%; }
+
+  .plugable-vans { 
+    width: 44%; 
+    margin-right: 6%;
+    transform: translateX(5%);
+  }
+
+  .charge-points {
+    width: 50%; 
+    transform: unset;
+  }
+
+  .government ul li:first-child h4 { width: 142px; }
+  
+  .government ul li:nth-child(2) h4 { width: 155px; }
+
+  .government ul li:nth-child(3) h4 { 
+    width: 99px;
+    margin-bottom: 11.5%; 
+  }
+
+  .government ul li:last-child h4 { width: 233px; }
+
+
+  .offering-stats .figure { font-size: 24px; }
+
+}
+
+@media screen and (max-width: 767px) {
+  .government-description h3 { width: 260px; } 
+  
+  .government ul li { position: relative; }
+
+  .government ul li h4 { 
+    font-size: 16px; 
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offering-image { margin-top: 100px; }
+
+  .hybrid-cars .offering-image { margin-top: 95px; }
+
+  .electric-vehicles { transform: translateX(-18%); }
+  
+  .government ul li:first-child h4 { width: 66%; }
+  
+  .government ul li:nth-child(2) h4 { width: 80%; }
+
+  .government ul li:last-child h4 { width: 80%; }
+
+  .offering-stats .figure { font-size: 16px; }
+
+}
+
+@media screen and (max-width: 540px) {
+  .government ul li:first-child h4 { width: 90%; }
+
+  .hybrid-cars .offering-image { margin-top: 97px; }
+
+  .offering-stats .figure { 
+    top: 8px;
+    font-size: 10px; 
+  }
+
+  .figure sup { font-size: 10px; }
 }
 
 /*==========================================================================
@@ -871,20 +1009,29 @@ h4 {
 
 /* on the road section starts here */
 
-.on-the-road { margin-top: 64px; }
+.on-the-road {
+  padding-bottom: 12%;
+  margin-top: 64px;
+  position: relative;
+}
+
+.on-the-road-content {
+  position: relative;
+  z-index: 1;
+}
 
 .on-the-road-info { width: 66%; }
 
 .on-the-road ul { width: 36%; }
 
-.on-the-road ul li { 
+.on-the-road ul li {
   width: calc(75% - 5px);
   display: inline-block; 
 }
 
 .line-indicator-vehicle { margin-top: 42px; }
 
-.line-indicator-vehicle li:first-child { 
+.line-indicator-vehicle li:first-child {
   width: 20%; 
   margin-right: 5%;
 }
@@ -911,11 +1058,59 @@ h4 {
   margin-top: 28px;
 }
 
+.on-the-road-graph {
+  position: absolute;
+  z-index: 0;
+  top: 34px;
+}
+
+.on-the-road-graph .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  animation: reveal 3s forwards;
+}
+
+@keyframes reveal {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.on-the-road-graph img { width: 100%; }
+
 /* Consumer Desire section starts here */
 
 .consumer-desire { margin-top: 61px; }
 
-.consumer-info { width: 28%; }
+.consumer-desire img { width: 100%; }
+
+.desire-overview,
+.desire-stats {
+  width: 33.33%;
+  margin-left: -5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.desire-overview { margin-left: 0; }
+
+.desire-overview p { width: 85%; }
+
+.desire-stats { padding: 0 3%; }
+
+.desire-stats:last-child { padding: 0 1% 0 5%; }
+
+.desire-stats .common-text-style {
+  margin-top: 20px;
+  font-size: 21px;
+}
 
 /* sources section starts here */
 
@@ -1070,7 +1265,7 @@ h4 {
 .sky {
   position: relative;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 4.5%;
   -webkit-animation: sky 1.5s linear forwards;
   -moz-animation:    sky 1.5s linear forwards;
   -o-animation:      sky 1.5s linear forwards;
@@ -1089,50 +1284,14 @@ h4 {
 .sky-text {
   width: 72%;
   position: absolute;
-  top: 38px;
+  top: 15%;
   left: 15%;
   -webkit-animation: scale-in 2s linear forwards;
   -moz-animation:    scale-in 2s linear forwards;
   -o-animation:      scale-in 2s linear forwards;
   animation:         scale-in 2s linear forwards;
 }
-/*
-.sky-text { 
-  width: 25%;
-  margin: 0 auto;
-  -webkit-animation: scale-in 2s linear forwards;
-  -moz-animation:    scale-in 2s linear forwards;
-  -o-animation:      scale-in 2s linear forwards;
-  animation:         scale-in 2s linear forwards;
- }
 
-.sky-text-number {
-  width: 100%;
-  margin-top: 25px;
-  color: #A71E34;
-  font-size: 6em;
-  font-weight: 900;
-  text-align: center;
-  line-height: 80px;
-  -webkit-animation: scale-in 2s linear forwards;
-  -moz-animation:    scale-in 2s linear forwards;
-  -o-animation:      scale-in 2s linear forwards;
-  animation:         scale-in 2s linear forwards;
-
-}
-
-.sky-text {
-  width: 100%;
-  top: 145px;
-  color: #A71E34;
-  font-size: 1.5em;
-  text-align: center;
-  -webkit-animation: scale-in 2s linear forwards;
-  -moz-animation:    scale-in 2s linear forwards;
-  -o-animation:      scale-in 2s linear forwards;
-  animation:         scale-in 2s linear forwards;
-
-}*/
 
 @keyframes scale-in {
   0%{ transform: scale(0); }
@@ -1177,21 +1336,12 @@ h4 {
    }
 
   .sky {
-    width: 90%;
-    margin-top: 20px; 
+    width: 90%; 
     margin-left: 11%;
   }
 
-  /*.sky-text-number {
-    margin-top: 19px;
-    font-size: 7.5em;
-    line-height: 117px;
-  }
+}
 
-  .sky-text {
-    width: 100%;
-    font-size: 2.1em;
-  }
-
-  .sky-text-img { width: 20%; }*/
+@media screen and (max-width: 540px){
+.bar-label { font-size: 16px;                                                                                                                                                                                                                                                                                                                              }
 }

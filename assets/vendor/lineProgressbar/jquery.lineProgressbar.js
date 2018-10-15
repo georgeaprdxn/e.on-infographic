@@ -50,9 +50,8 @@
       }, {
         step: function (x) {
           if (options.ShowProgressCount) {
-
             $(el).find(".percentCount").text('£' +
-              options.percentage.toLocaleString());
+              parseInt(((x/100)*16000).toFixed(0)).toLocaleString());
           }
         },
         duration: options.duration
