@@ -1072,7 +1072,28 @@ h4 {
 
 .consumer-desire { margin-top: 61px; }
 
-.consumer-info { width: 28%; }
+.consumer-desire img { width: 100%; }
+
+.desire-overview,
+.desire-stats {
+  width: 33.33%;
+  margin-left: -5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.desire-overview { margin-left: 0; }
+
+.desire-overview p { width: 85%; }
+
+.desire-stats { padding: 0 3%; }
+
+.desire-stats:last-child { padding: 0 1% 0 5%; }
+
+.desire-stats .common-text-style {
+  margin-top: 20px;
+  font-size: 21px;
+}
 
 /* sources section starts here */
 
