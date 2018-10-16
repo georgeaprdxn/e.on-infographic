@@ -73,19 +73,24 @@ $(document).ready(function () {
       }
     });
 
-    if(window.innerWidth <= 992) {
-      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph-mobile.png');
-    }
-    else {
-      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph.png');
-    }
-
     var _onTheGraph = document.querySelector('.on-the-road-graph');
     var _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
 
-    if(_offsetHeight) {
-      var _onTheRoadContainer = document.querySelector('.on-the-road');
-      _onTheRoadContainer.style.height = _offsetHeight+'px';
+    if(window.innerWidth <= 992) {
+
+      if(_offsetHeight) {
+        var _onTheRoadContainer = document.querySelector('.on-the-road');
+        _onTheRoadContainer.style.height = _offsetHeight+'px';
+      }
+
+      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph-mobile.png');
+    }
+    else {
+      if(_offsetHeight) {
+        var _onTheRoadContainer = document.querySelector('.on-the-road');
+        _onTheRoadContainer.style.height = 'auto';
+      }      
+      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph.png');
     }
     
   });

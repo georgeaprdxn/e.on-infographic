@@ -1045,7 +1045,7 @@ h4 {
 
 .on-the-road-graph {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: 34px;
 }
 
