@@ -120,7 +120,7 @@ $(document).ready(function () {
           .attr('dx', '0em')
           .attr('dy', '-.8em')
 
-  if ($(window).width() < 868) {
+  if ($(window).width() < 768) {
     $('.save-cost-car-image').addClass('hide');
     var progressContainerWidth = $('#progressbar-container').width() + 120;
     $('#progressbar-container').height(progressContainerWidth);

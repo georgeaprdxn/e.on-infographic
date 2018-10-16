@@ -1097,7 +1097,7 @@ h4 {
 
 .hide { display: none; }
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 767px) {
   #progressbar-container {
     height: 400px;
     padding-top: 10%;
