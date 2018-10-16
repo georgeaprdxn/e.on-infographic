@@ -1496,3 +1496,9 @@ h4 {
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 360px) {
+  #progressbar-container {
+    transform: rotate(-90deg) translateY(0%);
+  }
+}
