@@ -1512,6 +1512,7 @@ h4 {
     line-height: 30px;
   }
   
+
   .common-text-style {
     font-size: 18px;
     line-height: 24px;
@@ -1541,6 +1542,11 @@ h4 {
   }
 
   .infographic-content-section .wrapper:after { width: 14.6%; }
+
+  .save-cost-description { 
+    width: 100%; 
+    margin-right: unset;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -1548,6 +1554,7 @@ h4 {
   .line-indicator-fuel { margin-top: 15px; }
 
   .on-the-road-info {
+    width: 86%;
     line-height: 14px;
     font-size: 12px!important;
   }
@@ -1558,7 +1565,7 @@ h4 {
   }
 
   .charging-point-info {
-    width:  45%!important;
+    width:  36%!important;
     margin-top: 15px;
     line-height: 12px;
     font-size: 12px;

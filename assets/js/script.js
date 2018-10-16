@@ -150,7 +150,6 @@ $(document).ready(function () {
 
   $(window).on('resize', function() {
     if ($(window).width() < 768) {
-      console.log('hit');
       $('.save-cost-car-image').addClass('hide');
       var progressContainerWidth = $('#progressbar-container').width();
       $('#progressbar-container').height(progressContainerWidth);
