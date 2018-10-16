@@ -35,15 +35,27 @@ $(document).ready(function () {
   
 
   // To set piggy bank on position
-  $(window).on('load resize',function(){
-    a=$('.government').offset();
-    b=$('.government ul').offset();
+  var government_top,government_ul_top,subtracted_val,offering_title_height,counter;
+  $(window).on('load resize orientationchange',function(){
+    government_top=$('.government').offset();
+    government_ul_top=$('.government ul').offset();
     if(window.innerWidth <= 995){
-      c=b.top-a.top
-      $('.hand-money-bank-image').css('top',c+34);
+      subtracted_val=government_ul_top.top-government_top.top
+      $('.hand-money-bank-image').css('top',subtracted_val+34);
     }else {
       $('.hand-money-bank-image').css('cssText','top','unset')
     }
+
+    // Align offering section triangle
+    offering_title_height=document.getElementsByClassName('charge-points')[0].getElementsByTagName('h4')[0].offsetHeight;
+    counter=0;
+    $('.government ul li h4').each(function(){
+      if(counter<3){
+        counter++;
+        $(this).css('min-height',offering_title_height);
+      }
+    });
+  
   });
 
   // animation on scroll
