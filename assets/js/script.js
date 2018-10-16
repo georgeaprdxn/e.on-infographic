@@ -1,9 +1,25 @@
 $(document).ready(function () {
+
   //Progress Bar functionality
   var progressColors = ['#096275', '#a71e34', '#CED672', '#8fd0d8', '#86CED3'];
+  var progressImages = [{
+    'car': 'dark_blue_car.png',
+    'wheels': 'dark_blue_wheel.png'
+  }, {
+    'car': 'red_car.png',
+    'wheels': 'red_wheel.png'
+  }, {
+    'car': 'green_car.png',
+    'wheels': 'gree_blue_wheel.png'
+  }, {
+    'car': 'blue_car.png',
+    'wheels': 'gree_blue_wheel.png'
+  }];
+
   var progressBarData = [{
       'name': 'PETROL VEHICLE',
       'value': 15783,
+      'image': ''
     },
     {
       'name': 'DIESEL VEHICLE',
@@ -27,7 +43,8 @@ $(document).ready(function () {
     $('#progressbar' + i).LineProgressbar({
       percentage: progressBarData[i].value,
       fillBackgroundColor: progressColors[i],
-      height: '55px'
+      height: 55
+
     });
     $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
   }
@@ -55,7 +72,22 @@ $(document).ready(function () {
         $(this).css('min-height',offering_title_height);
       }
     });
-  
+
+    if(window.innerWidth <= 992) {
+      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph-mobile.png');
+    }
+    else {
+      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph.png');
+    }
+
+    var _onTheGraph = document.querySelector('.on-the-road-graph');
+    var _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
+
+    if(_offsetHeight) {
+      var _onTheRoadContainer = document.querySelector('.on-the-road');
+      _onTheRoadContainer.style.height = _offsetHeight+'px';
+    }
+    
   });
 
   // animation on scroll
@@ -110,5 +142,28 @@ $(document).ready(function () {
     }
 
   });
+
+  $(window).on('resize', function() {
+    if ($(window).width() < 768) {
+      console.log('hit');
+      $('.save-cost-car-image').addClass('hide');
+      var progressContainerWidth = $('#progressbar-container').width();
+      $('#progressbar-container').height(progressContainerWidth);
+      $('.proggress').height(65);
+
+      if (!$('.progressbar .image img').length) {
+        $('.progressbar .image').each(function(index,el) {
+          var image = new Image();
+          image.src = 'assets/images/'+progressImages[index].car;
+          el.innerHTML += '<img class="car" src=assets/images/' + progressImages[index].car + '>';
+          el.innerHTML += '<img class="wheels" src=assets/images/' + progressImages[index].wheels + '>';
+        });
+      }
+
+    } else if($(window).width() >= 768) {
+      $('.save-cost-car-image').removeClass('hide');
+      $('.progressbar .image img').remove();
+    }
+  }).resize();
 
 });
