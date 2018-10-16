@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var show_flag = false;
+  var counterAnimateFlag = false;
   //Progress Bar functionality
   var progressColors = ['#096275', '#a71e34', '#CED672', '#8fd0d8', '#86CED3'];
   var progressImages = [{
@@ -148,19 +149,31 @@ $(document).ready(function () {
     var consumer_top = $('.desire-stats').offset().top;
     if (consumer_top < (topOfWindow + 400)) {
       $('.desire-stats').addClass("anime-consumer-desire");
+      if (!counterAnimateFlag) {
+        counterAnimateFlag = true;
+        $('.desire-percent').each(function () {
+          $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+          }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now) + '%');
+            }
+          });
+        });
+      }
     }
 
     var bar_save_top = $('#progressbar-container').offset().top;
     if (bar_save_top < (topOfWindow + 400) && !show_flag) {
       show_flag = true;
       animeBar();
-    }
-
+    }    
   });
 
-  $(window).on('resize', function () {
+  $(window).on('resize', function() {
     if ($(window).width() < 768) {
-      console.log('hit');
       $('.save-cost-car-image').addClass('hide');
       var progressContainerWidth = $('#progressbar-container').width();
       $('#progressbar-container').height(progressContainerWidth);
