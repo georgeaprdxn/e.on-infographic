@@ -1086,9 +1086,7 @@ h4 {
   animation: show-desire 2s forwards;
 }
 
-.grayed-out img {
-  max-height: 100%;
-}
+.grayed-out img { max-height: 100%; }
 
 @keyframes show-desire {
   from {
@@ -1120,6 +1118,22 @@ h4 {
 .desire-stats .common-text-style {
   margin-top: 20px;
   font-size: 21px;
+}
+
+.desire-percent {
+  color: #39393a;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.count-69 .desire-percent {
+  position: absolute;
+  top: 13%;
+}
+
+.count-86 .desire-percent {
+  position: absolute;
+  top: -7%;
 }
 
 /* sources section starts here */
@@ -1576,4 +1590,486 @@ h4 {
   #progressbar-container {
     transform: rotate(-90deg) translateY(0%);
   }
+}
+
+/*Hamburger menu styling*/
+
+
+.menu-tools-container {
+  width: 30%;
+  padding: 80px 2.5%;
+  display: none;
+  position: absolute;
+  background-color: #eaeae8;
+  right: 9%;
+  top: 0;
+  z-index: 9;
+}
+
+.menu>li>a {
+  padding: 20px 40px 15px 10px;
+  display: block;
+  color: #000;
+  font-family: EconSansBol, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.menu li a {
+  transition: .2s ease-in;
+  position: relative;
+}
+
+.menu-item a svg,
+.menu li button {
+  display: none;
+}
+
+/*.sub-menu > li:hover ,
+.main-navigation .menu > li >  a:hover {
+    background-color: #131416;
+}*/
+
+.black+.article-content .sponsor-logo {
+  height: 36px;
+}
+
+.submenu-parent>a:hover::after {
+  content: "";
+  height: 34px;
+  background-image: url(assets/images/right-chevron-white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 9.5px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-navigation li a:hover,
+.sub-menu>li>a:hover {
+  color: #fff;
+  background-color: #131416;
+}
+
+
+.sub-menu>li>a {
+  font-family: EconSansReg, Helvetica, Arial, sans-serif;
+  padding: 20px 0 15px 20px;
+  display: block;
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.submenu-grandparent .sub-menu {
+  display: none;
+}
+
+.page-summary-page .summary>a {
+  padding-right: 40px;
+}
+
+.submenu-grandparent>.sub-menu>li>a {
+  padding-left: 40px;
+}
+
+.submenu-grandparent>a:before {
+  content: "";
+  height: 34px;
+  background-image: url(assets/images/right-chevron.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 9.5px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.submenu-grandparent>a:hover::before {
+  content: "";
+  height: 34px;
+  background-image: url(assets/images/right-chevron-white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 9.5px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sub-menu>li>a {
+  transition: .2s ease-in;
+}
+
+.menu>li,
+.menu>li>.sub-menu>li,
+.submenu-grandparent>.sub-menu>li {
+  border-bottom: 1px solid #c4c3c1;
+}
+
+.submenu-parent>.sub-menu,
+.submenu-grandparent>.sub-menu {
+  border-top: 1px solid #c4c3c1;
+}
+
+
+.submenu-parent>a {
+  border-bottom: none;
+}
+
+.menu>li>.sub-menu>li:last-of-type,
+.submenu-grandparent>.sub-menu>li:last-of-type {
+  border-bottom: none;
+}
+
+
+.bars {
+  padding: 25px;
+  background-color: #131416;
+  font-size: 27px;
+  position: absolute;
+  right: 9%;
+  top: 20px;
+  background-repeat: no-repeat;
+  z-index: 10;
+  background-image: url(../images/menu.png);
+  background-size: 25px;
+  background-position: center;
+}
+
+.icon-bars {
+  position: relative;
+  top: 3px;
+}
+
+.icon-close {
+  position: relative;
+  top: 2px;
+}
+
+.close {
+  display: none;
+  padding: 25px;
+  background-color: #131416;
+  font-size: 27px;
+  position: absolute;
+  position: absolute;
+  right: 9%;
+  top: 20px;
+  z-index: 10;
+  background-image: url(../images/close.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+
+.icon-bars,
+.icon-close {
+  display: none !important;
+  fill: #fff;
+}
+
+.bars_scroll {
+  top: 10px;
+}
+
+
+.sub-menu {
+  display: none;
+}
+
+blockmenu li>a:after {
+  content: "";
+  height: 20px;
+  background-image: url('../images/right-chevron.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.open:after {
+  content: "" !important;
+  height: 19px !important;
+  background-image: url('../images/down-arrow.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 0 17px !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.opened:before {
+  content: "" !important;
+  height: 19px !important;
+  background-image: url('../images/down-arrow.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 0 17px !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.open:hover::after {
+  content: "" !important;
+  height: 19px !important;
+  background-image: url('../images/down-arrow-white.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 0 17px !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.opened:hover::before {
+  content: "" !important;
+  height: 19px !important;
+  background-image: url('../images/down-arrow-white.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 0 17px !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.rmchevron:after {
+  content: "" !important;
+  background-image: url('') !important;
+}
+
+.rmchevron:hover::after {
+  content: "" !important;
+  background-image: url('') !important;
+}
+
+.sub-menu li>a:after {
+  display: none;
+}
+
+
+.fix {
+  position: fixed;
+}
+
+.menu {
+  z-index: 100000;
+}
+
+.navigation_index {
+  z-index: 9999;
+  top: 69px;
+  overflow-y: scroll;
+  height: calc(100vh - 150px);
+}
+
+.addition_header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 34px 0;
+  z-index: 1000000;
+  background: #f6f6f8;
+  border-bottom: 1px solid #cfcfd4;
+}
+
+.addition_header:after {
+  /* content: ''; */
+  background-image: url(../images/econ_logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 118px;
+  display: inline-block;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translateY(-50%);
+}
+
+
+.bars_scroll {
+  top: 10px;
+}
+
+
+.to-top {
+  display: none;
+  padding: 5px 14px;
+  border-radius: 50%;
+  background-color: #787878;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  z-index: 15;
+}
+
+
+.to-top i {
+  content: '\f106';
+  font-family: FontAwesome;
+  position: relative;
+  /*top: 50%;*/
+  /*left: 0;*/
+  /*transform: translate(-50%,-50%);*/
+}
+
+
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  /*// Your custom CSS goes here*/
+
+  .bars {
+    background: url('../images/hamburger.png') no-repeat #131416;
+    background-position: center;
+  }
+
+  nav .close {
+    background: url('../images/close.png') no-repeat #131416;
+    background-position: center;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .testimonial h5 {
+    position: static;
+  }
+
+  .full_width .info-window {
+    width: 100%;
+  }
+
+  .open:after {
+    content: "" !important;
+    height: 19px !important;
+    background-image: url('../images/down-arrow.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding: 0 17px !important;
+    position: absolute !important;
+    right: 4px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .open:hover::after {
+    content: "" !important;
+    height: 19px !important;
+    background-image: url(../images/down-arrow.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding: 0 17px !important;
+    position: absolute !important;
+    right: 3px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .opened:hover::before {
+    content: "" !important;
+    height: 19px !important;
+    background-image: url('../images/down-arrow.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding: 0 17px !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+
+  .main-navigation .menu>li>a:hover::after {
+    content: "";
+    height: 34px;
+    background-image: url(assets/images/right-chevron.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 9.5px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .submenu-grandparent>a:hover::before {
+    content: "";
+    height: 34px;
+    background-image: url(../images/right-chevron.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 9.5px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  sub-menu>li:hover,
+  .main-navigation .menu>li>a:hover {
+    background-color: transparent;
+  }
+
+  .main-navigation li a:hover,
+  .sub-menu>li>a:hover {
+    color: #000;
+    background-color: transparent;
+  }
+
+  .sub-menu>li:hover,
+  .main-navigation .menu>li>a:hover {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-tools-container {
+    padding: 20px 4% 0;
+    width: 100%;
+    right: 0;
+  }
+
+  .navigation_index {
+    height: 100vh;
+  }
+}
+
+.white-space-nowrap {
+  margin-left: 0 !important;
+  white-space: nowrap;
 }
