@@ -1611,7 +1611,7 @@ h4 {
   }
 
   .progressbar .image {
-    transform: rotate(90deg) translate(-15%, -10px);
+    transform: rotate(90deg) translate(-20%, -10px);
   }
 
   .percentCount { margin-top: 19px; }
