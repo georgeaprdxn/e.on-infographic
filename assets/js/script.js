@@ -83,14 +83,14 @@ $(document).ready(function () {
         var _onTheRoadContainer = document.querySelector('.on-the-road');
         _onTheRoadContainer.style.height = _offsetHeight + 'px';
       }
-
-      // $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph-mobile.png');
+      
+      $('#on-the-road-image').attr('src', $('#on-the-road-image').attr('data-mobile-src'));
     } else {
       if (_offsetHeight) {
         var _onTheRoadContainer = document.querySelector('.on-the-road');
         _onTheRoadContainer.style.height = 'auto';
       }
-      // $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph.png');
+      $('#on-the-road-image').attr('src', $('#on-the-road-image').attr('data-desktop-src'));
     }
 
   });
@@ -172,6 +172,7 @@ $(document).ready(function () {
     }    
   });
 
+  var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
   $(window).on('resize', function() {
     if ($(window).width() < 768) {
       $('.save-cost-car-image').addClass('hide');
@@ -183,8 +184,8 @@ $(document).ready(function () {
         $('.progressbar .image').each(function (index, el) {
           var image = new Image();
           image.src = 'assets/images/' + progressImages[index].car;
-          el.innerHTML += '<img class="car" src=assets/images/' + progressImages[index].car + '>';
-          el.innerHTML += '<img class="wheels" src=assets/images/' + progressImages[index].wheels + '>';
+          el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
+          el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
         });
       }
 
