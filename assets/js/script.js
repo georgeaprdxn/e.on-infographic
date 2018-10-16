@@ -46,14 +46,14 @@ $(document).ready(function () {
     }
   });
 
-  $(window).on('scroll',function () {
+  // animation on scroll
+  $(window).on('load scroll',function () {
     
-    // Lightning animation
     var lightning_banner = $('.banner').offset().top;
     var topOfWindow = $(window).scrollTop();
 
     if (lightning_banner < (topOfWindow+200)) {
-        $('.lightning').addClass("anim-lightning");
+      $('.lightning').addClass("anim-lightning");
     }
     
     // Car animation
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
   // Graph animation 
     var bar_top= $('.bar').offset().top;
-    if (bar_top < (topOfWindow+800)) {
+    if (bar_top < (topOfWindow+780)) {
       $('.bar').addClass("anime-bar");
     }
 
