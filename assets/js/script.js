@@ -61,6 +61,22 @@ $(document).ready(function () {
     }else {
       $('.hand-money-bank-image').css('cssText','top','unset')
     }
+
+    if(window.innerWidth <= 992) {
+      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph-mobile.png');
+    }
+    else {
+      $('#on-the-road-image').attr('src', 'assets/images/on_the_road_graph.png');
+    }
+
+    var _onTheGraph = document.querySelector('.on-the-road-graph');
+    var _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
+
+    if(_offsetHeight) {
+      var _onTheRoadContainer = document.querySelector('.on-the-road');
+      _onTheRoadContainer.style.height = _offsetHeight+'px';
+    }
+
   });
 
   // animation on scroll
