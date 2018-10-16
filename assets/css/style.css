@@ -191,6 +191,7 @@ h1,h2,h3,h5 { color: #39393a; }
   color: #39393a;
   font-family: EconSansReg;
   font-size: 24px;
+  font-weight: 500; 
   line-height: 28px;
 }
 
@@ -255,7 +256,7 @@ h1,h2,h3,h5 { color: #39393a; }
   vertical-align: top;
 }
 
-.banner-content .common-text-style { width: 80%; }
+.banner-content .common-text-style { width: 81%; }
 
 h2 {
   margin-bottom: 17px;
@@ -463,7 +464,7 @@ h2 {
   vertical-align: top;
 }
 
-.government-description .common-text-style { width: 91%; }
+.government-description .common-text-style { width: 89%; }
 
 .hand-money-bank-image {
   width: calc(30% - 5px);

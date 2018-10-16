@@ -94,7 +94,7 @@ $(document).ready(function () {
     }
     // fetch url
     var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
-    if ($(window).width() < 768) {
+    if (window.innerWidth < 768) {
       $('.save-cost-car-image').addClass('hide');
       var progressContainerWidth = $('#progressbar-container').width();
       $('#progressbar-container').height(progressContainerWidth);
