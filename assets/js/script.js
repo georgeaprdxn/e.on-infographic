@@ -92,6 +92,27 @@ $(document).ready(function () {
       }
       $('#on-the-road-image').attr('src', $('#on-the-road-image').attr('data-desktop-src'));
     }
+    // fetch url
+    var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
+    if ($(window).width() < 768) {
+      $('.save-cost-car-image').addClass('hide');
+      var progressContainerWidth = $('#progressbar-container').width();
+      $('#progressbar-container').height(progressContainerWidth);
+      $('.proggress').height(65);
+
+      if (!$('.progressbar .image img').length) {
+        $('.progressbar .image').each(function (index, el) {
+          var image = new Image();
+          image.src = 'assets/images/' + progressImages[index].car;
+          el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
+          el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
+        });
+      }
+
+    } else if ($(window).width() >= 768) {
+      $('.save-cost-car-image').removeClass('hide');
+      $('.progressbar .image img').remove();
+    }
 
   });
 
@@ -171,28 +192,5 @@ $(document).ready(function () {
       animeBar();
     }    
   });
-
-  var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
-  $(window).on('resize', function() {
-    if ($(window).width() < 768) {
-      $('.save-cost-car-image').addClass('hide');
-      var progressContainerWidth = $('#progressbar-container').width();
-      $('#progressbar-container').height(progressContainerWidth);
-      $('.proggress').height(65);
-
-      if (!$('.progressbar .image img').length) {
-        $('.progressbar .image').each(function (index, el) {
-          var image = new Image();
-          image.src = 'assets/images/' + progressImages[index].car;
-          el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
-          el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
-        });
-      }
-
-    } else if ($(window).width() >= 768) {
-      $('.save-cost-car-image').removeClass('hide');
-      $('.progressbar .image img').remove();
-    }
-  }).resize();
 
 });

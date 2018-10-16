@@ -1379,13 +1379,37 @@ h4 {
     max-height: 120px;
     width: 10%;
     display: inline-block;
-    transform: rotate(90deg) translateY(-10px);
+    transform: rotate(90deg) translate(1%,-10px);
   }
 
   .progressbar .image img {
     max-width: 120px;
     max-height: 120px;
     width: 50px;
+  }
+
+  #progressbar0 .car { animation: dark-blue-car 0.5s infinite; }
+
+  #progressbar1 .car { animation: red-car 0.5s infinite; }
+
+  #progressbar2 .car {
+    margin-bottom: -7px;
+    animation: green-car 0.5s infinite;
+  }
+
+  #progressbar3 .car {
+    margin-bottom: -7px;
+    animation: blue-car 0.5s infinite;
+  }
+
+  .progressbar .image .wheels {
+    width: 48px;
+    margin-left: 1px;
+  }
+
+  #progressbar1 .wheels {
+    width: 47px;
+    margin-left: 2px;
   }
 
 }
@@ -1588,8 +1612,10 @@ h4 {
 
 @media screen and (max-width: 360px) {
   #progressbar-container {
-    transform: rotate(-90deg) translateY(0%);
+    transform: rotate(-90deg) translateY(0);
   }
+
+  .percentCount { margin-top: 19px; }
 }
 
 /*Hamburger menu styling*/
