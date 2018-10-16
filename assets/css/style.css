@@ -1336,6 +1336,66 @@ h4 {
   100% { transform: scale(1); }
 }
 
+.hide { display: none; }
+
+@media screen and (max-width: 767px) {
+  #progressbar-container {
+    height: 400px;
+    transform: rotate(-90deg) translateY(7%);
+  }
+
+  .proggress,
+  .progressBlade .image {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .progressBlade { width: 70%; }
+
+  .percentCount {
+    margin-top: 22px;
+    font-size: 14px;
+    transform: rotate(90deg);
+  }
+
+  .progressName {
+    font-size: 14px;
+    transform: rotate(90deg) translateX(10%);
+  }
+
+  #progressbar3 { margin-top: 8px; }
+
+  #progressbar3 .progressName {
+    transform: rotate(90deg) translate(10%,23%);
+  }
+
+  .progressbar .image {
+    max-width: 120px;
+    max-height: 120px;
+    width: 10%;
+    display: inline-block;
+    transform: rotate(90deg) translateY(-10px);
+  }
+
+  .progressbar .image img {
+    max-width: 120px;
+    max-height: 120px;
+    width: 50px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .progressName {
+    width: 100%;
+    display: block;
+  }
+
+  .progressBlade {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 995px) {
  .ill-health,
   .polution-stats { width: 100%; }
@@ -1354,13 +1414,13 @@ h4 {
     left: -1% 
   }
 
-  .sky-text { 
+  .sky-text {
     width: 64%;
     top: 14%;
     left: 24%;
   }
 
-  .small-round {  
+  .small-round {
     width: 8%;
     position: absolute;
     top: 82%;
