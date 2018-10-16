@@ -1076,6 +1076,29 @@ h4 {
 
 .consumer-desire { margin-top: 61px; }
 
+.consumer-desire .image-container { position: relative; }
+
+.consumer-desire .grayed-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: show-desire 2s forwards;
+}
+
+.grayed-out img {
+  max-height: 100%;
+}
+
+@keyframes show-desire {
+  from {
+    max-height: 600px;
+  }
+  100% {
+    max-height: 0;
+  }
+}
+
 .consumer-desire img { width: 100%; }
 
 .desire-overview,
