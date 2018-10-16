@@ -68,7 +68,7 @@
                 And they’re not the only ones: the UK government wants half of all new cars to be ultra-low emission by 2030.
               </p>
               <p class="common-text-style">
-                The number of electric vehicles (EVs) and charging points in Britain is increasing exponentially, with clear evidence that government, businesses and consumers are taking this clean form of transportation seriously.
+                The number of electric vehicles (EVs) and charging points in Britain is increasing exponentially, with clear evidence that government, businesses and consumers are taking this clean form of transportation seriously.<sup>1</sup>
               </p>
             </div>
             <div class="banner-image">
@@ -90,7 +90,7 @@
             <div class="government-description">
               <h3>government action: carrots and sticks</h3>
               <p class="common-text-style">
-                The UK government is <strong>banning sales of new conventional diesel and petrol cars and vans from 2040,</strong> and providing a £400m fund to help roll out charging infrastructure. The government is also supporting individuals and businesses in the transition, offering: 
+                The UK government is <strong>banning sales of new conventional diesel and petrol cars and vans from 2040,</strong> and providing a £400m fund to help roll out charging infrastructure.<sup>2</sup> The government is also supporting individuals and businesses in the transition, offering: 
               </p>
             </div>
             <div class="hand-money-bank-image">
@@ -189,24 +189,52 @@
         <!-- Exhaust emission starts here -->
         <section class="infographic-content-section exhaust-emission">
           <div class="wrapper">
-            <h3>zero exhaust pipe emissions</h3>
+            <h3>zero exhaust-pipe emissions</h3>
             <div class="polllution-stats">
               <div class="ill-health">
                 <p class="common-text-style">
                   Pollution from diesel and petrol engines leads to considerable ill health and an estimated:
                 </p>
                 <figure class ="early-deaths-per-year">
-                  <img src="assets/images/cloud_half.png" alt="Cloud" class ="cloud half-round"/>
+                  <img src="assets/images/cloud_half.png" alt="Cloud" class ="desktop cloud half-round"/>
+                  <img src="assets/images/cloud_full.png" alt="Cloud" class ="mobile cloud small-round"/>
                   <img src="assets/images/cloud_full.png" alt="Cloud" class ="cloud round"/>
                   <img src="assets/images/cloud.png" alt="Cloud" class ="cloud sky"/>
-                  <img src="assets/images/death_stats.png" alt="Death Stats" class ="cloud sky-text"/>
+                  <img src="assets/images/death_stats.png" alt="Early Deaths Per Year" class ="sky-text"/>
                 </figure>
               </div>
               <div class="polution-stats">
                 <p class="common-text-style">
                   Air pollution, much of it coming from petrol and diesel engines, is estimated to have <strong>cost the NHS and social care</strong> £157m in 2017. If action isn’t taken, these numbers will increase:
                 </p>
-                <svg id="air-poultion-graph"></svg>
+                <div id="air-poulltion-graph-container">
+                  <div class="air-graph-wrapper">
+                    <div class="bar bar0">
+                      <div class="bar-label">
+                        &pound;157m
+                      </div>
+                      <div class="bar-year">
+                        2017
+                      </div>
+                    </div>
+                    <div class="bar bar1">
+                      <div class="bar-label">
+                        &pound;15bn
+                      </div>
+                      <div class="bar-year">
+                        2025
+                      </div>
+                    </div>
+                    <div class="bar bar2">
+                      <div class="bar-label">
+                        &pound;18.6bn
+                      </div>
+                      <div class="bar-year">
+                        2035<sup>6</sup>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -252,34 +280,29 @@
         <!-- on the road section starts here -->
         <section class="infographic-content-section on-the-road">
           <div class="wrapper">
-             <!-- on-the-road-content section starts here -->
-            <div class="on-the-road-content">
-              <h3>on the road</h3>
-              <p class="common-text-style on-the-road-info">
-                Registrations of electric cars per year are expected to <strong>overtake those of diesel models in July 2020</strong> if current sales trends continue:
-              </p>
-              <ul class="line-indicator-vehicle">
-                <li>
-                  <figure>
-                    <img src="assets/images/electric_car_mright.png" alt="Electric Car">
-                  </figure>
-                </li>
-                <li><p class="common-text-style">Registrations of electric cars</p></li>
-              </ul>
-              <ul class="line-indicator-fuel">
-                <li>
-                  <figure>
-                    <img src="assets/images/petrol-pump.png" alt="Petrol Pump">
-                  </figure>
-                </li>
-                <li><p class="common-text-style">Number of charging points</p></li>
-              </ul>
-              <p class="common-text-style charging-point-info">
-                The number of charging points in the UK is rising too, but more are needed
-              </p>
-            </div>
-            <!-- on-the-road-content section ends here -->
-
+            <h3>on the road</h3>
+            <p class="common-text-style on-the-road-info">
+              Registrations of electric cars per year are expected to <strong>overtake those of diesel models in July 2020</strong> if current sales trends continue<sup>8</sup>:
+            </p>
+            <ul class="line-indicator-vehicle">
+              <li>
+                <figure>
+                  <img src="assets/images/electric_car_mright.png" alt="Electric Car">
+                </figure>
+              </li>
+              <li><p class="common-text-style">Registrations of electric cars</p></li>
+            </ul>
+            <ul class="line-indicator-fuel">
+              <li>
+                <figure>
+                  <img src="assets/images/petrol-pump.png" alt="Petrol Pump">
+                </figure>
+              </li>
+              <li><p class="common-text-style">Number of charging points</p></li>
+            </ul>
+            <p class="common-text-style charging-point-info">
+              The number of charging points in the UK is rising too, but more are needed
+            </p>
             <!-- on-the-road-graph section starts here -->
             <div class="on-the-road-graph">
               <img src="assets/images/on_the_road_graph.png" alt="graph showing trend towards electric vehicles over diesel">
@@ -361,7 +384,6 @@
     <!-- container class ends here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/vendor/lineProgressbar/jquery.lineProgressbar.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 

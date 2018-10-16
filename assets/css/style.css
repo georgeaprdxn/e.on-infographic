@@ -209,11 +209,47 @@ h1,h2,h3,h5 { color: #39393a; }
   background-color: #39393a;
 }
 
+@media screen and (max-width: 995px) {
+  
+  .wrapper { width: 90%; }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  .common-text-style { 
+    font-size: 32px; 
+    line-height: 40px;
+  }
+
+  .infographic-content-section .wrapper:after { width: 10.6%; }
+}
+
+@media screen and (max-width: 767px) {
+
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .common-text-style { 
+    font-size: 18px; 
+    line-height: 24px;
+  }
+
+  .infographic-content-section .wrapper:after { width: 14.6%; }
+}
+
 /*==========================================================================
   Header section starts here
 ============================================================================*/
 
-.page-header { margin-top: 80px; }
+.page-header { 
+  margin-top: 80px; 
+  position: relative;
+}
 
 .page-header h1 { 
   font-size: 20px; 
@@ -285,6 +321,9 @@ h2 {
 .lightning { 
   display: inline-block; 
   position: absolute;
+}
+
+.anim-lightning {
   -webkit-animation: lightning 1s linear;
   -moz-animation:    lightning 1s linear;
   -o-animation:      lightning 1s linear;
@@ -324,10 +363,13 @@ h2 {
 .car-to-left {
   width: 15%;
   right: 85%;
-  -webkit-animation: car-left 2s infinite linear;
-  -moz-animation:    car-left 2s infinite linear;
-  -o-animation:      car-left 2s infinite linear;
-  animation:         car-left 2s infinite linear;
+}
+
+.car-left { 
+  -webkit-animation: car-left 2s linear;
+  -moz-animation:    car-left 2s linear;
+  -o-animation:      car-left 2s linear;
+  animation:         car-left 2s linear; 
 }
 
 @keyframes car-left {
@@ -338,10 +380,13 @@ h2 {
 .car-to-right {
   width: 20%;
   left: 20%;
-  -webkit-animation: car-right 2s infinite linear;
-  -moz-animation:    car-right 2s infinite linear;
-  -o-animation:      car-right 2s infinite linear;
-  animation:         car-right 2s infinite linear;
+}
+
+.car-right {
+  -webkit-animation: car-right 2s linear;
+  -moz-animation:    car-right 2s linear;
+  -o-animation:      car-right 2s linear;
+  animation:         car-right 2s linear;
 }
 
 @keyframes car-right {
@@ -352,10 +397,13 @@ h2 {
 .tempo-to-right {
   width: 22%;
   left: 65%;
-  -webkit-animation: tempo-right 2s infinite linear;
-  -moz-animation:    tempo-right 2s infinite linear;
-  -o-animation:      tempo-right 2s infinite linear;
-  animation:         tempo-right 2s infinite linear;
+}
+
+.tempo-right {
+  -webkit-animation: tempo-right 2s linear;
+  -moz-animation:    tempo-right 2s linear;
+  -o-animation:      tempo-right 2s linear;
+  animation:         tempo-right 2s linear;
 }
 
 @keyframes tempo-right {
@@ -461,22 +509,24 @@ h2 {
   width: 60%;
   position: absolute;
   z-index: 1;
-  top: -8%;
-  right: 17px;
-  -webkit-animation: hand-drop 2s infinite ease-in-out;
-  -moz-animation:    hand-drop 2s infinite ease-in-out;
-  -o-animation:      hand-drop 2s infinite ease-in-out;
-  animation:         hand-drop 2s infinite ease-in-out;
+  top: -6%;
+  right: 5%;
+}
+
+.hand-drop {
+  -webkit-animation: hand-drop 1.2s linear;
+  -moz-animation:    hand-drop 1.2s linear;
+  -o-animation:      hand-drop 1.2s linear;
 }
 
 @keyframes hand-drop {
   0% { 
-    right: -200px; 
+    right: -50%; 
     transform:rotate(10deg);
   }
   80% { transform:rotate(10deg); }
   100% { 
-    right: 18px; 
+    right: 5%; 
     transform:rotate(0);
   }
 }
@@ -485,7 +535,7 @@ h2 {
 
 .money-bank-image { 
   width: 50%;
-  margin: 24.5% auto 0;
+  margin: 26.5% auto 0;
 }
 
 .money-bank-image img { width: 100% }
@@ -503,7 +553,7 @@ h2 {
 
 h4 {
   width: 86%;
-  margin: 0 auto 15%;
+  margin: 0 auto;
   color: #1f5f76; 
   font-family: EconSansReg;
   font-size: 22px;
@@ -514,22 +564,22 @@ h4 {
 
 .government ul li:first-child h4 {
   width: 57%;
-  padding-bottom: 23px;
+  padding-bottom: 8.5%;
   margin-bottom: 10%;
 }
 
 .government ul li:nth-child(2) h4 {
   width: 60%;
-  padding-bottom: 27px;
+  padding-bottom: 10%;
   margin-bottom: 11%;
 }
 
 .government ul li:nth-child(3) h4 {
   width: 35%;
-  margin-bottom: 28px;
+  margin-bottom: 10%;
 }
 
-.government ul li:last-child h4 { margin-bottom: 33px; }
+.government ul li:last-child h4 { margin-bottom: 11%; }
 
 .offering-stats img {
   margin: 0 auto;
@@ -590,14 +640,14 @@ h4 {
   text-align: center;
 }
 
-.offering-stats-wrapper {
+.offering-stats-triangle {
   -webkit-animation: triangle-emerge 2s;
      -moz-animation: triangle-emerge 2s;
        -o-animation: triangle-emerge 2s;
           animation: triangle-emerge 2s;
 }
 
-.offering-stats-wrapper figure img { animation: triangle-emerge 4s; }
+.offering-stats-triangle figure img { animation: triangle-emerge 4s; }
 
 @keyframes triangle-emerge {
   0% {
@@ -650,10 +700,6 @@ h4 {
 .car {
   position: relative;
   z-index: -1;
-/*  -webkit-animation: car .5s infinite linear;
-  -moz-animation:    car .5s infinite linear;
-  -o-animation:      car .5s infinite linear;
-  animation:         car .5s infinite linear;*/
 }
 
 .electric_car_chargable {
@@ -699,6 +745,112 @@ h4 {
 .offering-image img,
 .offering-stats img {
   width: 100%;
+}
+
+@media screen and (max-width: 995px) {
+  .government-description { 
+    width: 100%; 
+    display: block;
+  }
+
+  .government-description h3 { width: 70%; }
+
+  .hand-money-bank-image { 
+    position: absolute; 
+    right: 6%;
+  }
+
+  .hand-image { 
+    width: 80%;   
+    top: -13%;
+    right: -10%
+  }
+
+  @keyframes hand-drop {
+    0% { 
+      right: -50%; 
+      transform:rotate(10deg);
+    }
+    80% { transform:rotate(10deg); }
+    100% { 
+      right: -10%; 
+      transform:rotate(0);
+    }
+  }
+
+  .money-bank-image { width: 75%; }
+
+  .hybrid-cars { width: 33%; }
+
+  .electric-vehicles { width: 33%; }
+
+  .plugable-vans { 
+    width: 44%; 
+    margin-right: 6%;
+    transform: translateX(5%);
+  }
+
+  .charge-points {
+    width: 50%; 
+    transform: unset;
+  }
+
+  .government ul li:first-child h4 { width: 142px; }
+  
+  .government ul li:nth-child(2) h4 { width: 155px; }
+
+  .government ul li:nth-child(3) h4 { 
+    width: 99px;
+    margin-bottom: 11.5%; 
+  }
+
+  .government ul li:last-child h4 { width: 233px; }
+
+
+  .offering-stats .figure { font-size: 24px; }
+
+}
+
+@media screen and (max-width: 767px) {
+  .government-description h3 { width: 260px; } 
+  
+  .government ul li { position: relative; }
+
+  .government ul li h4 { 
+    font-size: 16px; 
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offering-image { margin-top: 100px; }
+
+  .hybrid-cars .offering-image { margin-top: 95px; }
+
+  .electric-vehicles { transform: translateX(-18%); }
+  
+  .government ul li:first-child h4 { width: 66%; }
+  
+  .government ul li:nth-child(2) h4 { width: 80%; }
+
+  .government ul li:last-child h4 { width: 80%; }
+
+  .offering-stats .figure { font-size: 16px; }
+
+}
+
+@media screen and (max-width: 540px) {
+  .government ul li:first-child h4 { width: 90%; }
+
+  .hybrid-cars .offering-image { margin-top: 97px; }
+
+  .offering-stats .figure { 
+    top: 8px;
+    font-size: 10px; 
+  }
+
+  .figure sup { font-size: 10px; }
 }
 
 /*==========================================================================
@@ -933,8 +1085,9 @@ h4 {
   bottom: 0;
   left: 0;
   background-color: #fff;
-  animation: reveal 3s forwards;
 }
+
+.anime-on-the-road-graph .overlay { animation: reveal 3s forwards; }
 
 @keyframes reveal {
   from {
@@ -1003,8 +1156,81 @@ h4 {
 
 /* air-poultion-graph */
 
-#air-poultion-graph { overflow: unset; }
+#air-poulltion-graph-container { 
+  height: 300px;
+  overflow: unset; 
+}
+
 #air-poultion-graph rect { fill: #135863cf; }
+
+.air-graph-wrapper {
+  width: 90%;
+  height: 230px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bar {
+  width: 28%;
+  margin-left: -5px;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-color: #1f5f76;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.anime-bar {
+  -webkit-animation: graphAnimate 5s forwards;
+  -moz-animation:    graphAnimate 5s forwards;
+  -o-animation:      graphAnimate 5s forwards;
+  animation:         graphAnimate 5s forwards; 
+}
+
+.bar:first-child { margin-left: 0; }
+
+.bar-year {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  color: gray;
+  text-align: center;
+}
+
+.bar0 { height: 2px; }
+
+.bar1 {
+  height: 60px;
+  left: 37%;
+}
+
+.bar2 {
+  height: 200px;
+  left: 74%; 
+}
+
+.bar-label {
+  width: 100%;
+  position: absolute;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.bar0 .bar-label { top: -30px; }
+
+.bar1 .bar-label,
+.bar2 .bar-label {
+  color: #fff;
+  top: 10px;
+}
+
+@keyframes graphAnimate {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
 
 #air-poultion-graph .value-text {
   fill: #000; 
@@ -1027,18 +1253,20 @@ h4 {
   .progressBlade { width: 100%; }
 }
 
-@media only screen and (max-width: 995px) {
-  .polution-stats { width: 100%; }
-}
+
 /* Zero Exhaust Pipe Emissions */
 .early-deaths-per-year{ position: relative;}
 .cloud { display: inline-block; }
+.mobile { display: none; }
 
 .half-round {
   width: 11%;
   position: absolute;
   top: 85%;
   left: -25%;
+}
+
+.half-round-anime {
   -webkit-animation: half-round .5s linear forwards;
   -moz-animation:    half-round .5s linear forwards;
   -o-animation:      half-round .5s linear forwards;
@@ -1055,6 +1283,9 @@ h4 {
   position: absolute;
   top: 75%;
   left: -13%;
+}
+
+.anime-roud {
   -webkit-animation: round 1s linear forwards;
   -moz-animation:    round 1s linear forwards;
   -o-animation:      round 1s linear forwards;
@@ -1071,7 +1302,10 @@ h4 {
 .sky {
   position: relative;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 4.5%;
+}
+
+.sky-anime {
   -webkit-animation: sky 1.5s linear forwards;
   -moz-animation:    sky 1.5s linear forwards;
   -o-animation:      sky 1.5s linear forwards;
@@ -1086,11 +1320,15 @@ h4 {
   100% { transform: scale(1); }
 }
 
+
 .sky-text {
   width: 72%;
   position: absolute;
-  top: 45px;
-  left: 75px;
+  top: 15%;
+  left: 15%;
+}
+
+.anime-sky-text {
   -webkit-animation: scale-in 2s linear forwards;
   -moz-animation:    scale-in 2s linear forwards;
   -o-animation:      scale-in 2s linear forwards;
@@ -1145,5 +1383,50 @@ h4 {
   #progressbar0 .wheels {
     margin: 0 auto;
   }
+}
 
+@media only screen and (max-width: 995px) {
+ .ill-health,
+  .polution-stats { width: 100%; }
+
+  .early-deaths-per-year{
+    width: 90%;
+    margin: 0 0 50px 8%;
+  }
+
+  .air-graph-wrapper { height: 222px }
+  .exhaust-emission h3 { width: 228px; }
+  .desktop { display: none; }
+  .mobile { display: block; }
+  .round { 
+    width: 11%;
+    left: -1% 
+  }
+
+  .sky-text { 
+    width: 64%;
+    top: 14%;
+    left: 24%;
+  }
+
+  .small-round {  
+    width: 8%;
+    position: absolute;
+    top: 82%;
+    left: -10%;
+    -webkit-animation: half-round .5s linear forwards;
+    -moz-animation:    half-round .5s linear forwards;
+    -o-animation:      half-round .5s linear forwards;
+    animation:         half-round .5s linear forwards;
+   }
+
+  .sky {
+    width: 90%; 
+    margin-left: 11%;
+  }
+
+}
+
+@media screen and (max-width: 540px){
+.bar-label { font-size: 16px;                                                                                                                                                                                                                                                                                                                              }
 }

@@ -50,75 +50,71 @@ $(document).ready(function () {
   }
   $('#progressbar3 .progressName').append('<sup>7</sup>');
   
-  // Air Poultion Bar graph
-  var svgWidth = 100;
-  var svgHeight = 250;
 
-  var svg = d3.select('#air-poultion-graph')
-      .attr("width", svgWidth+'%')
-      .attr("height", svgHeight)
-      .attr("class", "bar-chart");
+  // To set piggy bank on position
+  $(window).on('load resize',function(){
+    a=$('.government').offset();
+    b=$('.government ul').offset();
+    if(window.innerWidth <= 995){
+      c=b.top-a.top
+      $('.hand-money-bank-image').css('top',c+34);
+    }else {
+      $('.hand-money-bank-image').css('cssText','top','unset')
+    }
+  });
 
-  var polutionDataSet = [{
-      'name':'&pound;157m',
-      'value':157,
-      'year': '2017'
-    },
-    {
-      'name':'&pound;5.5bn',
-      'value': 5500,
-      'year':'2025'
-    },
-    {
-      'name':'&pound;18.6bn',
-      'value': 18600,
-      'year':'2035'
-    }];
+  $(window).on('scroll',function () {
+    
+    // Lightning animation
+    var lightning_banner = $('.banner').offset().top;
+    var topOfWindow = $(window).scrollTop();
 
-  var barPadding = 10;
-  var scaleFactor = 20;
-  var barWidth = (svgWidth / polutionDataSet.length);
+    if (lightning_banner < (topOfWindow+200)) {
+        $('.lightning').addClass("anim-lightning");
+    }
+    
+    // Car animation
+    var tempo_right= $('.tempo-to-right').offset().top;
+    if (tempo_right < (topOfWindow+700)) {
+      $('.car-to-left').addClass("car-left");
+      $('.car-to-right').addClass("car-right");
+      $('.tempo-to-right').addClass("tempo-right");
+    }
 
-  var bar = svg.selectAll("g")
-                  .data(polutionDataSet)
-                  .enter()
-                  .append("g")
-                  .attr("width", barWidth - barPadding+'%')
-                  .attr('height',svgHeight-100)
-                  .attr("x",0 )
-                  .attr("transform", function (d, i) {
-                     var translate = [barWidth * i + 155*i];
-                     return "translate("+ translate +")";
-                  });
+  // Hand animation
+   var hand_drop= $('.hand-image').offset().top   
+    if (hand_drop < (topOfWindow+600)) {
+      $('.hand-image').addClass("hand-drop");
+    }
 
-    bar.append("rect")
-      .attr("height", 0)
-      .attr("width", barWidth - barPadding+'%')
-      .attr("y", svgHeight)
-      .transition()
-      .attr("height", function(d) { return d.value/100; })
-      .attr("y", function(d) { return svgHeight - d.value/100; })
-      .duration(2000)
-      .ease();
+  // trainle animation
+    var offering_stats_wrapper= $('.offering-stats-wrapper').offset().top;
+    if (offering_stats_wrapper < (topOfWindow+700)) {
+      $('.offering-stats-wrapper').addClass("offering-stats-triangle");
+    }
 
-      bar.append("text")
-         .attr('class', 'value-text')
-        .attr("y", function(d) { return svgHeight - d.value/100; })
-        .attr("dy", "-.75em")
-        .attr("dx", "3.8em")
-        .html(function(d) { return d.name; });
+  // Death animation
+    var sky_top= $('.sky').offset().top;
+    if (sky_top < (topOfWindow+700)) {
+      $('.half-round').addClass("anime-half-round");
+      $('.round').addClass("anime-roud");
+      $('.sky').addClass("sky-anime");
+      $('.sky-text').addClass("anime-sky-text");
+    }
 
-      bar.append('text')
-         .attr('class', 'year-text') 
-        .attr('y', svgHeight-20)
-        .attr("dx", "2.0em")
-        .attr("dy", "2.0em")
-        .html(function(d) { return d.year; })
-        .append('tspan')
-          .text(function(d, i) { if(i == 2)return '3'; })
-          .style('font-size', '10px')
-          .attr('dx', '0em')
-          .attr('dy', '-.8em')
+  // Graph animation 
+    var bar_top= $('.bar').offset().top;
+    if (bar_top < (topOfWindow+800)) {
+      $('.bar').addClass("anime-bar");
+    }
+
+  // on the road graph animation
+    var on_road_top= $('.on-the-road-graph').offset().top;
+    if (on_road_top < (topOfWindow+800)) {
+      $('.on-the-road-graph').addClass("anime-on-the-road-graph");
+    }
+
+  });
 
   if ($(window).width() < 768) {
     $('.save-cost-car-image').addClass('hide');
