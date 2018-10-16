@@ -1244,16 +1244,6 @@ h4 {
   text-anchor:start;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .progressName {
-    width: 100%;
-    display: block;
-  }
-
-  .progressBlade { width: 100%; }
-}
-
-
 /* Zero Exhaust Pipe Emissions */
 .early-deaths-per-year{ position: relative;}
 .cloud { display: inline-block; }
@@ -1382,6 +1372,17 @@ h4 {
 
   #progressbar0 .wheels {
     margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .progressName {
+    width: 100%;
+    display: block;
+  }
+
+  .progressBlade {
+    width: 100%;
   }
 }
 
