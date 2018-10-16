@@ -1346,8 +1346,12 @@ h4 {
 @media screen and (max-width: 767px) {
   #progressbar-container {
     height: 400px;
-    transform: rotate(-90deg) translateY(7%);
+    transform: rotate(-90deg) translateY(0);
   }
+
+  #progressbar3 { margin-top: 6%; }
+
+  .progressbars { margin-top:8%; }
 
   .proggress,
   .progressBlade .image {
@@ -1367,8 +1371,6 @@ h4 {
     font-size: 14px;
     transform: rotate(90deg) translateX(10%);
   }
-
-  #progressbar3 { margin-top: 8px; }
 
   #progressbar3 .progressName {
     transform: rotate(90deg) translate(10%,23%);
