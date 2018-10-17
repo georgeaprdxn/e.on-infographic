@@ -1560,6 +1560,7 @@ h4 {
     line-height: 30px;
   }
   
+  .sub-text { width: 73.8%; }
 
   .common-text-style {
     font-size: 18px;
@@ -1576,6 +1577,9 @@ h4 {
 }
 
 @media screen and (max-width: 768px) {
+
+  h1 { font-size: 25px; }
+
   .on-the-road-info {
     margin-top: 18px;
     line-height: 1.5;
