@@ -193,13 +193,15 @@ $(document).ready(function () {
           desireCounter++;
           if (desireCounter===1) {
             desirePercent=69;
+            desiretime=2000;
           }else{
             desirePercent=86;
+            desiretime=2500;
           }
           $(this).prop('Counter', 0).animate({
             Counter: desirePercent
           }, {
-            duration: 2000,
+            duration: desiretime,
             easing: 'swing',
             step: function (now) {
               $(this).text(Math.ceil(now) + '%');
