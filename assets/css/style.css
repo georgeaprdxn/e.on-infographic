@@ -192,7 +192,7 @@ h1,h2,h3,h5 { color: #39393a; }
   font-family: EconSansReg;
   font-size: 24px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 30px;
 }
 
 .infographic-content-section .wrapper {
@@ -251,7 +251,7 @@ h1,h2,h3,h5 { color: #39393a; }
 
 
 .banner-content {
-  width: 57%;
+  width: 58%;
   display: inline-block;
   vertical-align: top;
 }
@@ -275,7 +275,7 @@ h2 {
 }
 
 .banner-image {
-  width: 43%;
+  width: 42%;
   padding-top: 19%;
   float: right;
   position: relative;
@@ -477,7 +477,7 @@ h2 {
   width: 60%;
   position: absolute;
   z-index: 1;
-  top: -6%;
+  top: -13%;
   right: 5%;
 }
 
@@ -648,9 +648,9 @@ h4 {
   100% { opacity: 1; }
 }
 
-.figure sup {
-  margin-left: 3px;
-  font-size: 14px;
+.offering-stats sup {
+  margin-left: 4px;
+  font-size: 16px;
 }
 
 .government ul li figure { position: relative; }
@@ -663,8 +663,6 @@ h4 {
 }
 
 .offering-van { margin-top: -15%; }
-
-
 
 .car {
   position: relative;
@@ -832,19 +830,21 @@ h4 {
   Exhaust Emission section starts here
 ============================================================================*/
 
-.exhaust-emission { margin-top: 65px; }
+.exhaust-emission { margin-top: 50px; }
 
 .exhaust-emission h3 { width: 569px; }
 
 .ill-health {
-  width: 44%;
-  margin-right: calc(10% - 5px);
+  width: 50%;
+  padding-right: 6%;
   display: inline-block;
   vertical-align: top;
 }
 
 .polution-stats {
-  width: 46%;
+  width: 50%;
+  padding-left: 2%;
+  margin-left: -5px;
   display: inline-block;
   vertical-align: top;
 }
