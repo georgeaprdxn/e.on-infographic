@@ -259,6 +259,7 @@ h1,h2,h3,h5 { color: #39393a; }
 .banner-content .common-text-style { width: 80%; }
 
 h2 {
+  width: 98%;
   margin-bottom: 17px;
   line-height: 88px;
   font-size: 85px;
@@ -289,13 +290,14 @@ h2 {
 .lightning { 
   display: inline-block; 
   position: absolute;
+  transform: scale(0);
 }
 
 .anim-lightning {
-  -webkit-animation: lightning 1s linear;
-  -moz-animation:    lightning 1s linear;
-  -o-animation:      lightning 1s linear;
-  animation:         lightning 1s linear;
+  -webkit-animation: lightning 1s linear forwards;
+  -moz-animation:    lightning 1s linear forwards;
+  -o-animation:      lightning 1s linear forwards;
+  animation:         lightning 1s linear forwards;
 }
 
 .lightning-left { 
@@ -454,7 +456,7 @@ h2 {
   Government section starts here
 ============================================================================*/
 
-.government { margin-top: 63px; }
+.government { margin-top: 55px; }
 
 .government .wrapper { overflow: hidden; }
 
@@ -1182,6 +1184,7 @@ h4 {
 }
 
 .bar {
+  max-height: 0;
   width: 28%;
   margin-left: -5px;
   margin-right: 20px;
@@ -1291,10 +1294,10 @@ h4 {
 }
 
 .anime-roud {
-  -webkit-animation: round 1s linear forwards;
-  -moz-animation:    round 1s linear forwards;
-  -o-animation:      round 1s linear forwards;
-  animation:         round 1s linear forwards;
+  -webkit-animation: round 1.5s linear forwards;
+  -moz-animation:    round 1.5s linear forwards;
+  -o-animation:      round 1.5s linear forwards;
+  animation:         round 1.5s linear forwards;
 }
 
 @keyframes round {
@@ -1311,10 +1314,10 @@ h4 {
 }
 
 .sky-anime {
-  -webkit-animation: sky 1.5s linear forwards;
-  -moz-animation:    sky 1.5s linear forwards;
-  -o-animation:      sky 1.5s linear forwards;
-  animation:         sky 1.5s linear forwards;
+  -webkit-animation: sky 2s linear forwards;
+  -moz-animation:    sky 2s linear forwards;
+  -o-animation:      sky 2s linear forwards;
+  animation:         sky 2s linear forwards;
 }
 
 @keyframes sky {
@@ -1334,10 +1337,10 @@ h4 {
 }
 
 .anime-sky-text {
-  -webkit-animation: scale-in 2s linear forwards;
-  -moz-animation:    scale-in 2s linear forwards;
-  -o-animation:      scale-in 2s linear forwards;
-  animation:         scale-in 2s linear forwards;
+  -webkit-animation: scale-in 2.5s linear forwards;
+  -moz-animation:    scale-in 2.5s linear forwards;
+  -o-animation:      scale-in 2.5s linear forwards;
+  animation:         scale-in 2.5s linear forwards;
 }
 
 @keyframes scale-in {
