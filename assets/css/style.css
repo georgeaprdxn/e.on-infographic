@@ -259,6 +259,7 @@ h1,h2,h3,h5 { color: #39393a; }
 .banner-content .common-text-style { width: 80%; }
 
 h2 {
+  width: 98%;
   margin-bottom: 17px;
   line-height: 88px;
   font-size: 85px;
@@ -454,7 +455,7 @@ h2 {
   Government section starts here
 ============================================================================*/
 
-.government { margin-top: 63px; }
+.government { margin-top: 55px; }
 
 .government .wrapper { overflow: hidden; }
 
