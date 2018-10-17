@@ -294,10 +294,10 @@ h2 {
 }
 
 .anim-lightning {
-  -webkit-animation: lightning 1s linear forwards;
-  -moz-animation:    lightning 1s linear forwards;
-  -o-animation:      lightning 1s linear forwards;
-  animation:         lightning 1s linear forwards;
+  -webkit-animation: lightning 0.1s linear forwards;
+  -moz-animation:    lightning 0.1s linear forwards;
+  -o-animation:      lightning 0.1s linear forwards;
+  animation:         lightning 0.1s linear forwards;
 }
 
 .lightning-left { 
