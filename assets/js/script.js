@@ -90,14 +90,22 @@ $(document).ready(function () {
     });
 
     var _onTheGraph = document.querySelector('.on-the-road-graph');
-    var _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
+    var _onTheRoadContainer = document.querySelector('.on-the-road');
+    var _offsetHeight,
+    _ontheRoadHeight;
+    setTimeout(() => {
+      _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
+      _ontheRoadHeight = _onTheRoadContainer.offsetHeight;
+      if (_offsetHeight && _offsetHeight > _ontheRoadHeight) {
+        $('.on-the-road').height(_offsetHeight);
+      } else {
+        var graphImg = $('.on-the-road-graph img');
+        graphImg.height(_ontheRoadHeight);
+      }
+    }, 500);
 
     if (window.innerWidth <= 992) {
 
-      if (_offsetHeight) {
-        var _onTheRoadContainer = document.querySelector('.on-the-road');
-        _onTheRoadContainer.style.height = _offsetHeight + 'px';
-      }
       
       $('#on-the-road-image').attr('src', $('#on-the-road-image').attr('data-mobile-src'));
     } else {
