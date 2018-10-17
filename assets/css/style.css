@@ -1022,6 +1022,8 @@ h4 {
   margin-right: 5%;
 }
 
+.line-indicator-vehicle li:last-child { vertical-align: bottom; }
+
 .line-indicator-vehicle li:first-child figure { width: 100%; }
 
 .line-indicator-fuel { margin-top: 27px; }
@@ -1084,8 +1086,9 @@ h4 {
   top: 0;
   left: 0;
   overflow: hidden;
-  animation: show-desire 2s forwards;
 }
+
+.anime-consumer-desire .grayed-out { animation: show-desire 2s forwards; }
 
 .grayed-out img { max-height: 100%; }
 
