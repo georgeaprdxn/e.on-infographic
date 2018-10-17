@@ -36,19 +36,18 @@ $(document).ready(function () {
     }
   ];
 
-  if($(window).width() > 768) {
     for (var i = 0; i < progressBarData.length; i++) {
       var progressbar = document.createElement('div');
       $(progressbar).attr('id', 'progressbar' + i);
       $(progressbar).attr('class', 'progressbars');
       $('#progressbar-container').append(progressbar);
-      $('#progressbar' + i).height(50);
+      $('#progressbar' + i).height(55);
       $('#progressbar' + i).css('background-color', 'rgb(226, 233, 237)');
     }
-  }
 
   function animeBar() {
     for (var i = 0; i < progressBarData.length; i++) {
+      $('#progressbar'+i).remove();
       var progressbar = document.createElement('div');
       $(progressbar).attr('id', 'progressbar' + i);
       $(progressbar).attr('class', 'progressbars');
@@ -63,6 +62,7 @@ $(document).ready(function () {
     }
     $('#progressbar3 .progressName').append('<sup>7</sup>');
   }
+
   // To set piggy bank on position
   var government_top, government_ul_top, subtracted_val, offering_title_height, counter;
   $(window).on('load resize orientationchange', function () {
