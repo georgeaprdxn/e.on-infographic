@@ -1422,6 +1422,9 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  #progressbar-container { min-height: 380px; }
+
   .progressName {
     width: 100%;
     display: block;

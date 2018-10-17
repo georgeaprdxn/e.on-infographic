@@ -36,13 +36,15 @@ $(document).ready(function () {
     }
   ];
 
-  for (var i = 0; i < progressBarData.length; i++) {
-    var progressbar = document.createElement('div');
-    $(progressbar).attr('id', 'progressbar' + i);
-    $(progressbar).attr('class', 'progressbars');
-    $('#progressbar-container').append(progressbar);
-    $('#progressbar' + i).height(50);
-    $('#progressbar' + i).css('background-color', 'rgb(226, 233, 237)');
+  if($(window).width() > 768) {
+    for (var i = 0; i < progressBarData.length; i++) {
+      var progressbar = document.createElement('div');
+      $(progressbar).attr('id', 'progressbar' + i);
+      $(progressbar).attr('class', 'progressbars');
+      $('#progressbar-container').append(progressbar);
+      $('#progressbar' + i).height(50);
+      $('#progressbar' + i).css('background-color', 'rgb(226, 233, 237)');
+    }
   }
 
   function animeBar() {
