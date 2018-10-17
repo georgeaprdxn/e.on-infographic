@@ -93,7 +93,7 @@ $(document).ready(function () {
     var _onTheRoadContainer = document.querySelector('.on-the-road');
     var _offsetHeight,
     _ontheRoadHeight;
-    setTimeout(() => {
+    setTimeout(function() {
       _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
       _ontheRoadHeight = _onTheRoadContainer.offsetHeight;
       if (_offsetHeight && _offsetHeight > _ontheRoadHeight) {
