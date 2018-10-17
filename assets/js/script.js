@@ -37,12 +37,22 @@ $(document).ready(function () {
   ];
 
     for (var i = 0; i < progressBarData.length; i++) {
-      var progressbar = document.createElement('div');
-      $(progressbar).attr('id', 'progressbar' + i);
-      $(progressbar).attr('class', 'progressbars');
-      $('#progressbar-container').append(progressbar);
+      var progressbarItem = document.createElement('div');
+      var progressbars = document.createElement('div');
+      var progressName = document.createElement('div');
+      var progressBlade = document.createElement('div');
+      $(progressbarItem).attr('id', 'progressbar' + i);
+      $(progressbarItem).attr('class', 'progressbars');
+      $('#progressbar-container').append(progressbarItem);
       $('#progressbar' + i).height(55);
-      $('#progressbar' + i).css('background-color', 'rgb(226, 233, 237)');
+      $(progressName).text(progressBarData[i].name);
+      $(progressbars).attr('class', 'progressbar');
+      $(progressName).attr('class', 'progressName');
+      $(progressBlade).attr('class', 'progressBlade');
+      $(progressbars).append(progressName);
+      $(progressbars).append(progressBlade);
+      $(progressBlade).height(55);
+      $('#progressbar'+i).append(progressbars);
     }
 
   function animeBar() {
@@ -56,7 +66,6 @@ $(document).ready(function () {
         percentage: progressBarData[i].value,
         fillBackgroundColor: progressColors[i],
         height: 55
-
       });
       $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
     }
