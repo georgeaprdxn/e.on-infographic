@@ -290,13 +290,14 @@ h2 {
 .lightning { 
   display: inline-block; 
   position: absolute;
+  transform: scale(0);
 }
 
 .anim-lightning {
-  -webkit-animation: lightning 1s linear;
-  -moz-animation:    lightning 1s linear;
-  -o-animation:      lightning 1s linear;
-  animation:         lightning 1s linear;
+  -webkit-animation: lightning 1s linear forwards;
+  -moz-animation:    lightning 1s linear forwards;
+  -o-animation:      lightning 1s linear forwards;
+  animation:         lightning 1s linear forwards;
 }
 
 .lightning-left { 
@@ -541,7 +542,7 @@ h4 {
 .government ul li:nth-child(2) h4 {
  width: 60%;
  padding-bottom: 10%;
- margin-bottom: 11%;
+ margin-bottom: 11.1%;
 }
 
 .government ul li:nth-child(3) h4 {

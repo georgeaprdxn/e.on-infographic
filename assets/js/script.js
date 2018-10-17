@@ -141,9 +141,7 @@ $(document).ready(function () {
     var lightning_banner = $('.banner').offset().top;
     var topOfWindow = $(window).scrollTop();
 
-    if (lightning_banner < (topOfWindow + 200)) {
-      $('.lightning').addClass("anim-lightning");
-    }
+    $('.lightning').addClass("anim-lightning");
 
     // Car animation
     var tempo_right = $('.tempo-to-right').offset().top;
