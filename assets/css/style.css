@@ -192,7 +192,7 @@ h1,h2,h3,h5 { color: #39393a; }
   font-family: EconSansReg;
   font-size: 24px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 30px;
 }
 
 .infographic-content-section .wrapper {
@@ -251,12 +251,12 @@ h1,h2,h3,h5 { color: #39393a; }
 
 
 .banner-content {
-  width: 57%;
+  width: 58%;
   display: inline-block;
   vertical-align: top;
 }
 
-.banner-content .common-text-style { width: 81%; }
+.banner-content .common-text-style { width: 80%; }
 
 h2 {
   margin-bottom: 17px;
@@ -275,7 +275,7 @@ h2 {
 }
 
 .banner-image {
-  width: 43%;
+  width: 42%;
   padding-top: 19%;
   float: right;
   position: relative;
@@ -464,7 +464,7 @@ h2 {
   vertical-align: top;
 }
 
-.government-description .common-text-style { width: 89%; }
+.government-description .common-text-style { width: 90%; }
 
 .hand-money-bank-image {
   width: calc(30% - 5px);
@@ -477,7 +477,7 @@ h2 {
   width: 60%;
   position: absolute;
   z-index: 1;
-  top: -6%;
+  top: -13%;
   right: 5%;
 }
 
@@ -648,9 +648,9 @@ h4 {
   100% { opacity: 1; }
 }
 
-.figure sup {
-  margin-left: 3px;
-  font-size: 14px;
+.offering-stats sup {
+  margin-left: 4px;
+  font-size: 16px;
 }
 
 .government ul li figure { position: relative; }
@@ -663,8 +663,6 @@ h4 {
 }
 
 .offering-van { margin-top: -15%; }
-
-
 
 .car {
   position: relative;
@@ -832,19 +830,21 @@ h4 {
   Exhaust Emission section starts here
 ============================================================================*/
 
-.exhaust-emission { margin-top: 65px; }
+.exhaust-emission { margin-top: 50px; }
 
 .exhaust-emission h3 { width: 569px; }
 
 .ill-health {
-  width: 44%;
-  margin-right: calc(10% - 5px);
+  width: 50%;
+  padding-right: 6%;
   display: inline-block;
   vertical-align: top;
 }
 
 .polution-stats {
-  width: 46%;
+  width: 50%;
+  padding-left: 2%;
+  margin-left: -5px;
   display: inline-block;
   vertical-align: top;
 }
@@ -881,14 +881,14 @@ h4 {
 
 .percentCount {
   margin-top: 12px;
-  margin-right: 15px;
+  margin-right: 18px;
   color: #fff;
   font-family: EconSansReg !important;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 500;
 }
 
-.save-costs { margin-top: 61px; }
+.save-costs { margin-top: 20px; }
 
 .save-costs h3 { width: 560px; }
 
@@ -1207,8 +1207,9 @@ h4 {
 .bar-year {
   width: 100%;
   position: absolute;
-  bottom: -30px;
+  bottom: -35px;
   color: gray;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -1232,7 +1233,10 @@ h4 {
   text-align: center;
 }
 
-.bar0 .bar-label { top: -30px; }
+.bar0 .bar-label {
+  top: -35px;
+  color: #39393a;
+}
 
 .bar1 .bar-label,
 .bar2 .bar-label {
@@ -1282,9 +1286,9 @@ h4 {
 }
 
 .round {
-  width: 13%;
+  width: 14%;
   position: absolute;
-  top: 75%;
+  bottom: 0;
   left: -13%;
 }
 
@@ -1421,6 +1425,9 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  #progressbar-container { min-height: 380px; }
+
   .progressName {
     width: 100%;
     display: block;
@@ -1556,6 +1563,7 @@ h4 {
     line-height: 30px;
   }
   
+  .sub-text { width: 73.8%; }
 
   .common-text-style {
     font-size: 18px;
@@ -1572,6 +1580,9 @@ h4 {
 }
 
 @media screen and (max-width: 768px) {
+
+  h1 { font-size: 25px; }
+
   .on-the-road-info {
     margin-top: 18px;
     line-height: 1.5;
