@@ -44,7 +44,6 @@ $(document).ready(function () {
       $(progressbarItem).attr('id', 'progressbar' + i);
       $(progressbarItem).attr('class', 'progressbars');
       $('#progressbar-container').append(progressbarItem);
-      $('#progressbar' + i).height(55);
       $(progressName).text(progressBarData[i].name);
       $(progressbars).attr('class', 'progressbar');
       $(progressName).attr('class', 'progressName');
