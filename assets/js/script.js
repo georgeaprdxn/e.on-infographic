@@ -176,12 +176,13 @@ $(document).ready(function () {
 
     // on the road graph animation
     var on_road_top = $('.on-the-road-graph').offset().top;
-    if (on_road_top < (topOfWindow+400)) {
+    if (on_road_top < (topOfWindow+700)) {
       $('.on-the-road-graph').addClass("anime-on-the-road-graph");
     }
 
+    // consumer desire animation
     var consumer_top = $('.desire-stats').offset().top;
-    if (consumer_top < (topOfWindow + 400)) {
+    if (consumer_top < (topOfWindow + 500)) {
       $('.desire-stats').addClass("anime-consumer-desire");
       if (!counterAnimateFlag) {
         counterAnimateFlag = true;
@@ -209,7 +210,7 @@ $(document).ready(function () {
     }
 
     var bar_save_top = $('#progressbar-container').offset().top;
-    if (bar_save_top < (topOfWindow + 400) && !show_flag) {
+    if (bar_save_top < (topOfWindow + 700) && !show_flag) {
       show_flag = true;
       animeBar();
     }    

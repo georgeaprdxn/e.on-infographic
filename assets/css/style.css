@@ -393,7 +393,7 @@ h2 {
 
   .sub-text { width: 65%; }
 
-  .banner-content .common-text-style { width: 43%; }
+  .banner-content .common-text-style { width: 54%; }
 
   .banner-image { 
     width: 100%; 
@@ -437,11 +437,6 @@ h2 {
   }
 
   .sub-text { font-size: 26px; }
-
-  .banner-content .common-text-style { 
-    font-size: 18px; 
-    line-height: 24px;
-  }
 
   .banner-image { margin-top: -60%; }
 }
@@ -779,7 +774,7 @@ h4 {
 }
 
 @media screen and (max-width: 767px) {
-  .government-description h3 { width: 260px; } 
+  .government-description h3 { width: 100%; } 
   
   .government ul li { position: relative; }
 
@@ -808,6 +803,7 @@ h4 {
 }
 
 @media screen and (max-width: 540px) {
+  
   .government ul li:first-child h4 { width: 90%; }
 
   .hybrid-cars .offering-image { margin-top: 97px; }
@@ -1160,12 +1156,12 @@ h4 {
   word-break: break-all;
 }
 
-.sources ol li {
-  margin-bottom: 5px;
-  color: #39393a; 
-}
+.sources ol li { margin-bottom: 5px; }
 
-.sources ol li p { font-family: EconSansReg; }
+.sources ol li a {
+  color: #39393a;
+  font-family: EconSansReg; 
+}
 
 /* air-poultion-graph */
 
@@ -1444,7 +1440,6 @@ h4 {
   .wrapper { width: 90%; }
 
   h3 {
-    margin-bottom: 10px;
     font-size: 48px;
     line-height: 54px;
   }
@@ -1459,10 +1454,6 @@ h4 {
     line-height: 1.7;
   }
 
-  .on-the-road h3 { 
-    font-size: 5vw; 
-    line-height: 18%;
-  }
   .on-the-road ul { width: 50%; }
   .on-the-road > .common-text-style { font-size: 2.5vw; }
   .line-indicator li p { font-size: 20px; }
@@ -1484,7 +1475,6 @@ h4 {
   .wrapper { width: 90%; }
 
  h3 {
-   margin-bottom: 10px;
    font-size: 48px;
    line-height: 54px;
  }
@@ -1522,7 +1512,7 @@ h4 {
   .small-round {
     width: 8%;
     position: absolute;
-    top: 82%;
+    top: 93%;
     left: -10%;
     -webkit-animation: half-round .5s linear forwards;
     -moz-animation:    half-round .5s linear forwards;
@@ -1553,30 +1543,42 @@ h4 {
     margin-left: 8%;
   }
 
-  .ill-health { margin-right: unset;  }
+  .ill-health {
+    padding-right: unset;
+    margin-right: unset;  
+  }
 
   .save-costs h3 { width: 78%; }
+
+  .desire-overview p {width: 100%;}
+
+  .on-the-road h3 { margin-bottom: unset; }
+
+  .government-description .common-text-style { width: 100%; }
 }
 
 @media screen and (max-width: 767px) {
   h3 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 34px;
+    line-height: 38px;
   }
   
   .sub-text { width: 73.8%; }
 
   .common-text-style {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 26px;
+    line-height: 30px;
   }
 
   .exhaust-emission h3,
-  .save-costs h3 { width: 228px; }
+  .save-costs h3 { width: 100%; }
 
+  .banner-content .common-text-style { width: 62%; }
 }
 
 @media screen and (max-width: 540px) {
+  .desire-percent { font-size: 25px; }
+
   .bar-label { font-size: 16px; }
 }
 
@@ -1585,7 +1587,7 @@ h4 {
   h1 { font-size: 25px; }
 
   .on-the-road-info {
-    margin-top: 18px;
+    margin-top: 10px;
     line-height: 1.5;
   }
 
