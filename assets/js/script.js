@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var show_flag = false;
-  var counterAnimateFlag = false;
+  var counterAnimateFlag = false,desireCounter,desirePercent;
   //Progress Bar functionality
   var progressColors = ['#096275', '#a71e34', '#CED672', '#8fd0d8', '#86CED3'];
   var progressImages = [{
@@ -84,13 +84,9 @@ $(document).ready(function () {
     }
 
     // Align offering section triangle
-    offering_title_height = document.getElementsByClassName('charge-points')[0].getElementsByTagName('h4')[0].offsetHeight;
-    counter = 0;
+    offering_title_height = document.getElementsByClassName('electric-vehicles')[0].getElementsByTagName('h4')[0].offsetHeight;
     $('.government ul li h4').each(function () {
-      if (counter < 3) {
-        counter++;
         $(this).css('min-height', offering_title_height);
-      }
     });
 
     var _onTheGraph = document.querySelector('.on-the-road-graph');
@@ -135,6 +131,7 @@ $(document).ready(function () {
 
   });
 
+  $('.lightning').addClass("anim-lightning");
   // animation on scroll
   $(window).on('load scroll', function () {
 
@@ -142,7 +139,7 @@ $(document).ready(function () {
     var topOfWindow = $(window).scrollTop();
 
     if (lightning_banner < (topOfWindow + 200)) {
-      $('.lightning').addClass("anim-lightning");
+      // $('.lightning').addClass("anim-lightning");
     }
 
     // Car animation
@@ -182,7 +179,7 @@ $(document).ready(function () {
 
     // on the road graph animation
     var on_road_top = $('.on-the-road-graph').offset().top;
-    if (on_road_top < (topOfWindow)) {
+    if (on_road_top < (topOfWindow+400)) {
       $('.on-the-road-graph').addClass("anime-on-the-road-graph");
     }
 
@@ -191,9 +188,16 @@ $(document).ready(function () {
       $('.desire-stats').addClass("anime-consumer-desire");
       if (!counterAnimateFlag) {
         counterAnimateFlag = true;
+        desireCounter=0;
         $('.desire-percent').each(function () {
+          desireCounter++;
+          if (desireCounter===1) {
+            desirePercent=69;
+          }else{
+            desirePercent=86;
+          }
           $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
+            Counter: desirePercent
           }, {
             duration: 2000,
             easing: 'swing',
