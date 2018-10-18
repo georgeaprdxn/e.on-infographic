@@ -135,11 +135,11 @@ $(document).ready(function () {
     // fetch url
     var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
     if (window.innerWidth < 768) {
+      animeBar();
       $('.save-cost-car-image').addClass('hide');
       var progressContainerWidth = $('#progressbar-container').width();
       $('#progressbar-container').height(progressContainerWidth);
       $('.proggress').height(65);
-
       if (!$('.progressbar .image img').length) {
         $('.progressbar .image').each(function (index, el) {
           var image = new Image();
@@ -152,12 +152,13 @@ $(document).ready(function () {
     } else if ($(window).width() >= 768) {
       $('.save-cost-car-image').removeClass('hide');
       $('.progressbar .image img').remove();
+      $('.proggress').height(55);
     }
 
   });
 
   // animation on scroll
-  $(window).on('load scroll', function () {
+  $(window).on('load scroll resize', function () {
 
     var lightning_banner = $('.banner').offset().top;
     var topOfWindow = $(window).scrollTop();
@@ -207,7 +208,13 @@ $(document).ready(function () {
 
     // consumer desire animation
     var consumer_top = $('.desire-stats').offset().top;
-    if (isElementInViewport($('.consumer-desire h3'))) {
+    if(window.innerWidth >767) { 
+        offsetTopElem=$('.consumer-desire h3'); 
+      } else { 
+        offsetTopElem=$(".desire-percent"); 
+      }
+
+    if (isElementInViewport(offsetTopElem)) {
       $('.desire-stats').addClass("anime-consumer-desire");
       if (!counterAnimateFlag) {
         counterAnimateFlag = true;
