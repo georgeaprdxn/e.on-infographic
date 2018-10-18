@@ -3,6 +3,7 @@ $(document).ready(function () {
   var counterAnimateFlag = false,desireCounter,desirePercent;
   //Progress Bar functionality
   var progressColors = ['#096275', '#a71e34', '#CED672', '#8fd0d8', '#86CED3'];
+  var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
   var progressImages = [{
     'car': 'dark_blue_car.png',
     'wheels': 'dark_blue_wheel.png'
@@ -20,7 +21,6 @@ $(document).ready(function () {
   var progressBarData = [{
       'name': 'PETROL VEHICLE',
       'value': 15783,
-      'image': ''
     },
     {
       'name': 'DIESEL VEHICLE',
@@ -70,8 +70,6 @@ $(document).ready(function () {
     );
   }
 
-
-  var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
   function animeBar() {
     for (var i = 0; i < progressBarData.length; i++) {
       $('#progressbar'+i).remove();
@@ -82,9 +80,10 @@ $(document).ready(function () {
       $('#progressbar' + i).LineProgressbar({
         progressImages: $(window).width() >= 768 ? '': progressImages,
         ind: i,
+        fetch_url_val:fetch_url_val,
         percentage: progressBarData[i].value,
         fillBackgroundColor: progressColors[i],
-        height: 55
+        height: $(window).width() >= 768 ? 55 : 65
       });
       $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
     }
@@ -138,26 +137,12 @@ $(document).ready(function () {
     if (window.innerWidth < 768) {
       animeBar();
       $('.save-cost-car-image').addClass('hide');
-      setTimeout(function(){
         var progressContainerWidth = $('#progressbar-container').width();
         $('#progressbar-container').height(progressContainerWidth);
-        $('.proggress').height(65);
-  
-        // if (!$('.progressbar .image img').length) {
-        //   $('.progressbar .image').each(function (index, el) {
-        //     var image = new Image();
-        //     image.src = 'assets/images/' + progressImages[index].car;
-        //     el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
-        //     el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
-        //   });
-        // }
-      }, 500);
 
     } else if ($(window).width() >= 768) {
       $('.save-cost-car-image').removeClass('hide');
-      console.log($('.progressbar .image'));
       $('.progressbar .image').remove();
-      $('.proggress').height(55);
     }
 
   });
