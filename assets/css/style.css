@@ -613,7 +613,7 @@ h4 {
           animation: triangle-emerge 2s forwards;
 }
 
-.offering-stats-triangle figure img { animation: triangle-emerge 4s; }
+.offering-stats-triangle figure img { animation: triangle-emerge 2.8s; }
 
 @keyframes triangle-emerge {
   0% {
