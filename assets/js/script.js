@@ -135,6 +135,7 @@ $(document).ready(function () {
     // fetch url
     var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
     if (window.innerWidth < 768) {
+      animeBar();
       $('.save-cost-car-image').addClass('hide');
       setTimeout(function(){
         var progressContainerWidth = $('#progressbar-container').width();
@@ -155,6 +156,7 @@ $(document).ready(function () {
     } else if ($(window).width() >= 768) {
       $('.save-cost-car-image').removeClass('hide');
       $('.progressbar .image img').remove();
+      $('.proggress').height(55);
     }
 
   });
@@ -172,7 +174,7 @@ $(document).ready(function () {
 
     // Car animation
     var tempo_right = $('.tempo-to-right').offset().top;
-    if (isElementInViewport($('.government-description'))) {
+    if (isElementInViewport($('.lightning-middle'))) {
       $('.car-to-left').addClass("car-left");
       $('.car-to-right').addClass("car-right");
       $('.tempo-to-right').addClass("tempo-right");
