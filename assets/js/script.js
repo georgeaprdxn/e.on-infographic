@@ -170,7 +170,7 @@ $(document).ready(function () {
 
     // Car animation
     var tempo_right = $('.tempo-to-right').offset().top;
-    if (isElementInViewport($('.government-description'))) {
+    if (isElementInViewport($('.lightning-middle'))) {
       $('.car-to-left').addClass("car-left");
       $('.car-to-right').addClass("car-right");
       $('.tempo-to-right').addClass("tempo-right");

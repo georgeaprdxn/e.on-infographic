@@ -391,13 +391,12 @@ h2 {
 
   h2 { width: 76%; }
 
-  .sub-text { width: 65%; }
-
-  .banner-content .common-text-style { width: 54%; }
+  .sub-text,
+  .banner-content .common-text-style { width: 100%; }
 
   .banner-image { 
     width: 100%; 
-    margin-top: -86%;
+    margin-top: 16%;
     overflow: unset;
   }
   
@@ -438,7 +437,6 @@ h2 {
 
   .sub-text { font-size: 26px; }
 
-  .banner-image { margin-top: -60%; }
 }
 
 
@@ -806,7 +804,7 @@ h4 {
 
   .government ul li:last-child h4 { width: 80%; }
 
-  .offering-stats .figure { font-size: 16px; }
+  .offering-stats .figure { font-size: 18px; }
 
 }
 
@@ -818,10 +816,15 @@ h4 {
 
   .offering-stats .figure { 
     top: 8px;
-    font-size: 10px; 
+    font-size: 14px; 
   }
 
   .figure sup { font-size: 10px; }
+
+}
+
+@media screen and (max-width: 484px) {
+  .government ul li:nth-child(3) h4 { padding-top: 20px; }  
 }
 
 /*==========================================================================
@@ -999,9 +1002,8 @@ h4 {
 /* on the road section starts here */
 
 .on-the-road {
-  padding-bottom: 12%;
+  /*padding-bottom: 12%;*/
   margin-top: 64px;
-  position: relative;
 }
 
 .on-the-road-content {
@@ -1050,11 +1052,7 @@ h4 {
   margin-top: 28px;
 }
 
-.on-the-road-graph {
-  position: absolute;
-  z-index: -1;
-  top: 34px;
-}
+.on-the-road-graph { position: relative; }
 
 .on-the-road-graph .overlay {
   position: absolute;
@@ -1076,7 +1074,10 @@ h4 {
   }
 }
 
-.on-the-road-graph img { width: 100%; }
+.on-the-road-graph img { 
+  width: 100%; 
+  height: auto !important;
+}
 
 
 /* Consumer Desire section starts here */
@@ -1169,6 +1170,10 @@ h4 {
 .sources ol li a {
   color: #39393a;
   font-family: EconSansReg; 
+}
+
+@media screen and (min-width: 996px) {
+  .sources ol li a:hover { text-decoration: underline; }
 }
 
 /* air-poultion-graph */
@@ -1351,6 +1356,7 @@ h4 {
   0%{ transform: scale(0); }
   50% { transform: scale(0); }
   75% { transform: scale(0); }
+  90% { transform: scale(0); }
   100% { transform: scale(1); }
 }
 
@@ -1564,6 +1570,8 @@ h4 {
   .on-the-road h3 { margin-bottom: unset; }
 
   .government-description .common-text-style { width: 100%; }
+
+  .on-the-road-info { width: 100%; }
 }
 
 @media screen and (max-width: 767px) {
@@ -1572,8 +1580,6 @@ h4 {
     line-height: 38px;
   }
   
-  .sub-text { width: 73.8%; }
-
   .common-text-style {
     font-size: 26px;
     line-height: 30px;
@@ -1582,13 +1588,22 @@ h4 {
   .exhaust-emission h3,
   .save-costs h3 { width: 100%; }
 
-  .banner-content .common-text-style { width: 62%; }
+  .hybrid-cars { transform: translateX(-10%); }
+
+  .plugable-vans,
+  .charge-points { margin-top: 25px; }
 }
 
 @media screen and (max-width: 540px) {
   .desire-percent { font-size: 25px; }
 
   .bar-label { font-size: 16px; }
+
+  .hybrid-cars { transform: translateX(-6%); }
+  
+  .hybrid-cars .offering-stats img, .hybrid-cars .border-line { width: 75%; }
+
+  .electric-vehicles .offering-stats img, .electric-vehicles .border-line { width: 85%; }
 }
 
 @media screen and (max-width: 768px) {
@@ -1614,17 +1629,15 @@ h4 {
     width: 100%; 
     margin-right: unset;
   }
+  
+  .hybrid-cars .offering-stats img, .hybrid-cars .border-line { width: 70%; }
+
+  .electric-vehicles .offering-stats img, .electric-vehicles .border-line { width: 90%; }
 }
 
 @media screen and (max-width: 580px) {
   .line-indicator-vehicle { margin-top: 15px; }
   .line-indicator-fuel { margin-top: 15px; }
-
-  .on-the-road-info {
-    width: 86%;
-    line-height: 14px;
-    font-size: 12px!important;
-  }
 
   .line-indicator p {
     line-height: 12px;
