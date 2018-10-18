@@ -482,15 +482,24 @@ h2 {
   -webkit-animation: hand-drop 1.2s linear;
   -moz-animation:    hand-drop 1.2s linear;
   -o-animation:      hand-drop 1.2s linear;
+  animation:         hand-drop 1.2s linear;
 }
 
 @keyframes hand-drop {
-  0% { 
+  0% {
     right: -50%; 
     transform:rotate(10deg);
   }
-  80% { transform:rotate(10deg); }
-  100% { 
+  80% {
+    top: -12%;
+    transform:rotate(10deg);
+  }
+  85% {
+    transform: translate(0);
+    top: -5%;
+  }
+  100% {
+    top: -5%;
     right: 5%; 
     transform:rotate(0);
   }
@@ -607,16 +616,14 @@ h4 {
   text-align: center;
 }
 
-.offering-stats .offering-stats-wrapper { max-height: 0; }
+.offering-stats img { max-height: 0; }
 
-.offering-stats-triangle {
+.offering-stats-triangle figure img {
   -webkit-animation: triangle-emerge 2s forwards;
      -moz-animation: triangle-emerge 2s forwards;
        -o-animation: triangle-emerge 2s forwards;
           animation: triangle-emerge 2s forwards;
 }
-
-.offering-stats-triangle figure img { animation: triangle-emerge 2.8s; }
 
 @keyframes triangle-emerge {
   0% {

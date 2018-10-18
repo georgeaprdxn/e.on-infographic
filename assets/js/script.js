@@ -136,18 +136,21 @@ $(document).ready(function () {
     var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
     if (window.innerWidth < 768) {
       $('.save-cost-car-image').addClass('hide');
-      var progressContainerWidth = $('#progressbar-container').width();
-      $('#progressbar-container').height(progressContainerWidth);
-      $('.proggress').height(65);
-
-      if (!$('.progressbar .image img').length) {
-        $('.progressbar .image').each(function (index, el) {
-          var image = new Image();
-          image.src = 'assets/images/' + progressImages[index].car;
-          el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
-          el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
-        });
-      }
+      setTimeout(function(){
+        var progressContainerWidth = $('#progressbar-container').width();
+        $('#progressbar-container').height(progressContainerWidth);
+        $('.proggress').height(65);
+  
+        console.log("$('.progressbar .image img').length ", $('.progressbar .image img').length);
+        if (!$('.progressbar .image img').length) {
+          $('.progressbar .image').each(function (index, el) {
+            var image = new Image();
+            image.src = 'assets/images/' + progressImages[index].car;
+            el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
+            el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
+          });
+        }
+      }, 500);
 
     } else if ($(window).width() >= 768) {
       $('.save-cost-car-image').removeClass('hide');
@@ -157,7 +160,7 @@ $(document).ready(function () {
   });
 
   // animation on scroll
-  $(window).on('load scroll', function () {
+  $(window).on('load scroll touchstart touchend', function () {
 
     var lightning_banner = $('.banner').offset().top;
     var topOfWindow = $(window).scrollTop();
@@ -183,6 +186,16 @@ $(document).ready(function () {
 
     // trainle animation
     var offering_stats_wrapper = $('.offering-stats-wrapper').offset().top;
+    var triangleImgDimensions = $('.offering-stats-wrapper img');
+    var _image = new Image();
+    _image.src = triangleImgDimensions.attr('src');
+      var ht = 1592 ||_image.naturalHeight;
+      var wt = 1353 || _image.naturalWidth;
+      $('.offering-stats-wrapper').each(function() {
+        var _containerWidth = Math.round($(this).width());
+        var _containerHeight = Math.round((ht/wt)*_containerWidth);
+        $(this).height(_containerHeight);
+      });
     var animateTriangle = true;
     if (offering_stats_wrapper < (topOfWindow + 700) && animateTriangle) {
       animateTriangle = false;
