@@ -163,8 +163,14 @@ $(document).ready(function () {
 
     // trainle animation
     var offering_stats_wrapper = $('.offering-stats-wrapper').offset().top;
-    if (offering_stats_wrapper < (topOfWindow + 700)) {
-      $('.offering-stats-wrapper').addClass("offering-stats-triangle");
+    var animateTriangle = true;
+    if (offering_stats_wrapper < (topOfWindow + 700) && animateTriangle) {
+      animateTriangle = false;
+      $('.offering-stats-wrapper').each(function(index,el) {
+        setTimeout(function() {
+          $(el).addClass('offering-stats-triangle');
+        }, 500*index);
+      })
     }
 
     // Death animation

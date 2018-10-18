@@ -609,11 +609,13 @@ h4 {
   text-align: center;
 }
 
+.offering-stats .offering-stats-wrapper { max-height: 0; }
+
 .offering-stats-triangle {
-  -webkit-animation: triangle-emerge 2s;
-     -moz-animation: triangle-emerge 2s;
-       -o-animation: triangle-emerge 2s;
-          animation: triangle-emerge 2s;
+  -webkit-animation: triangle-emerge 2s forwards;
+     -moz-animation: triangle-emerge 2s forwards;
+       -o-animation: triangle-emerge 2s forwards;
+          animation: triangle-emerge 2s forwards;
 }
 
 .offering-stats-triangle figure img { animation: triangle-emerge 4s; }
