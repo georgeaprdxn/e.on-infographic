@@ -530,7 +530,7 @@ h4 {
 
 .government ul li:first-child h4 {
  width: 57%;
- margin-bottom: 18.4%;
+ margin-bottom: 18.3%;
 }
 
 .government ul li:nth-child(2) h4 {
@@ -569,21 +569,24 @@ h4 {
   width: 100%;
 }
 
-.hybrid-cars { width: 23.33%; }
+.hybrid-cars { 
+  width: 23.33%; 
+  transform: translateX(-21%);
+}
 
 .electric-vehicles {
   width: 23.33%;
-  transform: translateX(-20%);
+  transform: translateX(-40%);
 }
 
 .plugable-vans {
   width: 25.33%;
-  transform: translateX(-18%);
+  transform: translateX(-35%);
 }
 
 .charge-points {
   width: 28%;
-  transform: translateX(-5%);
+  transform: translateX(-19.9%);
 }
 
 .border-line {

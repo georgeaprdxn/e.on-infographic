@@ -191,7 +191,7 @@ $(document).ready(function () {
       $('.offering-stats .figure').each(function (index, el) {
         setTimeout(function () {
           $(el).addClass('show-figure');
-        }, 600 * index);
+        }, 500 * index);
       })
     }
 
