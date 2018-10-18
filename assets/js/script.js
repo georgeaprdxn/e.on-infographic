@@ -36,26 +36,25 @@ $(document).ready(function () {
     }
   ];
 
-    for (var i = 0; i < progressBarData.length; i++) {
-      var progressbarItem = document.createElement('div');
-      var progressbars = document.createElement('div');
-      var progressName = document.createElement('div');
-      var progressBlade = document.createElement('div');
-      $(progressbarItem).attr('id', 'progressbar' + i);
-      $(progressbarItem).attr('class', 'progressbars');
-      $('#progressbar-container').append(progressbarItem);
-      $(progressName).text(progressBarData[i].name);
-      $(progressbars).attr('class', 'progressbar');
-      $(progressName).attr('class', 'progressName');
-      $(progressBlade).attr('class', 'progressBlade');
-      $(progressbars).append(progressName);
-      $(progressbars).append(progressBlade);
-      $(progressBlade).height(55);
-      $('#progressbar'+i).append(progressbars);
-    }
+  for (var i = 0; i < progressBarData.length; i++) {
+    var progressbarItem = document.createElement('div');
+    var progressbars = document.createElement('div');
+    var progressName = document.createElement('div');
+    var progressBlade = document.createElement('div');
+    $(progressbarItem).attr('id', 'progressbar' + i);
+    $(progressbarItem).attr('class', 'progressbars');
+    $('#progressbar-container').append(progressbarItem);
+    $(progressName).text(progressBarData[i].name);
+    $(progressbars).attr('class', 'progressbar');
+    $(progressName).attr('class', 'progressName');
+    $(progressBlade).attr('class', 'progressBlade');
+    $(progressbars).append(progressName);
+    $(progressbars).append(progressBlade);
+    $(progressBlade).height(55);
+    $('#progressbar'+i).append(progressbars);
+  }
 
-    function isElementInViewport (el) {
-
+  function isElementInViewport (el) {
     //special bonus for those using jQuery
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];
@@ -71,6 +70,8 @@ $(document).ready(function () {
     );
   }
 
+
+  var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
   function animeBar() {
     for (var i = 0; i < progressBarData.length; i++) {
       $('#progressbar'+i).remove();
@@ -79,6 +80,8 @@ $(document).ready(function () {
       $(progressbar).attr('class', 'progressbars');
       $('#progressbar-container').append(progressbar);
       $('#progressbar' + i).LineProgressbar({
+        progressImages: $(window).width() >= 768 ? '': progressImages,
+        ind: i,
         percentage: progressBarData[i].value,
         fillBackgroundColor: progressColors[i],
         height: 55
@@ -123,7 +126,6 @@ $(document).ready(function () {
 
     if (window.innerWidth <= 992) {
 
-      
       $('#on-the-road-image').attr('src', $('#on-the-road-image').attr('data-mobile-src'));
     } else {
       if (_offsetHeight) {
@@ -133,7 +135,6 @@ $(document).ready(function () {
       $('#on-the-road-image').attr('src', $('#on-the-road-image').attr('data-desktop-src'));
     }
     // fetch url
-    var fetch_url_val=$('#progressbar-container').attr('data-url-fetch');
     if (window.innerWidth < 768) {
       animeBar();
       $('.save-cost-car-image').addClass('hide');
@@ -142,27 +143,27 @@ $(document).ready(function () {
         $('#progressbar-container').height(progressContainerWidth);
         $('.proggress').height(65);
   
-        console.log("$('.progressbar .image img').length ", $('.progressbar .image img').length);
-        if (!$('.progressbar .image img').length) {
-          $('.progressbar .image').each(function (index, el) {
-            var image = new Image();
-            image.src = 'assets/images/' + progressImages[index].car;
-            el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
-            el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
-          });
-        }
+        // if (!$('.progressbar .image img').length) {
+        //   $('.progressbar .image').each(function (index, el) {
+        //     var image = new Image();
+        //     image.src = 'assets/images/' + progressImages[index].car;
+        //     el.innerHTML += '<img class="car" src='+fetch_url_val+'assets/images/' + progressImages[index].car + '>';
+        //     el.innerHTML += '<img class="wheels" src='+fetch_url_val+'assets/images/' + progressImages[index].wheels + '>';
+        //   });
+        // }
       }, 500);
 
     } else if ($(window).width() >= 768) {
       $('.save-cost-car-image').removeClass('hide');
-      $('.progressbar .image img').remove();
+      console.log($('.progressbar .image'));
+      $('.progressbar .image').remove();
       $('.proggress').height(55);
     }
 
   });
 
   // animation on scroll
-  $(window).on('load scroll touchstart touchend', function () {
+  $(window).on('load scroll', function () {
 
     var lightning_banner = $('.banner').offset().top;
     var topOfWindow = $(window).scrollTop();
@@ -170,7 +171,6 @@ $(document).ready(function () {
     if (isElementInViewport($('.lightning-middle'))) {
       $('.lightning').addClass("anim-lightning");
     }
-
 
     // Car animation
     var tempo_right = $('.tempo-to-right').offset().top;
@@ -214,7 +214,6 @@ $(document).ready(function () {
     }
 
     // Death animation
-    var sky_top = $('.sky').offset().top;
     if (isElementInViewport($('.ill-health .common-text-style'))) {
       $('.half-round').addClass("anime-half-round");
       $('.round').addClass("anime-roud");
@@ -223,19 +222,16 @@ $(document).ready(function () {
     }
 
     // Graph animation
-    var bar_top = $('.bar').offset().top;
     if (isElementInViewport($('.polution-stats .common-text-style'))) {
       $('.bar').addClass("anime-bar");
     }
 
     // on the road graph animation
-    var on_road_top = $('.on-the-road-graph').offset().top;
     if (isElementInViewport($('.charging-point-info'))) {
       $('.on-the-road-graph').addClass("anime-on-the-road-graph");
     }
 
     // consumer desire animation
-    var consumer_top = $('.desire-stats').offset().top;
     if (isElementInViewport($('.consumer-info'))) {
       $('.desire-stats').addClass("anime-consumer-desire");
       if (!counterAnimateFlag) {

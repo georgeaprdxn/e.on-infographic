@@ -15,7 +15,8 @@
       percentage: null,
       ShowProgressCount: true,
       duration: 1500,
-
+      progressImages: '',
+      ind:0,
       // Styling Options
       fillBackgroundColor: '#3498db',
       backgroundColor: '#e2e9ed',
@@ -27,7 +28,10 @@
     $.options = options;
     return this.each(function (index, el) {
       // Markup
-      $(el).html('<div class="progressbar"><div class=progressName></div><div class="progressBlade"><div class="proggress"><div class="percentCount"></div></div><figure class="image"></figure></div></div>');
+      if(options.progressImages) {
+        var imgTag = '<img src=assets/images/'+options.progressImages[options.ind].car+'>';
+      }
+      $(el).html('<div class="progressbar"><div class=progressName></div><div class="progressBlade"><div class="proggress"><div class="percentCount"></div></div><figure class="image">'+imgTag+'</figure></div></div>');
 
       var progressFill = $(el).find('.proggress');
       var progressBar = $(el).find('.progressbar');
