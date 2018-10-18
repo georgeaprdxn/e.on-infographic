@@ -54,6 +54,23 @@ $(document).ready(function () {
       $('#progressbar'+i).append(progressbars);
     }
 
+    function isElementInViewport (el) {
+
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
+  }
+
   function animeBar() {
     for (var i = 0; i < progressBarData.length; i++) {
       $('#progressbar'+i).remove();
@@ -195,12 +212,13 @@ $(document).ready(function () {
 
     // on the road graph animation
     var on_road_top = $('.on-the-road-graph').offset().top;
-    if (on_road_top < (topOfWindow+400)) {
+    if (on_road_top < (topOfWindow+700)) {
       $('.on-the-road-graph').addClass("anime-on-the-road-graph");
     }
 
+    // consumer desire animation
     var consumer_top = $('.desire-stats').offset().top;
-    if (consumer_top < (topOfWindow + 400)) {
+    if (isElementInViewport($('.consumer-desire h3'))) {
       $('.desire-stats').addClass("anime-consumer-desire");
       if (!counterAnimateFlag) {
         counterAnimateFlag = true;
@@ -228,7 +246,7 @@ $(document).ready(function () {
     }
 
     var bar_save_top = $('#progressbar-container').offset().top;
-    if (bar_save_top < (topOfWindow + 400) && !show_flag) {
+    if (bar_save_top < (topOfWindow + 700) && !show_flag) {
       show_flag = true;
       animeBar();
     }    
