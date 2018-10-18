@@ -294,10 +294,10 @@ h2 {
 }
 
 .anim-lightning {
-  -webkit-animation: lightning 0.1s linear forwards;
-  -moz-animation:    lightning 0.1s linear forwards;
-  -o-animation:      lightning 0.1s linear forwards;
-  animation:         lightning 0.1s linear forwards;
+  -webkit-animation: lightning 0.3s linear forwards;
+  -moz-animation:    lightning 0.3s linear forwards;
+  -o-animation:      lightning 0.3s linear forwards;
+  animation:         lightning 0.3s linear forwards;
 }
 
 .lightning-left { 
@@ -530,7 +530,7 @@ h4 {
 
 .government ul li:first-child h4 {
  width: 57%;
- margin-bottom: 18.5%;
+ margin-bottom: 18.3%;
 }
 
 .government ul li:nth-child(2) h4 {
@@ -569,21 +569,24 @@ h4 {
   width: 100%;
 }
 
-.hybrid-cars { width: 23.33%; }
+.hybrid-cars { 
+  width: 23.33%; 
+  transform: translateX(-21%);
+}
 
 .electric-vehicles {
   width: 23.33%;
-  transform: translateX(-20%);
+  transform: translateX(-40%);
 }
 
 .plugable-vans {
   width: 25.33%;
-  transform: translateX(-18%);
+  transform: translateX(-35%);
 }
 
 .charge-points {
   width: 28%;
-  transform: translateX(-5%);
+  transform: translateX(-19.9%);
 }
 
 .border-line {
@@ -604,14 +607,16 @@ h4 {
   text-align: center;
 }
 
+.offering-stats .offering-stats-wrapper { max-height: 0; }
+
 .offering-stats-triangle {
-  -webkit-animation: triangle-emerge 2s;
-     -moz-animation: triangle-emerge 2s;
-       -o-animation: triangle-emerge 2s;
-          animation: triangle-emerge 2s;
+  -webkit-animation: triangle-emerge 2s forwards;
+     -moz-animation: triangle-emerge 2s forwards;
+       -o-animation: triangle-emerge 2s forwards;
+          animation: triangle-emerge 2s forwards;
 }
 
-.offering-stats-triangle figure img { animation: triangle-emerge 4s; }
+.offering-stats-triangle figure img { animation: triangle-emerge 2.8s; }
 
 @keyframes triangle-emerge {
   0% {
@@ -632,10 +637,13 @@ h4 {
   font-weight: 600;
   transform: translateX(-50%);
   opacity: 0;
-  -webkit-animation: showfigure 1.5s forwards;
-     -moz-animation: showfigure 1.5s forwards;
-       -o-animation: showfigure 1.5s forwards;
-          animation: showfigure 1.5s forwards;
+}
+
+.show-figure {
+  -webkit-animation: showfigure 1s forwards;
+  -moz-animation: showfigure 1s forwards;
+  -o-animation: showfigure 1s forwards;
+  animation: showfigure 1s forwards;
 }
 
 @keyframes showfigure {

@@ -97,7 +97,7 @@ $(document).ready(function () {
       subtracted_val = government_ul_top.top - government_top.top
       $('.hand-money-bank-image').css('top', subtracted_val + 34);
     } else {
-      $('.hand-money-bank-image').css('cssText', 'top', 'unset')
+      $('.hand-money-bank-image').css('cssText', 'top', 'unset');
     }
 
     // Align offering section triangle
@@ -163,11 +163,14 @@ $(document).ready(function () {
     var lightning_banner = $('.banner').offset().top;
     var topOfWindow = $(window).scrollTop();
 
-    $('.lightning').addClass("anim-lightning");
+    if (isElementInViewport($('.lightning-middle'))) {
+      $('.lightning').addClass("anim-lightning");
+    }
+
 
     // Car animation
     var tempo_right = $('.tempo-to-right').offset().top;
-    if (tempo_right < (topOfWindow + 700)) {
+    if (isElementInViewport($('.government-description'))) {
       $('.car-to-left').addClass("car-left");
       $('.car-to-right').addClass("car-right");
       $('.tempo-to-right').addClass("tempo-right");
@@ -181,13 +184,24 @@ $(document).ready(function () {
 
     // trainle animation
     var offering_stats_wrapper = $('.offering-stats-wrapper').offset().top;
-    if (offering_stats_wrapper < (topOfWindow + 700)) {
-      $('.offering-stats-wrapper').addClass("offering-stats-triangle");
+    var animateTriangle = true;
+    if (offering_stats_wrapper < (topOfWindow + 700) && animateTriangle) {
+      animateTriangle = false;
+      $('.offering-stats-wrapper').each(function(index,el) {
+        setTimeout(function() {
+          $(el).addClass('offering-stats-triangle');
+        }, 500*index);
+      })
+      $('.offering-stats .figure').each(function (index, el) {
+        setTimeout(function () {
+          $(el).addClass('show-figure');
+        }, 500 * index);
+      })
     }
 
     // Death animation
     var sky_top = $('.sky').offset().top;
-    if (sky_top < (topOfWindow + 700)) {
+    if (isElementInViewport($('.ill-health .common-text-style'))) {
       $('.half-round').addClass("anime-half-round");
       $('.round').addClass("anime-roud");
       $('.sky').addClass("sky-anime");
@@ -196,25 +210,19 @@ $(document).ready(function () {
 
     // Graph animation
     var bar_top = $('.bar').offset().top;
-    if (bar_top < (topOfWindow + 780)) {
+    if (isElementInViewport($('.polution-stats .common-text-style'))) {
       $('.bar').addClass("anime-bar");
     }
 
     // on the road graph animation
     var on_road_top = $('.on-the-road-graph').offset().top;
-    if (on_road_top < (topOfWindow+700)) {
+    if (isElementInViewport($('.charging-point-info'))) {
       $('.on-the-road-graph').addClass("anime-on-the-road-graph");
     }
 
     // consumer desire animation
     var consumer_top = $('.desire-stats').offset().top;
-    if(window.innerWidth >767) { 
-        offsetTopElem=$('.consumer-desire h3'); 
-      } else { 
-        offsetTopElem=$(".desire-percent"); 
-      }
-
-    if (isElementInViewport(offsetTopElem)) {
+    if (isElementInViewport($('.consumer-info'))) {
       $('.desire-stats').addClass("anime-consumer-desire");
       if (!counterAnimateFlag) {
         counterAnimateFlag = true;
