@@ -639,10 +639,13 @@ h4 {
   font-weight: 600;
   transform: translateX(-50%);
   opacity: 0;
-  -webkit-animation: showfigure 1.5s forwards;
-     -moz-animation: showfigure 1.5s forwards;
-       -o-animation: showfigure 1.5s forwards;
-          animation: showfigure 1.5s forwards;
+}
+
+.show-figure {
+  -webkit-animation: showfigure 1s forwards;
+  -moz-animation: showfigure 1s forwards;
+  -o-animation: showfigure 1s forwards;
+  animation: showfigure 1s forwards;
 }
 
 @keyframes showfigure {

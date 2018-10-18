@@ -171,6 +171,11 @@ $(document).ready(function () {
           $(el).addClass('offering-stats-triangle');
         }, 500*index);
       })
+      $('.offering-stats .figure').each(function (index, el) {
+        setTimeout(function () {
+          $(el).addClass('show-figure');
+        }, 600 * index);
+      })
     }
 
     // Death animation
