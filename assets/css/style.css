@@ -1059,7 +1059,11 @@ h4 {
   margin-top: 28px;
 }
 
-.on-the-road-graph { position: relative; }
+.on-the-road-graph {
+  position: absolute;
+  z-index: -1;
+  top: 34px;
+}
 
 .on-the-road-graph .overlay {
   position: absolute;
@@ -1475,17 +1479,8 @@ h4 {
     line-height: 1.7;
   }
 
-  .on-the-road ul { width: 50%; }
-  .on-the-road > .common-text-style { font-size: 2.5vw; }
-  .line-indicator li p { font-size: 20px; }
   .line-indicator -fuel,
   .line-indicator-vehicle { margin-top: 3%; }
-
-  .on-the-road .charging-point-info {
-    width: 50%;
-    margin-top: 20px;
-    line-height: 1.2;
-  }
   
   .infographic-content-section .wrapper:after { width: 10.6%; }
 }
@@ -1578,6 +1573,12 @@ h4 {
   .government-description .common-text-style { width: 100%; }
 
   .on-the-road-info { width: 100%; }
+
+  .on-the-road-graph { position: relative; }
+
+  .on-the-road .charging-point-info { width: 100%; }
+
+  .on-the-road ul { width: 72%; }
 }
 
 @media screen and (max-width: 767px) {
@@ -1598,6 +1599,10 @@ h4 {
 
   .plugable-vans,
   .charge-points { margin-top: 25px; }
+
+  .on-the-road ul { width: 100%; }
+
+  .on-the-road ul li p { font-size: 21px; }
 }
 
 @media screen and (max-width: 540px) {
@@ -1621,14 +1626,6 @@ h4 {
     line-height: 1.5;
   }
 
-  .line-indicator p { font-size: 18px !important; }
-
-  .charging-point-info {
-     width: 45% !important;
-     margin-top: 20px;
-     font-size: 18px;
-  }
-
   .infographic-content-section .wrapper:after { width: 14.6%; }
 
   .save-cost-description { 
@@ -1644,18 +1641,6 @@ h4 {
 @media screen and (max-width: 580px) {
   .line-indicator-vehicle { margin-top: 15px; }
   .line-indicator-fuel { margin-top: 15px; }
-
-  .line-indicator p {
-    line-height: 12px;
-    font-size: 12px!important;
-  }
-
-  .charging-point-info {
-    width:  36%!important;
-    margin-top: 15px;
-    line-height: 12px;
-    font-size: 12px;
-  }
 }
 
 @media screen and (max-width: 360px) {

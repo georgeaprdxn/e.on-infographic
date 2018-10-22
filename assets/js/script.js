@@ -83,7 +83,7 @@ $(document).ready(function () {
         fetch_url_val:fetch_url_val,
         percentage: progressBarData[i].value,
         fillBackgroundColor: progressColors[i],
-        height: $(window).width() >= 768 ? 55 : 65
+        height: $(window).width() >= 768 ? 55 : 58
       });
       $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
     }
