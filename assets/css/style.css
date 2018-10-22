@@ -2151,3 +2151,10 @@ blockmenu li>a:after {
   margin-left: 0 !important;
   white-space: nowrap;
 }
+
+@media (max-width: 320px) {
+  #progressbar3 { margin-top: 3%; }
+
+  .progressbars { margin-top: 7%; }
+
+}
