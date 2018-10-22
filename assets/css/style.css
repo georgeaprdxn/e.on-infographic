@@ -195,6 +195,8 @@ h1,h2,h3,h5 { color: #39393a; }
   line-height: 30px;
 }
 
+.infographic-content-section { margin-top: 55px; }
+
 .infographic-content-section .wrapper {
   padding-top: 34px;
   position: relative;
@@ -449,8 +451,6 @@ h2 {
 /*==========================================================================
   Government section starts here
 ============================================================================*/
-
-.government { margin-top: 55px; }
 
 .government .wrapper { overflow: hidden; }
 
@@ -724,6 +724,9 @@ h4 {
 }
 
 @media screen and (max-width: 995px) {
+
+  .government { margin-top: 55px; }
+
   .government-description { 
     width: 100%; 
     display: block;
@@ -845,8 +848,6 @@ h4 {
   Exhaust Emission section starts here
 ============================================================================*/
 
-.exhaust-emission { margin-top: 50px; }
-
 .exhaust-emission h3 { width: 569px; }
 
 .ill-health {
@@ -903,12 +904,10 @@ h4 {
   font-weight: 500;
 }
 
-.save-costs { margin-top: 20px; }
-
 .save-costs h3 { width: 560px; }
 
 .save-cost-description {
-  width: 57.5%;
+  width: 57%;
   margin-right: calc(12% - 5px);
   display: inline-block;
 }
@@ -1019,7 +1018,7 @@ h4 {
   z-index: 1;
 }
 
-.on-the-road-info { width: 66%; }
+.on-the-road-info { width: 65%; }
 
 .on-the-road ul { width: 36%; }
 
@@ -1127,7 +1126,7 @@ h4 {
 
 .desire-overview { margin-left: 0; }
 
-.desire-overview p { width: 85%; }
+.consumer-info { width: 80%; }
 
 .desire-stats { padding: 0 3%; }
 
