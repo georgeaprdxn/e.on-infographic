@@ -33,7 +33,7 @@
         var carImg = '<img class="car" src='+options.fetch_url_val+'assets/images/'+options.progressImages[options.ind].car+'>';
         var wheelImg = '<img class="wheels" src='+options.fetch_url_val+'assets/images/'+options.progressImages[options.ind].wheels+'>';
       }
-      $(el).html('<div class="progressbar"><div class=progressName></div><div class="progressBlade"><div class="proggress"><div class="percentCount"></div></div><figure class="image">'+carImg+wheelImg+'</figure></div></div>');
+      $(el).html('<div class="progressbar"><div class=progressName></div><div class="progressBlade"><div class="proggress"><div class="percentCount"></div></div><figure class="image">'+(options.progressImages ? carImg : '')+(options.progressImages ? wheelImg : '')+'</figure></div></div>');
 
       var progressFill = $(el).find('.proggress');
       var progressBar = $(el).find('.progressbar');
