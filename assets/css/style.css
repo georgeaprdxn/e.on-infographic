@@ -1009,7 +1009,7 @@ h4 {
 /* on the road section starts here */
 
 .on-the-road {
-  /*padding-bottom: 12%;*/
+  padding-bottom: 12%;
   margin-top: 64px;
 }
 
@@ -1085,10 +1085,7 @@ h4 {
   }
 }
 
-.on-the-road-graph img { 
-  width: 100%; 
-  height: auto !important;
-}
+.on-the-road-graph img { width: 100%; }
 
 
 /* Consumer Desire section starts here */
@@ -1574,11 +1571,28 @@ h4 {
 
   .on-the-road-info { width: 100%; }
 
-  .on-the-road-graph { position: relative; }
+  .on-the-road-graph { 
+    position: relative; 
+    display: block;
+  }
 
   .on-the-road .charging-point-info { width: 100%; }
 
   .on-the-road ul { width: 72%; }
+
+  #air-poulltion-graph-container { padding-top: 45px; }
+
+  .bar-label { 
+    margin-top: -45px;
+    color: #000 !important; 
+  }
+
+  .bar0 .bar-label { margin-top: initial; }
+
+  .on-the-road { padding-bottom: 0; }
+
+  .on-the-road img { height: auto !important; }
+ 
 }
 
 @media screen and (max-width: 767px) {
@@ -1636,6 +1650,10 @@ h4 {
   .hybrid-cars .offering-stats img, .hybrid-cars .border-line { width: 70%; }
 
   .electric-vehicles .offering-stats img, .electric-vehicles .border-line { width: 90%; }
+
+  .hybrid-cars { transform: translateX(-14%); }
+
+  .electric-vehicles { transform: translateX(-25%) }
 }
 
 @media screen and (max-width: 580px) {
@@ -2137,7 +2155,7 @@ blockmenu li>a:after {
   white-space: nowrap;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   #progressbar3 { margin-top: 3%; }
 
   .progressbars { margin-top: 7%; }
