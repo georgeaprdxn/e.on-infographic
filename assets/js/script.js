@@ -185,7 +185,7 @@ $(document).ready(function () {
       var wt = 1353 || _image.naturalWidth;
       $('.offering-stats-wrapper').each(function() {
         var _containerWidth = Math.round($(this).width());
-        var _containerHeight = Math.round((ht/wt)*_containerWidth);
+        var _containerHeight = Math.round(_containerWidth / (ht/wt));
         $(this).height(_containerHeight);
       });
     var animateTriangle = true;

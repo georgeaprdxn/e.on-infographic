@@ -180,7 +180,7 @@ h1,h2,h3,h5 { color: #39393a; }
 
 
  h3 {
-   margin-bottom: 16px;
+   margin-bottom: 20px;
    font-family: EconSansReg;
    font-size: 60px;
    line-height: 64px;
@@ -190,7 +190,7 @@ h1,h2,h3,h5 { color: #39393a; }
 .common-text-style {
   color: #39393a;
   font-family: EconSansReg;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 30px;
 }
@@ -256,10 +256,10 @@ h1,h2,h3,h5 { color: #39393a; }
   vertical-align: top;
 }
 
-.banner-content .common-text-style { width: 80%; }
+.banner-content .common-text-style { width: 79%; }
 
 h2 {
-  width: 98%;
+  width: 73%;
   margin-bottom: 17px;
   line-height: 88px;
   font-size: 85px;
@@ -268,6 +268,7 @@ h2 {
 }
 
 .sub-text {
+  width: 98%;
   margin-bottom: 31px;
   color: #1f5f76;
   font-family: EconSansReg;
@@ -459,7 +460,7 @@ h2 {
   vertical-align: top;
 }
 
-.government-description .common-text-style { width: 90%; }
+.government-description .common-text-style { width: 89%; }
 
 .hand-money-bank-image {
   width: calc(30% - 5px);
