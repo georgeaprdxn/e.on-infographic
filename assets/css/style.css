@@ -396,7 +396,12 @@ h2 {
   Government section starts here
 ============================================================================*/
 
-.government .wrapper { overflow: hidden; }
+.government { margin-top: 0; }
+
+.government .wrapper {
+  padding-top: 55px;
+  overflow: hidden;
+}
 
 .government-description {
   width: calc(70% - 5px);
@@ -438,8 +443,9 @@ h2 {
     transform:rotate(10deg);
   }
   85% {
-    transform: translate(0);
     top: -5%;
+    right: 5%;
+    transform: translate(0);
   }
   100% {
     top: -5%;
