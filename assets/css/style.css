@@ -513,7 +513,7 @@ h4 {
 
 .offering-image,
 .offering-stats {
-  width: 51%; 
+  width: 51%;
   margin: 0 auto;
 }
 
@@ -534,12 +534,8 @@ h4 {
 }
 
 @keyframes triangle-emerge {
-  0% {
-    max-height: 0;
-  }
-  100% {
-    max-height: 500px;
-  }
+  0% { max-height: 0; }
+  100% { max-height: 500px; }
 }
 
 .offering-stats .figure {
@@ -656,7 +652,6 @@ h4 {
 .cloud { display: inline-block; }
 .mobile { display: none; }
 
-
 .sky {
   width: 100%;
   margin-top: 4.5%;
@@ -700,7 +695,6 @@ h4 {
   100% { transform: scale(1); }
 }
 
-
 .half-round {
   width: 11%;
   position: absolute;
@@ -743,6 +737,8 @@ h4 {
 
 /*ill-health section ends here here*/
 
+/*air-poulltion-graph-container section starts here*/
+
 .polution-stats {
   width: 50%;
   padding-left: 2%;
@@ -770,19 +766,12 @@ h4 {
   width: 28%;
   margin-left: -5px;
   margin-right: 20px;
+  display: inline-block;
   position: absolute;
   bottom: 0;
-  display: inline-block;
   background-color: #1f5f76;
   text-align: center;
   vertical-align: bottom;
-}
-
-.anime-bar {
-  -webkit-animation: graphAnimate 5s forwards;
-  -moz-animation:    graphAnimate 5s forwards;
-  -o-animation:      graphAnimate 5s forwards;
-  animation:         graphAnimate 5s forwards;
 }
 
 .bar:first-child { margin-left: 0; }
@@ -827,6 +816,13 @@ h4 {
   top: 10px;
 }
 
+.anime-bar {
+  -webkit-animation: graphAnimate 5s forwards;
+  -moz-animation: graphAnimate 5s forwards;
+  -o-animation: graphAnimate 5s forwards;
+  animation: graphAnimate 5s forwards;
+}
+
 @keyframes graphAnimate {
   from { max-height: 0; }
   to { max-height: 500px; }
@@ -844,6 +840,9 @@ h4 {
   text-anchor:start;
 }
 
+/*air-poulltion-graph-container section ends here*/
+
+
 /*==========================================================================
   Exhaust Emission section ends here
 ============================================================================*/
@@ -854,6 +853,7 @@ h4 {
   Save Costs section starts here
 ============================================================================*/
 
+#progressbar-container { margin-top: 40px; }
 .progressbars { margin-top: 15px; }
 .progressbar { background-color: #fff !important; }
 
@@ -979,8 +979,6 @@ h4 {
   margin: 0 auto;
 }
 
-#progressbar-container { margin-top: 40px; }
-
 /*==========================================================================
   Save Costs section ends here
 ============================================================================*/
@@ -1053,12 +1051,8 @@ h4 {
 .anime-on-the-road-graph .overlay { animation: reveal 3s forwards; }
 
 @keyframes reveal {
-  from {
-    left: 0;
-  }
-  to {
-    left: 100%;
-  }
+  from { left: 0; }
+  to { left: 100%; }
 }
 
 .on-the-road-graph img { width: 100%; }
@@ -1089,12 +1083,8 @@ h4 {
 .grayed-out img { max-height: 100%; }
 
 @keyframes show-desire {
-  from {
-    max-height: 600px;
-  }
-  100% {
-    max-height: 0;
-  }
+  from { max-height: 600px; }
+  to { max-height: 0; }
 }
 
 .consumer-desire img { width: 100%; }
@@ -1108,11 +1098,8 @@ h4 {
 }
 
 .desire-overview { margin-left: 0; }
-
 .consumer-info { width: 80%; }
-
 .desire-stats { padding: 0 3%; }
-
 .desire-stats:last-child { padding: 0 1% 0 5%; }
 
 .desire-stats .common-text-style {
