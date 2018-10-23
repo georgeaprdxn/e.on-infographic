@@ -1176,7 +1176,8 @@ h4 {
 
 .sources ol li { margin-bottom: 5px; }
 
-.sources ol li a {
+.sources a,
+.sources span {
   color: #39393a;
   font-family: EconSansReg; 
 }
