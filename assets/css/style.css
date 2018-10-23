@@ -396,7 +396,7 @@ h2 {
   Government section starts here
 ============================================================================*/
 
-.government { margin-top: 0; }
+.government .wrapper:after { top: 20px; }
 
 .government .wrapper {
   padding-top: 55px;
