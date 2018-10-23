@@ -78,12 +78,12 @@ $(document).ready(function () {
       $(progressbar).attr('class', 'progressbars');
       $('#progressbar-container').append(progressbar);
       $('#progressbar' + i).LineProgressbar({
-        progressImages: $(window).width() >= 768 ? '': progressImages,
+        progressImages: window.innerWidth >= 768 ? '': progressImages,
         ind: i,
         fetch_url_val:fetch_url_val,
         percentage: progressBarData[i].value,
         fillBackgroundColor: progressColors[i],
-        height: $(window).width() >= 768 ? 55 : $(window).width() <= 360 ? 58 : 65
+        height: window.innerWidth >= 768 ? 55 : window.innerWidth <= 360 ? 58 : 65
       });
       $('#progressbar' + i + ' .progressName').text(progressBarData[i].name);
     }
@@ -144,7 +144,7 @@ $(document).ready(function () {
         var progressContainerWidth = $('#progressbar-container').width();
         $('#progressbar-container').height(progressContainerWidth);
 
-    } else if ($(window).width() >= 768) {
+    } else if (window.innerWidth >= 768) {
       $('#progressbar-container').height('auto');
       $('.save-cost-car-image').removeClass('hide');
       $('.progressbar .image').remove();
