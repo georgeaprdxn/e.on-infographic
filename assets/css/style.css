@@ -1628,6 +1628,19 @@ h4 {
   .percentCount { margin-top: 19px; }
 }
 
+@media screen and (max-width: 767px) {
+  .progressName { width: 65px; }
+  .progressbar .image { margin-top: 2%; }
+}
+
+@media screen and (max-width: 568px) {
+  .progressbar .image { margin-top: 1.5%; }
+}
+
+@media screen and (max-width: 420px) {
+  .progressbar .image { margin-top: initial; }
+}
+
 /*Hamburger menu styling*/
 
 
