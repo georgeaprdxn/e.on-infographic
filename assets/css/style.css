@@ -397,7 +397,7 @@ h2 {
   .sub-text,
   .banner-content .common-text-style { width: 100%; }
 
-  .banner-image { 
+  .banner-image {
     width: 100%; 
     margin-top: 16%;
     overflow: unset;
@@ -797,17 +797,13 @@ h4 {
   
   .government ul li:first-child h4 { width: 90%; }
 
-  .offering-stats .figure {
+  .government .offering-stats .figure {
     top: 8px;
-    font-size: 14px; 
+    font-size: 20px;
   }
 
   .figure sup { font-size: 10px; }
 
-}
-
-@media screen and (max-width: 484px) {
-  .government ul li:nth-child(3) h4 { padding-top: 20px; }  
 }
 
 /*==========================================================================
@@ -1632,7 +1628,15 @@ h4 {
     transform: rotate(90deg) translate(-20%, -10px);
   }
 
+  .government ul li h4 { font-size: 18px; }
+
+  .government .offering-stats .figure { font-size: 18px; }
+
   .percentCount { margin-top: 19px; }
+
+  #progressbar3 { margin-top: 3%; }
+
+  .progressbars { margin-top: 7%; }
 }
 
 @media screen and (max-width: 767px) {
@@ -1961,7 +1965,6 @@ blockmenu li>a:after {
   transform: translateY(-50%);
 }
 
-
 .bars_scroll { top: 10px; }
 
 .to-top {
@@ -2105,14 +2108,12 @@ blockmenu li>a:after {
 
 @media (max-width: 400px) {
   .menu-tools-container {
-    padding: 20px 4% 0;
     width: 100%;
+    padding: 20px 4% 0;
     right: 0;
   }
 
-  .navigation_index {
-    height: 100vh;
-  }
+  .navigation_index { height: 100vh; }
 }
 
 .white-space-nowrap {
@@ -2120,9 +2121,3 @@ blockmenu li>a:after {
   white-space: nowrap;
 }
 
-@media (max-width: 360px) {
-  #progressbar3 { margin-top: 3%; }
-
-  .progressbars { margin-top: 7%; }
-
-}
