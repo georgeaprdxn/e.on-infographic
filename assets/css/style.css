@@ -1286,9 +1286,7 @@ h4 {
     width: 75%;
   }
 
-  .electric-vehicles {
-    width: 33%;
-  }
+  .electric-vehicles { width: 33%; }
 
   .plugable-vans {
     width: 44%;
@@ -1321,6 +1319,12 @@ h4 {
 
   .offering-stats .figure {
     font-size: 24px;
+  }
+
+  .sources a,
+  .sources span {
+    color: #39393a;
+    font-family: EconSansReg;
   }
 
 }
