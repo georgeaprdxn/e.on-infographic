@@ -113,7 +113,7 @@ $(document).ready(function () {
     var _offsetHeight,
     _ontheRoadHeight;
     var graphImg = $('.on-the-road-graph img');
-    if ($(window).width() <= 1024) {
+    if (window.innerWidth <= 1300) {
       setTimeout(function() {
         _offsetHeight = _onTheGraph && _onTheGraph.offsetHeight;
         _ontheRoadHeight = _onTheRoadContainer.offsetHeight;

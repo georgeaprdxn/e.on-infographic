@@ -887,7 +887,8 @@ h4 {
 .progressBlade { width: 80%; }
 
 .progressName {
-  width: 20%;
+  width: 18%;
+  margin-right: 2%;
   color: #096275;
   font-size: 22px;
   font-weight: 700;
@@ -1441,6 +1442,7 @@ h4 {
     margin-left: 2px;
   }
 
+  .progressName { margin-right: initial; }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
