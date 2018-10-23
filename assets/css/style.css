@@ -515,12 +515,12 @@ h2 {
 
 .government ul {
   margin-top: 41px;
-  text-align: center; 
+  text-align: center;
 }
 
 .government ul li {
   margin-left: -5px;
-  margin-right: 8%; 
+  margin-right: 8%;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -755,22 +755,31 @@ h4 {
 
 }
 
-@media screen and (max-width: 767px) {
-  .government-description h3 { width: 100%; } 
+@media screen and (max-width: 768px) {
+  .government-description h3 { width: 100%; }
+
+  .government ul { text-align: left; }
   
   .government ul li { position: relative; }
 
-  .government ul li h4 { 
-    font-size: 16px; 
+  .government ul li h4 {
+    font-size: 20px;
     line-height: 20px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
 
+  .government .offering-stats .figure { font-size: 30px; }
+
+  .plugable-vans,
+  .charge-points { margin-top: 15%; }
+
+  .plugable-vans .offering-image { margin-top: 99px; }
+
   .offering-image { margin-top: 100px; }
 
-  .electric-vehicles { transform: translateX(-18%); }
+  .government li:first-child { margin-right: 50%; }
   
   .government ul li:first-child h4 { width: 66%; }
   
@@ -780,13 +789,15 @@ h4 {
 
   .offering-stats .figure { font-size: 18px; }
 
+  .government .plugable-vans { margin-right: 6%; }
+
 }
 
 @media screen and (max-width: 540px) {
   
   .government ul li:first-child h4 { width: 90%; }
 
-  .offering-stats .figure { 
+  .offering-stats .figure {
     top: 8px;
     font-size: 14px; 
   }
@@ -1602,13 +1613,7 @@ h4 {
     margin-right: unset;
   }
   
-  .hybrid-cars .offering-stats img, .hybrid-cars .border-line { width: 70%; }
-
   .electric-vehicles .offering-stats img, .electric-vehicles .border-line { width: 90%; }
-
-  .hybrid-cars { transform: translateX(-14%); }
-
-  .electric-vehicles { transform: translateX(-25%) }
 }
 
 @media screen and (max-width: 580px) {
@@ -1915,18 +1920,11 @@ blockmenu li>a:after {
   background-image: url('') !important;
 }
 
-.sub-menu li>a:after {
-  display: none;
-}
+.sub-menu li>a:after { display: none; }
 
+.fix { position: fixed; }
 
-.fix {
-  position: fixed;
-}
-
-.menu {
-  z-index: 100000;
-}
+.menu { z-index: 100000; }
 
 .navigation_index {
   z-index: 9999;
@@ -1962,10 +1960,7 @@ blockmenu li>a:after {
 }
 
 
-.bars_scroll {
-  top: 10px;
-}
-
+.bars_scroll { top: 10px; }
 
 .to-top {
   display: none;
