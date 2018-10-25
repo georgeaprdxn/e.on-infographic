@@ -212,7 +212,7 @@ h1,h2,h3,h5 { color: #39393a; }
   background-color: #39393a;
 }
 
-.hide { display: none; }
+.hide { display: none !important; }
 
 
 /*==========================================================================
@@ -1154,7 +1154,8 @@ h4 {
 
 .sources ol li { margin-bottom: 5px; }
 
-.sources ol li a {
+.sources a,
+.sources span {
   color: #39393a;
   font-family: EconSansReg; 
 }
@@ -1195,6 +1196,16 @@ h4 {
 @media screen and (max-width: 995px) {
 
   .government { margin-top: 55px; }
+  .government li:first-child { margin-right: 50%; }
+  .government .plugable-vans { margin-right: 6%; }
+  .plugable-vans .offering-image { margin-top: 42px; }
+
+  .plugable-vans,
+  .charge-points {
+    margin-top: 15%;
+  }
+
+  .government ul { text-align: left; }
 
   .government-description {
     width: 100%;
@@ -1418,8 +1429,8 @@ h4 {
 @media screen and (max-width: 768px) {
 
   .government-description h3 { width: 100%; }
-  .government ul { text-align: left; }
   .government ul li { position: relative; }
+  .plugable-vans .offering-image { margin-top: 99px; }
 
   .government ul li h4 {
     position: absolute;
@@ -1431,20 +1442,12 @@ h4 {
 
   .government .offering-stats .figure { font-size: 30px; }
 
-  .plugable-vans,
-  .charge-points {
-    margin-top: 15%;
-  }
-
   h1 { font-size: 25px; }
-  .plugable-vans .offering-image { margin-top: 99px; }
   .offering-image { margin-top: 100px; }
-  .government li:first-child { margin-right: 50%; }
   .government ul li:first-child h4 { width: 66%; }
   .government ul li:nth-child(2) h4 { width: 80%; }
   .government ul li:last-child h4 { width: 80%; }
   .offering-stats .figure { font-size: 18px; }
-  .government .plugable-vans { margin-right: 6%; }
 
   .on-the-road-info {
     margin-top: 10px;
