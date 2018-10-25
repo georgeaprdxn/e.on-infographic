@@ -1195,7 +1195,7 @@ h4 {
 
 @media screen and (max-width: 995px) {
 
-  .government { margin-top: 55px; }
+  .government { margin-top: 43px; }
   .government li:first-child { margin-right: 50%; }
   .government .plugable-vans { margin-right: 6%; }
   .plugable-vans .offering-image { margin-top: 42px; }
@@ -1408,9 +1408,18 @@ h4 {
   }
 
   .bar0 .bar-label { margin-top: initial; }
-  .on-the-road { padding-bottom: 0; }
+  .on-the-road {
+    padding-top: 26px;
+    padding-bottom: 0; 
+  }
   .on-the-road img { height: auto !important; }
 
+  .exhaust-emission { padding-top: 8px; }
+  .save-costs { padding-top: 4px; }
+  .consumer-desire {
+    margin-top: 45px;
+    padding-top: 46px;
+  }
 }
 
 
